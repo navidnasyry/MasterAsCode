@@ -1,0 +1,76 @@
+% Chapter 4
+\chapter{فرمول}
+\label{chap:propml}
+
+نمونه‌های فرمول چندخطی:
+\begin{align}
+Loss(t,y(x)) & = \{y(x)-t\}^2 \nonumber\\ 
+& = \{y(x)- \mathbb{E}_{t}[t|x] + \mathbb{E}_{t}[t|x] -t\}^2 \nonumber \\ 
+& = \{y(x)- \mathbb{E}_{t}[t|x]\}^2 + 2\{y(x)- \mathbb{E}_{t}[t|x]\}\{\mathbb{E}_{t}[t|x] - t\} + 
+\{\mathbb{E}_{t}[t|x] -t\}^2 
+\end{align}
+برای رفرنس دهی به رابطه \eqref{eq:biasvar_bias_var} اینگونه عمل کنید.
+\begin{multline}
+\label{eq:biasvar_bias_var}
+\mathbb{E}_\mathcal{D} [\{y(x;\mathcal{D})-\mathbb{E}_{t}[t|x]\}^2] \\
+=\{\mathbb{E}_\mathcal{D}[y(x;\mathcal{D})]-\mathbb{E}_{t}[t|x]\}^2 + 
+\mathbb{E}_\mathcal{D}[\{y(x;\mathcal{D})-\mathbb{E}_\mathcal{D}[y(x;\mathcal{D})]\}^2] 
+\end{multline}
+برای نوشتن فرمول چندبخشی اینگونه عمل کنید.
+\begin{subequations}
+	\begin{equation}
+	\text{\gls{variance}} = \int{\mathbb{E}_\mathcal{D}[\{y(x;\mathcal{D})-\mathbb{E}_\mathcal{D}[y(x;\mathcal{D})]\}^2]p(x)dx}
+	\end{equation}
+	\begin{equation}
+	\text{\gls{bias}} = \int{\{\mathbb{E}_\mathcal{D}[y(x;\mathcal{D})]-\mathbb{E}_{t}[t|x]\}^2p(x)dx}
+	\end{equation}
+	\begin{equation}
+	\text{\gls{noise}} = \int{\{\mathbb{E}_{t}[t|x] -t\}^2p(x)dx}
+	\end{equation}
+\end{subequations}
+دیگر نمونه فرمول ها:
+\begin{equation*}
+G=
+\begin{bmatrix}
+G_{11}&G_{12}\\G_{21}&G_{22}
+\end{bmatrix} 
+\end{equation*}
+
+\begin{equation*}
+\left\{\begin{array}{l}
+z=G_{11}w+G_{12}u\\
+y=G_{21}w+G_{22}u
+\end{array}\right. 
+\end{equation*}
+
+برای رسم دیاگرام به صورت مستقیم، اینگونه عمل کنید.
+\setlength{\unitlength}{1cm}
+\begin{figure}[t]
+	\centering
+	\lr{
+		\begin{picture}(10.5,2.3)(0,0)
+		\put(0,1.5){\vector(1,0){1.35}}
+		\put(0.675,1.7){\makebox(0,0)[b]{$r(t)$}}
+		\put(1.2,1.7){\makebox(0,0){$ \scriptstyle + $}}
+		\put(1.5,1.5){\circle{0.3}}
+		\put(1.65,1.5){\vector(1,0){1.35}}
+		\put(2.325,1.7){\makebox(0,0)[b]{$e(t)$}}
+		\put(3,1){\framebox(1.5,1){$K(t) $}}
+		\put(4.5,1.5){\vector(1,0){1.5}}
+		\put(5.25,1.7){\makebox(0,0)[b]{$u(t)$ }}
+		\put(6,1){\framebox(1.5,1){$G(s)$}}
+		\put(7.5,1.5){\line(1,0){1.5}}
+		\put(9,1.5){\circle*{0.08}}
+		\put(9,1.5){\vector(1,0){1.5}}
+		\put(9.75,1.7){\makebox(0,0)[b]{$y(t)$}}
+		\put(9,1.5){\line(0,-1){1.5}}
+		\put(9,0){\line(-1,0){7.5}}
+		\put(1.5,0){\vector(0,1){1.35}}
+		\put(1.3,1.2){\makebox(0,0){$ \scriptstyle - $}}
+		\end{picture}
+	}
+	\caption{یک سیستم زمان‌پیوسته}
+	\label{fig:sample}
+\end{figure} 
+
+
