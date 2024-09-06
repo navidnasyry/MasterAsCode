@@ -1,0 +1,474 @@
+%% !TeX root=Proposal.tex
+%% !TEX TS-program = XeLaTeX
+%% Last version 1400.11.18
+% نمونه پیشنهاد رساله (پروپوزال) دانشکده برق و کامپیوتر دانشگاه صنعتی اصفهان
+%نظرات اصلاحی همه عزیزان را در ارتباط با قالب طراحی شده به دیده منت می‌نهیم و با کمال سپاس و قدردانی مورد استفاده قرار خواهیم داد (a.qazavi@ec.iut.ac.com).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,fleqn]{article}
+%در صورت نیاز به فراخوانی بسته‌های اضافی، آن‌ها را در فایل commands.tex و قبل از
+%بسته زی‌پرشین فراخوانی کنید.
+\input{commands}
+\begin{document}
+% دستوری جهت حذف کردن شماره صفحه و سربرگ، در صورت وجود (فقط در صفحه جاری)
+\thispagestyle{empty}
+\begin{center}
+	{\Naz
+	باسمه تعالی
+	\\[.1cm]
+	\includegraphics[height=3cm]{iut_logo.png}
+	%دستوری برای کم کردن فاصله بین لوگو و خط پایین آن
+	\vspace{-2mm}
+	
+	{\large
+	دانشگاه صنعتی اصفهان\\
+	}
+	{\small
+	دانشکده برق و کامپیوتر
+	}
+	%دستوری برای تعیین فاصله بین دو خط
+	\\[.3cm]
+	{\large
+		\textbf{پیشنهاد موضوع تحقیقاتی برای پایان‌نامه کارشناسی ارشد}	
+		\\[.2cm]
+	}
+
+%%{
+%%  \fontsize{9}{10.8}\selectfont دانشجوی محترم: لطفاً 
+%%	\textbf{شیوه نامه تدوین گزارش پیشنهاد موضوع تحقیق پایان‌نامه کارشناسی ارشد}	را از وب سایت دانشکده دريافت نمایید.	نسخه 94/06/31
+%%}
+
+}
+
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setlength{\parindent}{0pt}
+%\vspace{-0.25cm}
+%%%%%%%%%%%%%%مشخصات فردی را وارد کنید
+{
+\titr
+\textbf{مشخصات دانشجو:}
+}
+{\Naz
+\begin{center}
+	\scalebox{1.1}{
+		\begin{tabular}{|r|r|r|r|}
+			
+			\hline
+			نام و نام خانوادگی: نوید نصیری&
+			شماره دانشجويي: 40214394&
+			رشته: مهندسی کامپیوتر&
+			گرایش: نرم‌افزار
+			\\ \hline
+			\multicolumn{2}{|r|}{گرایش/رشته  دوره کارشناسی: مهندسی کامپیوتر-سیستم‌های هوشمند}&
+			\multicolumn{2}{|r|}{شماره تلفن همراه: 09215312706}
+			\\	\hline
+			
+		\end{tabular}}
+	\end{center}}
+%	\vfill
+
+%%%%%%%%%%%%%%عنوان پروپوزال را وارد کنید
+{
+\titr
+\textbf{مشخصات تحقیق پیشنهادی:}
+}
+{\Naz
+\begin{center}
+	\scalebox{0.97}{
+    \begin{tabular}{|c|c|}
+	\hline
+	عنوان فارسی & دوقلو‌های مجازی توزیع‌شده
+	\\ \hline  
+	عنوان انگلیسی & \lr{Distributed Digital Twins}
+	\\ \hline      
+	\end{tabular}}
+\end{center}
+}
+%%%%%%%%%%%%%% کلمات کلیدی گزارش
+%کلمات کلیدی خود را وارد کنید.
+\begin{center}
+	\scalebox{1.}{
+		\begin{tabular}{|r|r|r|r|}
+			\hline
+			کلمات کلیدی گزارش:&1- دوقلو‌های مجازی&2- سیستم‌ چند‌عاملی &3- هوش مصنوعی
+			\\ \hline  
+		\multicolumn{1}{|l|}{\lr{3- AI}} &
+		\multicolumn{1}{|l|}{\lr{2- Multi Agent System}} &
+		\multicolumn{1}{|l|}{\lr{1- Digital Twins}} &
+		\multicolumn{1}{|l|}{Keywords:}
+			\\ \hline
+	\end{tabular}}
+\end{center}
+
+
+%%%%%%%%%%%%%%مشخصات استاد راهنما و مشاور را وارد کنید، موارد وارد شده برای مثال است.
+{\titr
+	\textbf{اساتید راهنما و مشاور:}}
+\begin{center}
+	\scalebox{0.89}{
+		\begin{tabular}{|r|r|r|r|r|r|}
+			\hline
+			\multicolumn{1}{|c|}{سمت} &
+			\multicolumn{1}{c|}{نام و نام خانوادگی} &
+			\multicolumn{1}{c|}{درصد مشارکت} &
+			\multicolumn{1}{c|}{دانشگاه/مؤسسه} &
+			\multicolumn{1}{c|}{مرتبه علمی} &
+			\multicolumn{1}{c|}{تخصص مرتبط با پایان نامه}
+			\\ \hline
+			\multicolumn{1}{|r|}{استاد راهنما} &
+			دکتر  مسعودرضا هاشمی&۱۰۰ درصد&دانشگاه صنعتی اصفهان&استاد& شبکه‌های کامپیوتری
+			\\ \hline
+			\multicolumn{1}{|r|}{*استاد مشاور} &
+			&&&&
+			\\ \hline
+			\multicolumn{1}{|r|}{*استاد راهنمای دوم} &
+			&&&&
+			\\ \hline
+			\multicolumn{1}{|r|}{*استاد مشاور دوم} &
+			&&&&
+			\\ \hline
+	\end{tabular}}
+\end{center}
+%	\vfill
+
+\newpage
+\setlength{\parindent}{0pt}
+%\pagebreak
+% دستوری جهت حذف کردن شماره صفحه و سربرگ، در صورت وجود (فقط در صفحه جاری)
+\thispagestyle{empty}
+
+\clearpage
+
+	%%%%%%%%%%%سربرگ گزارش
+	% دستوری جهت حذف کردن شماره صفحه و سربرگ، در صورت وجود (فقط در صفحه جاری)
+\thispagestyle{empty}
+\newgeometry{left=3cm,right=3cm,top=2cm}
+{\Naz
+\begin{center}
+	باسمه تعالی
+	\\[.1cm]
+	\includegraphics[height=3cm]{iut_logo.png}
+	%دستوری برای کم کردن فاصله بین لوگو و خط پایین آن
+%	\vspace{-2mm}
+	\vspace{0.2cm}
+	
+	{\large
+		دانشگاه صنعتی اصفهان\\
+	}
+	{\small
+		دانشکده برق و کامپیوتر
+	}
+	%دستوری برای تعیین فاصله بین دو خط
+	\\[1.cm]
+	{\LARGE
+		\textbf{گزارش پيشنهاد موضوع تحقيق پایان‌نامه کارشناسی ارشد}	
+		\\[1.3cm]
+	}
+%	در اینجا نسخه اول یا نهایی بودن گزارش خود را معین نمایید.
+	{\Large
+		\textbf{نسخه اول }
+		\\[1.6cm]
+	}
+%	رشته خود را مشخص نمایید.
+	{\LARGE
+		\textbf{مهندسی کامپیوتر/نرم‌افزار}
+		\\[1.2cm]
+	}
+%	عنوان را وارد کنید.
+	{\titr
+		{\LARGE
+			\textbf{دوقلو‌های مجازی توزیع‌شده}
+		\\[2.5cm]
+		}
+	}
+%	نام خود را بنویسید
+	{\LARGE
+		\textbf{نوید نصیری}
+		\\[2cm]
+	}
+%		نام استاد(های) راهنمای خود را وارد کنید. موارد نوشته شده برای مثال اند
+	{\Large
+		دکتر مسعودرضا هاشمی
+%		\\
+%		نام استاد مشاور را وارد کنید.
+		\\[3.cm]
+	}
+	{\Large
+	\textbf{تاریخ}
+	\\[.4cm]
+	\textbf{شهریور ۱۴۰۳}
+	}
+\end{center}}
+\clearpage
+% دستوری جهت حذف کردن شماره صفحه و سربرگ، در صورت وجود (فقط در صفحه جاری)
+\thispagestyle{empty}
+		
+
+%*****************************************************************
+%% تنظیم مناسب صفحه و فونت برای متن اصلی پایان‌نامه
+\newgeometry{left=2.5cm,right=3cm,top=3cm,bottom=2.5cm,includehead=false,headsep=1cm,footnotesep=.5cm}
+\settextfont{XB Zar}\fontsize{12}{6}\selectfont
+\setlatintextfont{Times New Roman}\fontsize{11}{6}
+\baselineskip=.9cm
+
+\pagenumbering{arabic}
+% Moving page number to top right
+\pagestyle{myheadings}
+
+\newpage
+
+\section{موضوع کلی و زمینه اصلی تحقیق}
+
+در دنیای امروز، با پیشرفت تکنولوژی، هزینه نگهداری و استفاده از آن نیز روز به روز افزایش می‌یابد تا اینکه مارا ملزم به ایجاد یک دنیای مجازی از موجودیت‌های واقعی و فیزیکی، می‌کند. این دنیای مجازی ساخته‌شده از واقعیت را 
+دوقلوی مجازی یا همزاد مجازی \LTRfootnote{Digital Twin} 
+می‌نامیم. در دنیای امروز، مجازی‌سازی اشیاء، موجودیت‌ها و فرایند‌ها، این کمک را می‌کند که بتوان بدون نیاز به ایجاد تغییر و دستکاری در واقعیت، با مشاهده و بررسی دوقلوی مجازی آن، بهترین تصمیم گرفته و اجرا شود. با این وجود، یک حقیقت غیرقابل انکار در دنیا این است که یک فرایند واقعی، از ارتباط و تاثیر موجودیت‌ها، اشیاء و فرایند‌های کوچک‌تر بر یکدیگر ایجاد می‌شود و نمی‌توان این مورد را نادیده گرفت. لذا مطالعه بر نوع ارتباط چندعامل، مدیریت،‌ تبادل داده و تصمیم‌گیری درست بر اساس داده‌ها و هوش مصنوعی، می‌تواند به دوقلو‌های مجازی در دنیای مجازی کمک کند. پس دو مورد سیستم‌های چند‌عاملی و دوقلو‌های مجازی، می‌توانند مکمل یکدیگر باشند و نقاط ضعف یکدیگر را کامل کرده و در نهایت یک سامانه کامل از دنیای مجازی و دوقلوی مجازی به ما اهداء کنند.
+
+\section{مرور کارها و نتایج  قبلی }
+
+در این مقاله 
+\cite{b1}
+در هنگام بررسی روش‌های یادگیری عمیق در بهبود تصاویر کم نور، چهار استراتژی یادگیری متمایز شناسایی می‌شوند: یادگیری با نظارت، یادگیری بدون نظارت، یادگیری نیمه نظارتی\LTRfootnote{Supervised Learning} و یادگیری بدون نمونه\LTRfootnote{Zero-shot Learning}.
+
+یادگیری با نظارت در بهبود تصاویر کم نور از تصاویر جفتی استفاده می‌کند که فقط در میزان نوردهی متفاوت هستند. کار پیشگامانه LLNet\cite{b1} از یک خودرمزگذار\LTRfootnote{Autoencoder} پاک کننده تنک\LTRfootnote{Stacked Sparse} برای استخراج اطلاعات چند مقیاسی\LTRfootnote{Multi-scale} استفاده کرد. پژوهش بعدی، MBLLEN\cite{b2} برای اولین بار تکنیک های بهبود تصویر کم نور را به ویدیوها اعمال کرد. KinD\cite{b3} و KinD++\cite{b4} ترکیبی از نظریه مبتنی بر مدل Retinex و بهبود تصویر محور داده را برای مقابله با تنظیم نور و حذف تخریب ارائه دادند.
+
+یادگیری بدون نظارت تنها از تصاویر کم نور استفاده می‌کند. EnlightenGAN\cite{b5} یک شبکه مولد تخاصمی\LTRfootnote{Generative Adversarial Network} بدون نظارت است که یادگیری بدون جفت را با استفاده از یک تبعیض گذار چند مقیاسی\LTRfootnote{Multi-scale Discriminator}، خسارت درکی خود تنظیم شده\LTRfootnote{Self-regularized Perceptual Loss} و مکانیزم توجه\LTRfootnote{Attention Mechanism} تنظیم می‌کند. SCI\cite{b6} یک چارچوب روشنایی خود تنظیم شونده\LTRfootnote{Self-calibrated} را معرفی می‌کند که از یک فرآیند یادگیری روشنایی زنجیره ای با اشتراک وزن استفاده می‌کند.
+
+یادگیری نیمه نظارتی از تعداد کمی از تصاویر جفتی و تعداد زیادی تصاویر بدون جفت استفاده می‌کند. تا کنون تنها یک روش نماینده برای بهبود کیفیت تصاویر کم نور به نام DRBN\cite{b7} از این استراتژی استفاده کرده است.
+
+یادگیری بدون نمونه در بهبود تصاویر کم نور نیازی به داده‌های آموزشی جفتی یا بدون جفت ندارد. به عنوان مثال ExCNet\cite{b8} یک شبکه عصبی پیچشی\LTRfootnote{Convolutional Neural Network} بدون نمونه را بر اساس تخمین منحنی S که بهترین تطبیق را با نوردهی تصاویر پس روشن می‌یابد معرفی کرده است.
+
+هر یک از این روش‌ها دارای مزایا و معایب خاص خود هستند. به عنوان مثال روش‌های یادگیری با نظارت بسیار وابسته به مجموعه داده‌های آموزشی جفتی هستند و روش‌های یادگیری بدون نمونه نمی‌توانند تمامی خصوصیات ضروری تصاویر کم نور دنیای واقعی را پوشش دهند. استفاده از مناسب‌ترین روش بسیار وابسته به مسئله‌ای است که با آن سر و کار داریم.
+
+\section{نحوه ارزیابی دستاوردهای تحقیق}
+در مسئله بهبود تصاویر با نوردهی کم از دو معیار نسبت قله سیگنال به نویز\LTRfootnote{Peak Signal-to-noise Ratio} و شاخص تشابه ساختاری\LTRfootnote{Structural Similarity Index } استفاده می‌شود زیرا ما به دنبال تصویر با کیفیت بالاتر (با نسبت قله سیگنال به نویز بالاتر) هستیم که در عین حال ساختار اصلی تصویر (که با شاخص تشابه ساختاری اندازه‌گیری می‌شود) را حفظ کند. به همین دلیل نسبت قله سیگنال به نویز و شاخص تشابه ساختاری معیارهای مناسبی برای ارزیابی کیفیت تصاویر بازیابی شده در این مسئله هستند.
+
+\section{زمان‌بندی تحقیق}
+در جدول \ref{tab11}، برنامه‌ی یکسال آینده، زمان‌بندی تقریبی انجام مراحل مختلف تحقیق جهت بدست آوردن نتایج تحقیق برآورد شده است.
+\begin{table}[H]
+	\centering
+	\caption{پیش بینی زمان بندی فعالیت‌ها و مراحل اجرایی تحقیق و ارائه گزارش پیشرفت کار}
+	\label{tab11}
+	\scalebox{.80}{
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			ردیف &
+			\multicolumn{1}{>{\centering}m{7cm}|}{شرح فعالیت}
+			&	 زمان کل &
+			\multicolumn{12}{c|}{زمان اجرا به ماه}\\
+			\cline{4-15}
+			&
+			\multicolumn{1}{>{\centering}m{4cm}|}{}&
+			(ماه) & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12
+			\\ \hline
+			1 &
+			\multicolumn{1}{>{\centering}m{7cm}|}{شبیه‌سازی کارهای پیشین}	
+			& 4 & $\times$ &$\times$ &$\times$ & $\times$& & & & & & & &
+			\\ \hline
+			2 &
+			\multicolumn{1}{>{\centering}m{7cm}|}{بهبود روش‌های قبلی و ارائه راهکار جدید}	
+			& 5 & & & $\times$ &$\times$ & $\times$&$\times$ &$\times$ & & & & &
+			\\ \hline
+			3
+			&
+			\multicolumn{1}{>{\centering}m{7cm}|}{شبیه‌سازی ساختار جدید و ارزیابی نتایج حاصله}
+			& 5 & & &  & & & &$\times$ &$\times$ &$\times$ &$\times$ &$\times$ &
+			\\ \hline
+			4 &
+			\multicolumn{1}{>{\centering}m{7cm}|}{نگارش پایان‌نامه}
+			& 5 & & & &  &  &  &  & $\times$ & $\times$ & $\times$ & $\times$ & $\times$
+			\\ \hline
+%			5 &
+%			\multicolumn{1}{>{\centering}m{7cm}|}{}
+%			& & & & & & & & & & & & &
+%			\\ \hline
+	\end{tabular}}
+\end{table}
+\section{امكانات و تجهيزات مورد نياز، نحوه تامين و جدول  برآورد هزينه}
+
+
+\newpage
+
+\renewcommand{\bibname}{مراجع}
+\addcontentsline{toc}{chapter}{مراجع}
+
+\bibliographystyle{IEEEtran}
+
+\setLTRbibitems
+
+\begin{thebibliography}{99}
+
+\begin{latin}
+
+\bibitem{b1}
+Barricelli, B.R., Casiraghi, E. and Fogli, D. (2019) ‘A survey on digital twin: Definitions, characteristics, applications, and design implications’, IEEE Access, 7, pp. 167653-167671.
+
+\bibitem{b2}
+ F. Lv, F. Lu, J. Wu, and C. Lim, “Mbllen: Low-light image/video enhancement using cnns.” in \textit{BMVC}, vol. 220, no. 1, 2018, p. 4.
+
+\bibitem{b3}
+Y. Zhang, J. Zhang, and X. Guo, “Kindling the darkness: A practical low-light image enhancer,” in \textit{Proceedings of the 27th ACM international conference on multimedia}, 2019, pp. 1632–1640.
+
+\bibitem{b4}
+Y. Zhang, X. Guo, J. Ma, W. Liu, and J. Zhang, “Beyond brightening low-light images,” \textit{International Journal of Computer Vision}, vol. 129, no. 4, pp. 1013–1037, 2021.
+
+\bibitem{b5}
+Y. Jiang, X. Gong, D. Liu, Y. Cheng, C. Fang, X. Shen, J. Yang, P. Zhou, and Z. Wang, “Enlightengan: Deep light enhancement without paired supervision,” \textit{IEEE Transactions on Image Processing}, vol. 30, pp. 2340–2349, 2021.
+
+\bibitem{b6}
+ L. Ma, T. Ma, R. Liu, X. Fan, and Z. Luo, “Toward fast, flexible, and robust low-light image enhancement,” in \textit{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, 2022, pp. 5637–5646.
+
+\bibitem{b7}
+W. Yang, S. Wang, Y. Fang, Y. Wang, and J. Liu, “From fidelity to perceptual quality: A semi-supervised approach for low-light image enhancement,” in \textit{Proceedings of the IEEE/CVF conference on computer vision and pattern recognition}, 2020, pp. 3063–3072.
+
+\bibitem{b8}
+L. Zhang, L. Zhang, X. Liu, Y. Shen, S. Zhang, and S. Zhao, “Zeroshot restoration of back-lit images using deep internal learning,” in \textit{Proceedings of the 27th ACM International Conference on Multimedia}, 2019, pp. 1623–1631.
+
+\end{latin}
+
+\end{thebibliography}
+
+
+\newpage
+	%%%%%%%% تعهدنامه
+
+
+\begin{center}
+
+	\scalebox{.80}{
+		\begin{tabular}{|c|}
+			\hline
+			\\
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{\textbf{تعهد دانشجو:}}
+			\\
+			\\
+			%%%%%%%% اطلاعات (فرم را با اطلاعات خود پر کنید.)
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{
+				اینجانب ---------------- ضمن اطلاع از اینکه كليه حقوق مادی مترتب بر نتايج تحقيق این پایان نامه متعلق به دانشگاه صنعتی اصفهان بوده و انتشار نتايج تابع مقررات دانشگاهی است که صرفاً پس از موافقت و تایید استاد/ اساتيد راهنما قابل انجام است، تعهد می‌نمایم که اصول اخلاق علمی در انتخاب موضوع و نگارش این گزارش رعایت شده و در طول تحقیق و تدوین/انتشار  نتایج/گزارش ها/مقالات  بعدی نیز رعايت شود.
+			}
+			\\
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{
+				%				نام خود را وارد کنید.
+				نام و نام خانوادگي: 
+				\hspace{.5cm}
+				امضا:
+				%			فایل امضای خود را با نام Signature.JPG در مسیر قرار دهید و کامنت بعدی را انکامنت کنید
+				%			\includegraphics[scale=.4]{Signature.JPG}
+				\hspace{1.5cm}
+				تاریخ:
+			}
+			\\ \hline
+	\end{tabular}}
+\end{center}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\scalebox{.80}{
+		\begin{tabular}{|c|}
+			\hline
+			\\
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{\textbf{تائيد اساتيد راهنما و مشاور پایان‌نامه:}}
+			\\
+			\\
+		
+			%%%%%%%% اطلاعات
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{
+				در صورت تصويب موضوع تحقيق پيشنهادي، بدين‌وسيله آمادگي خود را براي راهنمايي و مشاوره دانشجو در كليه مراحل انجام و ارائه تحقيق و مشاركت در ارزيابي پایان‌نامه بر اساس ضوابط دانشگاه و دانشكده اعلام مي‌نماييم. 
+			}
+			\\
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{
+				\hspace{5cm}نام و نام خانوادگی:
+				\hspace{2.5cm}
+				امضا:
+				%			\begin{figure}
+					%				\includegraphics[scale=0.4]{Signature.JPG}
+					%			\end{figure}
+				\hspace{2.5cm}
+				تاریخ:
+			}
+			\\
+			
+			\multicolumn{1}{|>{\raggedright}m{18cm}|}{
+				\begin{enumerate}[1-]
+					\item
+					استاد راهنما
+					\item
+					استاد مشاور 
+					\item
+					استاد راهنمای دوم*
+					\item
+					استاد مشاور دوم*
+				\end{enumerate}
+			}
+			
+			\\ \hline
+	\end{tabular}}
+\end{center}
+
+%% نظر نهایی گروه
+
+\begin{center}
+	\scalebox{.80}{
+		\begin{tabular}{|c|}
+			\hline
+			\\
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{\textbf{نظر نهایی گروه:}}
+			\\
+			\\
+			
+			%%%%%%%% اطلاعات
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{
+				نسخه نهایی پیشنهاده مورد تایید است.
+			}
+			\\
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{
+				\hspace{5cm}نام و نام خانوادگی مدیر گروه:
+				\hspace{2.5cm}
+				امضا:
+				%			\begin{figure}
+					%				\includegraphics[scale=0.4]{Signature.JPG}
+					%			\end{figure}
+				\hspace{2.5cm}
+				تاریخ:
+			}
+			\\
+			
+			\\ \hline
+	\end{tabular}}
+\end{center}
+
+%% نظر نهایی شورای تحصیلات تکمیلی دانشکده
+
+\begin{center}
+	\scalebox{.80}{
+		\begin{tabular}{|c|}
+			\hline
+			\\
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{\textbf{نظر نهایی شورای تحصیلات تکمیلی دانشکده:}}
+			\\
+			\\
+			
+			%%%%%%%% اطلاعات
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{
+موضوع پیشنهادی تحقیق پایان‌نامه کارشناسی ارشد آقا/خانم --------------- مورد تایید است.
+			}
+			\\
+			\multicolumn{1}{|>{\raggedright}m{19cm}|}{
+				\hspace{5cm}نام و نام خانوادگی مدیر گروه:
+				\hspace{2.5cm}
+				امضا:
+				%			\begin{figure}
+					%				\includegraphics[scale=0.4]{Signature.JPG}
+					%			\end{figure}
+				\hspace{2.5cm}
+				تاریخ:
+			}
+			\\
+			
+			\\ \hline
+	\end{tabular}}
+\end{center}
+
+
+%\bibliography{REF}
+\end{document}
+%% End of file 

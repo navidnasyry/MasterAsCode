@@ -1,0 +1,132 @@
+%% !TeX root=GUATThesis-main.tex
+%% !TEX TS-program = XeLaTeX
+%بسته های برای تایپ متون ریاضی و محیط های شماره دار
+\usepackage{amsthm,amssymb,amsmath,amsfonts}			% Writing math
+\usepackage{mathtools}
+%% \usepackage{upgreek}  %%برای ایستاده نمایش دادن شکل ایستاده نمادهای یونانی
+\usepackage[shortlabels]{enumitem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بسته‌ای برای تنطیم حاشیه‌های بالا، پایین، چپ و راست صفحه
+\usepackage[top=40mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بسته ای برای رسم انواع مختلف نمودارها
+\usepackage{tikz}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بسته‌‌ای برای ظاهر شدن شکل‌ها و تصاویر متن
+\usepackage{epsf,graphicx}								% Including graphics
+\usepackage{caption, subcaption}
+\usepackage{xcolor,colortbl}
+\definecolor{green}{rgb}{0.5,1,0.5}
+\usepackage{makecell}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%دستوری برای وارد کردن واژه‌نامه انگلیسی به فارسی
+\newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}
+%\newcommand{\done}{\cellcolor{teal}5- اطلاعات رساله} %{0.9}
+%\newcommand{\hcyan}[1]{{\color{teal} #1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[stable,bottom]{footmisc}					% Move footnotes to the bottom of page
+\usepackage{notoccite}% PREVENTS CITES IN CAPTIONS FROM MISNUMBERING YOUR REFERENCES 
+\usepackage{cite}
+\usepackage{url}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% برای مدیریت بر ساختار عناوین، هدر و ... مربوط به فصل، بخش و ...
+\usepackage{emptypage}
+\usepackage{titlesec}
+\usepackage{setspace}									% Change line spacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% مورد استفاده در تعاریف با استفاده از newcommand
+%\usepackage{xspace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
+\usepackage[colorlinks=true,linkcolor=Blue,urlcolor=Blue,citecolor=Blue]{hyperref}
+% چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌، 
+% لینک‌ها به رنگ سیاه ظاهر خواهند شد و برای پرینت گرفتن، مناسب‌تر خواهد بود.
+%\usepackage[pagebackref=false]{hyperref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%بسته های مربوط به ایجاد الگوریتم
+\usepackage{algorithm,algcompatible}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%بسته هایی برای مدیریت کپشن در محیط های شناور مانند شکل و جدول و ...
+\usepackage[textfont={small},labelfont={rm,small},format=hang,labelsep=quad,justification={centering},aboveskip=2pt,belowskip=4pt]{caption}
+\usepackage{subcaption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بسته مورد نیاز برای نوشتن کدهای برنامه نویسی در نوشتار و رنگ
+\usepackage{listings}
+\usepackage{color}
+\definecolor{Blue}{rgb}{0,0,.55}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{pbox}
+%تغییر اندازه سطرهای جداول
+\renewcommand{\arraystretch}{1.2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{roundbox,framed}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%بسته‌ای برای ظاهر شدن «مراجع»  در فهرست مطالب
+\usepackage{tocbibind}
+\usepackage{zref-perpage}
+\zmakeperpage[1]{footnote}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\renewcommand\tableofcontents{%
+	\if@twocolumn
+	\@restonecoltrue\onecolumn
+	\else
+	\@restonecolfalse
+	\fi
+	\centerline{\huge\bfseries\contentsname
+		\@mkboth{%
+			\MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+	\vskip 20\p@
+	\@starttoc{toc}%
+	\if@restonecol\twocolumn\fi
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{indentfirst}
+% فراخوانی بسته زی‌پرشین و تعریف قلم فارسی و انگلیسی
+%\usepackage[extrafootnotefeatures]{xepersian}
+\usepackage{xepersian}
+%دستور \usepackage{xepersian} باید بعد از همه بسته‌ها (پکیج‌ها)گذاشته شود یعنی زیپرشین آخرین بسته‌ای باید باشد که فراخوانی می‌کنید
+%\settextfont[Scale=0.93]{HM XZar}
+\settextfont{XB Zar}										% Persian font
+\setlatintextfont{Times New Roman}
+% تعریف قلم‌های فارسی و انگلیسی برای استفاده در بعضی از قسمت‌های متن
+\defpersianfont\titr[Scale=1]{B Titr}
+\defpersianfont\Naz[Scale=1]{B Nazanin}
+\defpersianfont\traffic[Scale=1]{B Traffic}
+% چنانچه می‌خواهید که اعداد داخل فرمول‌ها، فارسی باشد، دستور زیر را فعال کنید
+%\setdigitfont{Yas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Use English digits in equations
+\usepackage{amsmath}
+
+%\DefaultMathsDigits
+
+% Default footnotes from left to right
+\setfootnoteLR
+
+% Use dash instead of dot in section numbers
+%\SepMark{.}										
+
+
+%% Change fonts and margins of section and subsection titles
+%% For chapters please see firstpages.tex
+%\titlespacing*{\section}{0pt}{1cm}{0.2cm}
+%\titleformat{\section}
+%{\fontsize{12}{6}\scshape\bfseries}{\thesection}{1em}{}
+%
+%\titlespacing*{\subsection}{0pt}{.8cm}{0cm}
+%\titleformat{\subsection}
+%{\fontsize{11}{6}\scshape\bfseries}{\thesubsection}{1em}{}
