@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.6)  6 SEP 2024 23:32
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.6)  7 SEP 2024 23:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1531,49 +1531,49 @@ LaTeX Font Info:    Font shape `TU/BTitr(0)/b/n' will be
 
 LaTeX Info: Redefining \persianfont on input line 210.
 LaTeX Info: Redefining \latinfont on input line 211.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 223.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 222.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 223.
+(Font)              size <5> substituted on input line 222.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 223.
+(Font)              size <5> substituted on input line 222.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 223.
+(Font)              size <5> substituted on input line 222.
 
 [1
 
 
 ]
 LaTeX Font Info:    Font shape `TU/XBZar(0)/m/sl' in size <10> not available
-(Font)              Font shape `TU/XBZar(0)/m/it' tried instead on input line 2
-86.
+(Font)              Font shape `TU/XBZar(0)/m/it' tried instead on input line 3
+07.
  [2] [3]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 298.
+(hyperref)                be the same. Added a new anchor on input line 319.
 
 [4]
-Overfull \hbox (4.26053pt too wide) in paragraph at lines 360--361
+Overfull \hbox (4.26053pt too wide) in paragraph at lines 378--379
  [][][][][] 
  []
 
 
-Overfull \hbox (4.26053pt too wide) in paragraph at lines 404--405
+Overfull \hbox (4.26053pt too wide) in paragraph at lines 422--423
  [][][][][] 
  []
 
 
-Overfull \hbox (4.26053pt too wide) in paragraph at lines 436--437
+Overfull \hbox (4.26053pt too wide) in paragraph at lines 454--455
  [][][][][] 
  []
 
 
-Overfull \hbox (4.26053pt too wide) in paragraph at lines 468--469
+Overfull \hbox (4.26053pt too wide) in paragraph at lines 486--487
  [][][][][] 
  []
 
@@ -1598,12 +1598,12 @@ Package rerunfilecheck Info: File `Proposal.out' has not changed.
 (rerunfilecheck)             Checksum: E922AF518146F847BD11F81B810F3CD5;1631.
  ) 
 Here is how much of TeX's memory you used:
- 30893 strings out of 409617
- 602342 string characters out of 5778277
- 1938191 words of memory out of 5000000
- 52345 multiletter control sequences out of 15000+600000
- 566615 words of font info for 138 fonts, out of 8000000 for 9000
+ 30889 strings out of 409617
+ 602324 string characters out of 5778277
+ 1939191 words of memory out of 5000000
+ 52339 multiletter control sequences out of 15000+600000
+ 566623 words of font info for 139 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 107i,16n,110p,1357b,484s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,16n,110p,1357b,485s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on Proposal.pdf (7 pages).
