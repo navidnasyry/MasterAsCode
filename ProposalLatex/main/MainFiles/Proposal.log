@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.6)  7 SEP 2024 23:33
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.9.6)  12 SEP 2024 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1550,30 +1550,30 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
 
 ]
 LaTeX Font Info:    Font shape `TU/XBZar(0)/m/sl' in size <10> not available
-(Font)              Font shape `TU/XBZar(0)/m/it' tried instead on input line 3
-04.
+(Font)              Font shape `TU/XBZar(0)/m/it' tried instead on input line 2
+68.
  [2] [3]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 316.
+(hyperref)                be the same. Added a new anchor on input line 336.
 
 [4]
-Overfull \hbox (4.26053pt too wide) in paragraph at lines 375--376
+Overfull \hbox (4.26053pt too wide) in paragraph at lines 395--396
  [][][][][] 
  []
 
 
-Overfull \hbox (4.26053pt too wide) in paragraph at lines 419--420
+Overfull \hbox (4.26053pt too wide) in paragraph at lines 439--440
  [][][][][] 
  []
 
 
-Overfull \hbox (4.26053pt too wide) in paragraph at lines 451--452
+Overfull \hbox (4.26053pt too wide) in paragraph at lines 471--472
  [][][][][] 
  []
 
 
-Overfull \hbox (4.26053pt too wide) in paragraph at lines 483--484
+Overfull \hbox (4.26053pt too wide) in paragraph at lines 503--504
  [][][][][] 
  []
 
@@ -1595,13 +1595,13 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Proposal.out' has not changed.
-(rerunfilecheck)             Checksum: E922AF518146F847BD11F81B810F3CD5;1631.
+(rerunfilecheck)             Checksum: 4EE19021195E6961F590FE9EC50E951F;1986.
  ) 
 Here is how much of TeX's memory you used:
- 30889 strings out of 409617
- 602324 string characters out of 5778277
+ 30891 strings out of 409617
+ 602347 string characters out of 5778277
  1939191 words of memory out of 5000000
- 52339 multiletter control sequences out of 15000+600000
+ 52341 multiletter control sequences out of 15000+600000
  566623 words of font info for 139 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  107i,16n,110p,1357b,485s stack positions out of 10000i,1000n,20000p,200000b,200000s
