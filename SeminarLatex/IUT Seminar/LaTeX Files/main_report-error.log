@@ -1,0 +1,11 @@
+return {
+ ["errortype"]=0,
+ ["filename"]="./main_report.tex",
+ ["lastcontext"]="\n<line 3.9> \n    \\documentclass\n    [a4paper,fleqn]{report}\n\n",
+ ["lastluaerror"]="",
+ ["lasttexerror"]="Undefined control sequence",
+ ["lasttexhelp"]="The control sequence at the end of the top line of your error message was never\n\\def'ed. You can just continue as I'll forget about whatever was undefined.",
+ ["linenumber"]=9,
+ ["offset"]=10,
+ ["skiplinenumber"]=0,
+}
