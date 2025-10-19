@@ -1,5 +1,0 @@
-\textbf {\relax $\@@underline {\hbox {\beginR عنوان\endR }}\mathsurround \z@ $\relax }
-\hfill \textbf {\relax $\@@underline {\hbox {\beginR صفحه\endR }}\mathsurround \z@ $\relax }\par 
-\contentsline {section}{فهرست مطالب}{5}{Item.4}%
-\contentsline {section}{\numberline {1}چکیده }{6}{section.1}%
-\contentsline {section}{مراجع}{6}{table.caption.2}%
