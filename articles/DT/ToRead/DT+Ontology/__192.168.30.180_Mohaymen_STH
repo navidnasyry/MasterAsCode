@@ -1,0 +1,108 @@
+بدنه پاسخ
+"Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project description,Project url,Priority,Resolution,Assignee,Reporter,Creator,Created,Updated,Last Viewed,Resolved,Affects Version/s,Affects Version/s,Component/s,Due Date,Votes,Labels,Labels,Description,Environment,Watchers,Watchers,Watchers,Log Work,Original Estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Outward issue link (Incident/Bug),Outward issue link (Relates),Attachment,Attachment,Custom field (Account),Custom field (Actual Completion Date),Custom field (Actual Start Change),Custom field (Approval Request Date),Custom field (Asnad Digital CIs),Custom field (Assessment Responsible),Assessment Sub-task DAP,Assessment Sub-task DAP simplified,Custom field (Backout Plan),Custom field (Baseline end date),Custom field (Baseline start date),Custom field (Begin Date),Custom field (Benefit Plan),Custom field (Bonus (Rials)),Custom field (Bug Reason),Custom field (Bug Rejection),Custom field (Canceled Date),Custom field (Change Completion),Custom field (Change Duration (Days)),Custom field (Change Reason),Custom field (Change Result),Custom field (Change Start),Custom field (Change risk),Custom field (ClosedBy),Custom field (ClosedDate),Custom field (Commentary),Custom field (Concerns),Creation Time to End,Creation Time to End simplified,Custom field (Customer Approval),Custom field (Customer Rejected),Customer Request Type,Custom field (DeliveredBy),Custom field (DeliveredDate),Custom field (Deploy Completion),Custom field (Deploy Responsible),Custom field (Deploy with Customer Approve),Custom field (Deployed Plan),Custom field (Designer),Custom field (Developed Date),Custom field (EditDate),Custom field (Employee Suggestions),Custom field (Employee's Name),Custom field (End date),Custom field (Epic Link),Custom field (Escalation Reason),Custom field (Escalation Result),Custom field (GSC VSS CIs),Custom field (Implementation Failure),Custom field (Implementation Plan),Custom field (Implementation Responsible),Custom field (Implementation Start),Custom field (Implementation Time (hour)),Custom field (InProgressBy),Custom field (InProgressDate),Custom field (Investigation reason),Custom field (Iteration),Custom field (Last Assign),Custom field (Linked major incidents),Custom field (Need To Deploy),Custom field (NewBy),Custom field (NewDate),OLA - Tier 3,OLA - Tier 3 simplified,Custom field (OLA ALM),Custom field (OLA Service Desk),Custom field (OLA Total),Custom field (Old Implementation Cost),Custom field (Operational categorization),Custom field (Original story points),Custom field (Other Party),Custom field (Overdue Status),Custom field (Owner),Custom field (PIR Responsible),Custom field (Parent Link),Custom field (Passing Deploy),Custom field (Patch Number),Custom field (Payment conditions),Custom field (Pended to Customer),Custom field (Pending reason),Custom field (PendingBy),Custom field (PendingDate),Custom field (Planning Duration),Custom field (Problem Solution),Custom field (Product categorization),Custom field (Program Increment),Custom field (RDBMS Version),Custom field (Rank),Custom field (Reason),Custom field (Reason),Custom field (Reason Description),Custom field (Reason Explanation),Custom field (Reassess Date),Custom field (Related Issue Link Status),Custom field (Related issue link URL),Custom field (Request participants),Custom field (ResolveBy),Custom field (ResolveDate),Custom field (Review Result),Custom field (Risk Plan),Custom field (Risk consequence),Custom field (Risk probability),Custom field (Root Cause),SLA request,SLA request simplified,Custom field (STAR CIs),Custom field (STAR CIs),Satisfaction score (out of 5),Service Level Agreement,Service Level Agreement simplified,Custom field (Source),Custom field (Start date),Custom field (Suggested Solutions),Custom field (SuspendedBy),Custom field (SuspendedDate),TTR,TTR simplified,Custom field (Target Date),Custom field (Target end),Custom field (Target start),Custom field (Task mode),Custom field (Task progress),Custom field (Team),Custom field (Team),Custom field (Team (MOD)),Custom field (Team Role),Custom field (Tech Leader),Custom field (Tech. Responsible),Custom field (Technical Implementation Time (hour)),Temporary Solution,Temporary Solution simplified,Custom field (Test Case Status),Custom field (Test Failure),Custom field (Test Plan),Custom field (Test Responsible),Time In Pend,Time In Pend simplified,Time To Escalate (OLA) - Tier1,Time To Escalate (OLA) - Tier1 simplified,Time To Escalate (OLA) - Tier2,Time To Escalate (OLA) - Tier2 simplified,Time To Resolution (OLA) - Tier 2,Time To Resolution (OLA) - Tier 2 simplified,Time To Resolution (OLA) - Tier 3,Time To Resolution (OLA) - Tier 3 simplified,Time To Resolution For Bug,Time To Resolution For Bug simplified,Time in Authorization (Change),Time in Authorization (Change) simplified,Time in Evaluation (Major Change),Time in Evaluation (Major Change) simplified,Time in In Progress,Time in In Progress simplified,Time in NEW(Change),Time in NEW(Change) simplified,Time in PIR (Change),Time in PIR (Change) simplified,Time in Resolved (change),Time in Resolved (change) simplified,Time in To Do,Time in To Do simplified,Time in assessment (Change),Time in assessment (Change) simplified,Time to Plan,Time to Plan simplified,Time to Plan or Rejecting,Time to Plan or Rejecting simplified,Time to Resolve,Time to Resolve simplified,Custom field (Time to SLA),Time to approve normal change,Time to approve normal change simplified,Time to close after resolution,Time to close after resolution simplified,Time to first Response,Time to first Response simplified,Time to first response,Time to first response simplified,Time to resolution,Time to resolution simplified,Custom field (Urgency),Custom field (Value Area),Custom field (Vendor),Custom field (Vendor),Waiting For Other Parties,Waiting For Other Parties simplified,Custom field (Workaround),calender,calender simplified,Custom field (comment),Custom field (due date- hasan agha),Custom field (gitCommitsReferenced),ola-copy,ola-copy simplified,Custom field (test due date),Custom field (test dynamic duration),Custom field (شرح فعالیت1),Custom field (شرح فعالیت2),Custom field (شرح فعالیت3),Custom field (مدیر مناقصه),Custom field (همکار1),Custom field (همکار2),Custom field (همکار3),Comment,Comment,Comment,Comment,Comment,Comment
+پرتال تحلیل عملکرد - داشبورد - عدم امکان استفاده ی همزمان از یک جدول، در دو فیلتر ,DATALM-97550,485545,Bug,Suspended,DATALM,DAT ALM,software,m.haghighat,,,3,,,z.heydarian,JiraAutomatic,17/Jun/23 12:39 PM,23/Oct/23 7:46 AM,29/Nov/23 5:39 PM,,26,27,MCI FMRA,,0,generated-in-27,m.f,""با سلام
+
+در داشبورد پلتفرم تحلیل عملکرد، استفاده از یک جدول، در دو فیلتر امکان پذیر نیست.
+
+بعنوان مثال، جدولی در ماژول اطلاعات پایه با نام X ساخته شده است. این جدول دارای یک ستون است که مقادیر آن شامل اسامی کشور های مختلف است.(20 کشور)
+
+داشبوردی داریم که در آن دو فیلتر با نام {color:#00875a}کشور مبدا({color:#172b4d}در تصویر{color} Roam_Country){color} و
+
+{color:#de350b}کشور مقصد({color:#172b4d}در تصویر{color} Other_Country){color} موجود است. جدول X را به فیلتر {color:#00875a}کشور مبدا{color} assign می کنیم، لیست کشورها(20 کشور) نمایش داده می شود. حال جدول X را به فیلتر {color:#de350b}کشور مقصد{color} assign می کنیم، در این حالت هنگامی که بر روی این فیلتر در داشبورد کلیلک می کنیم، کشوری نمایش داده نمی شود.(No data found)
+
+حال اگر جدولی با نام Y بسازیم که دارای اطلاعات مشابه به X است و آن را به {color:#de350b}کشور مقصد{color} assign کنیم، داد ها به درستی نمایش داده می شود. به عبارت دیگر امکان assign کردن یک جدول به دو فیلتر وجود ندارد.
+
+همچنین اگر جدول X را ابتدا به {color:#de350b}کشور مقصد{color} assign کنیم سپس به {color:#00875a}کشور مبدا{color}، این بار لیست کشورها برای {color:#00875a}کشور مبدا{color} نمایش داده نمی شود.
+
+اطلاعات سامانه:
+
+PAPortal: 21.0.177.0
+
+AM:21.0.157.0
+
+BaseModule:21.0.20.0
+
+Web:21.0.487.0"",,a.amanifar,JiraAutomatic,m.nafar,,,,,,,,,,DATSM-8040,DATALM-97785,""17/Jun/23 12:39 PM;JiraAutomatic;فیلتر داشبورد 1 .webm;https://jira.mohaymen.ir/secure/attachment/169976/%D9%81%DB%8C%D9%84%D8%AA%D8%B1+%D8%AF%D8%A7%D8%B4%D8%A8%D9%88%D8%B1%D8%AF+1+.webm"",""17/Jun/23 12:39 PM;JiraAutomatic;فیلتر داشبورد 2 .webm;https://jira.mohaymen.ir/secure/attachment/169977/%D9%81%DB%8C%D9%84%D8%AA%D8%B1+%D8%AF%D8%A7%D8%B4%D8%A8%D9%88%D8%B1%D8%AF+2+.webm"",,,,,,,,,,,,18/Jun/23 8:00 AM,,,,,,,,New functionality,,,,,,,,,,,,,,,,,,,,,21/Jun/23 7:49 AM,,,22/Oct/23 11:59 PM,,,Backlog Needed,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,21/Jun/23 7:49 AM,,,,,,""2|i15nmv:"",,,,,,,,,,,,,,,,,,PAPortal (DC-4598),,,,,,22/Oct/23 12:00 AM,,,,,,2023-06-24T15:57:01,,,,,,,,,h.rajabi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-129d 2m 59s,,,,,,,,,,,,Business,,,,,,,,""با سلام و احترام.
+
+این مشکل بدلیل قابلیت پارامتر آبشاری بوجود می آید. وقتی از یک جدول در دو پارامتر استفاده میکنیم، سعی می شود که داده های پارامتر دوم بر حسب مقدار پارامتر اول فیلتر شود، حال چون هر دو به یک ستون متصل شده اند، داده ای برای پارامتر دوم پیدا نمیشود.
+چون ما قابلیتی برای فعال بودن یا نبودن پارامتر آبشاری نداریم، این جور مشکلات بوجود می آیند.
+به منظور رفع موقتی این مشکل می‌توانید از جداول مجزا استفاده کنید.
+در صورتی که ضروری است تا امکان غیرفعال کردن قابلیت آبشاری برای شما فراهم شود بفرمایید تا اصلاح شود.
+
+با تشکر"",,,,,2023-06-24T15:57:01,,,,,,,,,""18/Jun/23 7:31 AM;m.nafar;با سلام و احترام.
+این مشکل بدلیل قابلیت پارامتر آبشاری بوجود می آید. وقتی از یک جدول در دو پارامتر استفاده میکنیم، سعی می شود که داده های پارامتر دوم بر حسب مقدار پارامتر اول فیلتر شود، حال چون هر دو به یک ستون متصل شده اند، داده ای برای پارامتر دوم پیدا نمیشود.
+چون ما قابلیتی برای فعال بودن یا نبودن پارامتر آبشاری نداریم،  این جور مشکلات بوجو می آیند.
+با تشکر"",""21/Jun/23 7:49 AM;m.movahedrad;*{color:red}
+""""External""""
+{color}*
+با سلام و احترام.
+
+این مشکل بدلیل قابلیت پارامتر آبشاری بوجود می آید. وقتی از یک جدول در دو پارامتر استفاده میکنیم، سعی می شود که داده های پارامتر دوم بر حسب مقدار پارامتر اول فیلتر شود، حال چون هر دو به یک ستون متصل شده اند، داده ای برای پارامتر دوم پیدا نمیشود.
+چون ما قابلیتی برای فعال بودن یا نبودن پارامتر آبشاری نداریم، این جور مشکلات بوجود می آیند.
+به منظور رفع موقتی این مشکل می‌توانید از جداول مجزا استفاده کنید.
+در صورتی که ضروری است تا امکان غیرفعال کردن قابلیت آبشاری برای شما فراهم شود بفرمایید تا اصلاح شود.
+
+با تشکر"",""24/Jun/23 3:57 PM;JiraAutomatic;*{color:red}
+""""External""""
+{color}*
+زهرا حیدریان:
+با سلام 
+
+بله وجود چنین امکانی برای ما دارای اهمیت بالایی است. در حال حاضر با ساخت جداول مجزا، نیازمندی مربوطه مدیریت شده است."",""25/Jun/23 7:41 AM;m.nafar;با سلام.
+لطفا تیم طراحی نظر دهند."",""12/Aug/23 11:08 AM;JiraAutomatic;*{color:red}
+""""External""""
+{color}*
+زهرا حیدریان:
+با سلام و احترام
+
+در رابطه با روند اصلاح این باگ، لطفا آپدیتی ارائه می فرمائید؟ 
+
+در چه نسخه و ورژنی ما شاهد رفع این باگ خواهیم بود؟
+
+ 
+
+با تشکر"",""07/Oct/23 9:34 AM;a.amanifar;با سلام و احترام
+با توجه به آن که این باگ بر روی نسخه 27 نیز وجود دارد، affectedVersion این باگ به 27 تغییر خواهد کرد.
+با تشکر""
+نمایش خطای idle time برای اتصالات PADW,DATALM-101291,537810,Bug,Confirmed,DATALM,DAT ALM,software,m.haghighat,,,3,,r.adibi,r.mahdian,JiraAutomatic,25/Nov/23 2:22 PM,26/Nov/23 11:35 AM,29/Nov/23 5:39 PM,,26,,MCI FMRA,,0,highpriority,,""با سلام و احترام
+
+در گزارشاتی که با اتصالات PADW ساخته می شوند همچنان خطای idle time نمایش داده میوشد. لطفا بررسی فرمایید.
+
+با تشکر"",,JiraAutomatic,r.adibi,,"";26/Nov/23 11:08 AM;r.adibi;5940"",,0,5940,,,0,5940,,DATSM-9329,,,,,,,,,,,,,,,26/Nov/23 8:00 AM,,,,,,,,New functionality,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,""2|i1eewn:"",,,,,,,,,,,,,,,,,,PAPortal (DC-4598),PADW (DC-5293),,,,,,,,,,,2023-11-28T16:00:00,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-1d,,,,,,,,,,,,Business,,,,,,,,,,,,,2023-11-28T16:00:00,,,,,,,,,""26/Nov/23 11:35 AM;r.adibi;راه های پیشنهادی پویان:
+
+ببینیم همیشه سر تایم خاصی بعد از استارت سرویس این خطا میخوره یا نه.
+
+ببینیم اگه lifetime کانکشن کم بشه با زخطا میخوریم یا نه.
+
+اگه این خطا رو خوردیم ریترای کنیم."",,,,,
+عدم تاثیر پذیری رنگ سری ها و متن های گزارش از پسزمینه داشبورد,DATALM-100477,523224,Bug,Suspended,DATALM,DAT ALM,software,m.haghighat,,,5,,,r.mahdian,JiraAutomatic,11/Oct/23 1:38 PM,23/Oct/23 4:49 AM,29/Nov/23 5:39 PM,,26,,MCI FMRA,,0,frontend,pending_fmra_mig,""با سلام و احترام
+در حال حاضر رنگ سری ها و متن های محورهای عمودی و افقی گزارشات از رنگ پس زمینه داشبورد تاثیر پذیر نیست و با تیره شدن پسزمینه داشبورد رنگ نوشته های گزارش تیره می ماند و روشن نمی شود.
+لطفا بررسی فرمایید
+با تشکر"",,e.ghorbani,JiraAutomatic,r.adibi,,,,,,,,,,DATSM-9047,DATALM-100543,""11/Oct/23 1:38 PM;JiraAutomatic;background dash.PNG;https://jira.mohaymen.ir/secure/attachment/189304/background+dash.PNG"",,,,,,,,,,,,,12/Oct/23 8:00 AM,,,,1.0,,,,New functionality,,,,,,""با سلام و احترام
+همانطور که مستحضر هستید امکان تغییر رنگ برچسب مقادیر، برچسب محور افقی و برچسب محور عمودی از طریق تنظیمات نمایشی وجود دارد.
+به عنوان مثال در نمونه پیوست شده رنگ این سه مورد به رنگ سفید تغییر یافته است و کاربر میتواند متناسب با نیاز خود، رنگ این عناوین را به رنگ متناسب با رنگ پس زمینه تغییر دهد. (عکس 1)
+همچنین در حال حاضر امکانی فراهم شده است که با تغییر رنگ پس زمینه هر گزارش این عناوین به رنگ مناسب تغییر پیدا کنند(عکس 2)
+و در حال حاضر امکان تنظیم رنگ خودکار عنوان بر اساس رنگ پس زمینه داشبورد وجود ندارد و این مورد باگ محسوب نمیشود.
+در صورت باقی ماندن نیازمندی، این مسئله را از طریق ثبت چنج پیگیری بفرمایید."",,,,,,,,,,,,,,,,,,22/Oct/23 11:59 PM,,,Backlog Needed,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,""2|i1bytj:"",,,,,,,,,,11/Oct/23 11:36 PM,,,,,,,,PAPortal (DC-4598),,,,,,22/Oct/23 12:00 AM,,,,,,2023-10-26T16:00:00,,,,,,,,,m.fardipour,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-29d,,,,,,,,,,,,Business,,,,,,,,,,,,,2023-10-26T16:00:00,,,,,,,,,""11/Oct/23 11:35 PM;e.ghorbani;با سلام و احترام
+همانطور که مستحضر هستید امکان تغییر رنگ برچسب مقادیر، برچسب محور افقی و برچسب محور عمودی از طریق تنظیمات نمایشی وجود دارد.
+به عنوان مثال در نمونه پیوست شده رنگ این سه مورد به رنگ سفید تغییر یافته است و کاربر میتواند متناسب با نیاز خود، رنگ این عناوین را به رنگ متناسب با رنگ پس زمینه تغییر دهد. (عکس 1)
+همچنین در حال حاضر امکانی فراهم شده است که با تغییر رنگ پس زمینه هر گزارش این عناوین به رنگ مناسب تغییر پیدا کنند(عکس 2)
+ و در حال حاضر امکان تنظیم رنگ خودکار عنوان بر اساس رنگ پس زمینه داشبورد وجود ندارد.
+در صورت باقی ماندن نیازمندی، این مسئله را از طریق ثبت چنج پیگیری بفرمایید."",""11/Oct/23 11:36 PM;e.ghorbani;*{color:red}
+""""External""""
+{color}*
+با سلام و احترام
+همانطور که مستحضر هستید امکان تغییر رنگ برچسب مقادیر، برچسب محور افقی و برچسب محور عمودی از طریق تنظیمات نمایشی وجود دارد.
+به عنوان مثال در نمونه پیوست شده رنگ این سه مورد به رنگ سفید تغییر یافته است و کاربر میتواند متناسب با نیاز خود، رنگ این عناوین را به رنگ متناسب با رنگ پس زمینه تغییر دهد. (عکس 1)
+همچنین در حال حاضر امکانی فراهم شده است که با تغییر رنگ پس زمینه هر گزارش این عناوین به رنگ مناسب تغییر پیدا کنند(عکس 2)
+و در حال حاضر امکان تنظیم رنگ خودکار عنوان بر اساس رنگ پس زمینه داشبورد وجود ندارد و این مورد باگ محسوب نمیشود.
+در صورت باقی ماندن نیازمندی، این مسئله را از طریق ثبت چنج پیگیری بفرمایید."",""12/Oct/23 4:01 PM;JiraAutomatic;*{color:red}
+""""External""""
+{color}*
+رضا مهدیان:
+طی صحبت های انجام شده این مورد بررسی شد و باگ هست."",""14/Oct/23 10:18 AM;r.adibi;با سلام
+
+در حال حاضر چنین فیچری پیاده سازی نشده است
+
+در صورت نیاز تحلیل انجام شود"",,
+"
