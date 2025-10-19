@@ -1,0 +1,12 @@
+
+services:
+  fastapi:
+    build: .
+    container_name: lstm-rul-api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Bind only the large model folder
+      - ./AiModels:/app/AiModels
+    environment:
+      - PYTHONUNBUFFERED=1
