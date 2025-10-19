@@ -1,0 +1,78 @@
+# ============================================
+# Python / FastAPI Project
+# ============================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Logs & cache
+*.log
+*.out
+*.err
+*.tmp
+.cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ============================================
+# Model directories and large files
+# ============================================
+
+# Ignore everything in AiModels/
+AiModels/*
+
+# ...except .zip files
+!AiModels/*.zip
+
+# ...and optionally keep subfolders (if you plan to unzip inside)
+!AiModels/.gitkeep
+
+# Ignore raw model files
+*.h5
+*.pkl
+*.pt
+*.pth
+*.joblib
+*.onnx
+*.tflite
+*.weights
+*.ckpt
+*.tar
+*.gz
+
+# ============================================
+# Datasets
+# ============================================
+
+data/
+datasets/
+*.csv
+*.xlsx
+*.parquet
+
+# ============================================
+# Build / packaging
+# ============================================
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ============================================
+# Editor / OS files
+# ============================================
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
