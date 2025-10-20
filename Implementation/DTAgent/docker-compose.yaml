@@ -1,0 +1,9 @@
+services:
+  dt-engine-api:
+    build: .
+    container_name: dt-engine-api
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./app/data:/app/app/data    # Bind dataset folder (for easy updates)
+    restart: always
