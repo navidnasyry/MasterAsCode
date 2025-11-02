@@ -1,0 +1,725 @@
+app:
+  description: 'Nasa Engin Digital Twin
+
+    this project try to create Digital Twin from engins of NASA dataset'
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: Nasa Engin Digital Twin
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/openai:0.2.6@e2665624a156f52160927bceac9e169bd7e5ae6b936ae82575e14c90af390e6e
+    version: null
+kind: app
+version: 0.4.0
+workflow:
+  conversation_variables: []
+  environment_variables:
+  - description: ''
+    id: 106a83ac-7579-4281-b8d5-7ef76269f920
+    name: response_faild
+    selector:
+    - env
+    - response_faild
+    value: عملیات با خطا مواجه شد.
+    value_type: string
+  - description: ''
+    id: d7d89b2b-9e9a-4246-b63a-7fb3016393e9
+    name: response_turn_off_done
+    selector:
+    - env
+    - response_turn_off_done
+    value: "موتور‌هایی که مقدار \nRUL\nکمتر از مقدار مشخص شده داشتند، با موفقیت خاموش\
+      \ شدند."
+    value_type: string
+  - description: ''
+    id: cc28c777-82f9-45c2-8239-cc9d211d30dc
+    name: dt_host_addr
+    selector:
+    - env
+    - dt_host_addr
+    value: 10.237.147.45:8001
+    value_type: string
+  - description: ''
+    id: 84073d10-4ba6-4401-a333-7e4490fc8803
+    name: not_related_questoin
+    selector:
+    - env
+    - not_related_questoin
+    value: 'سوال یا درخواست وارد شده غیر مرتبط است و نمی‌توانم آن را انجام دهم.
+
+      اگر سوال یا دستوری درباره موتور‌های CMAPSS دارید، در خدمتم.'
+    value_type: string
+  - description: ''
+    id: e41e0231-2e40-4e95-be67-8767df2c6dbb
+    name: threshold
+    selector:
+    - env
+    - threshold
+    value: 30
+    value_type: integer
+  - description: ''
+    id: 48d2951a-8dd5-473c-84c1-164952eca2f7
+    name: lstm_host_addr
+    selector:
+    - env
+    - lstm_host_addr
+    value: 10.237.147.45:8000
+    value_type: string
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: http-request
+      id: 1760900489398-source-1760900752943-target
+      source: '1760900489398'
+      sourceHandle: source
+      target: '1760900752943'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: code
+      id: 1760900752943-source-1760909993563-target
+      source: '1760900752943'
+      sourceHandle: source
+      target: '1760909993563'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1760909993563-source-1760910547856-target
+      source: '1760909993563'
+      sourceHandle: source
+      target: '1760910547856'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1760910547856-source-1760910738461-target
+      source: '1760910547856'
+      sourceHandle: source
+      target: '1760910738461'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: question-classifier
+      id: 1760735325729-source-1760991131417-target
+      source: '1760735325729'
+      sourceHandle: source
+      target: '1760991131417'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: llm
+      id: 1760991131417-1-1760900489398-target
+      source: '1760991131417'
+      sourceHandle: '1'
+      target: '1760900489398'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: end
+      id: 1760991131417-1761161022185-1761161423558-target
+      source: '1760991131417'
+      sourceHandle: '1761161022185'
+      target: '1761161423558'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: http-request
+      id: 1760991131417-2-1761162982217-target
+      source: '1760991131417'
+      sourceHandle: '2'
+      target: '1761162982217'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: code
+      id: 1761162982217-source-17611630413860-target
+      source: '1761162982217'
+      sourceHandle: source
+      target: '17611630413860'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: http-request
+      id: 17611630413860-source-1761163537962-target
+      source: '17611630413860'
+      sourceHandle: source
+      target: '1761163537962'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: if-else
+      id: 1761163537962-source-1761163915244-target
+      source: '1761163537962'
+      sourceHandle: source
+      target: '1761163915244'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: end
+      id: 1761163915244-true-1761163956890-target
+      source: '1761163915244'
+      sourceHandle: 'true'
+      target: '1761163956890'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: end
+      id: 1761163915244-false-1761164230061-target
+      source: '1761163915244'
+      sourceHandle: 'false'
+      target: '1761164230061'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: Start
+        type: start
+        variables:
+        - default: ''
+          hint: ''
+          label: user_input
+          max_length: 100
+          options: []
+          placeholder: ''
+          required: true
+          type: text-input
+          variable: user_input
+      height: 87
+      id: '1760735325729'
+      position:
+        x: 30
+        y: 319.5
+      positionAbsolute:
+        x: 30
+        y: 319.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            response_format: text
+          mode: chat
+          name: gpt-4o
+          provider: langgenius/openai/openai
+        prompt_config:
+          jinja2_variables: []
+        prompt_template:
+        - edition_type: basic
+          id: 8ff65335-7af4-41e3-a1de-9a5e0010039b
+          role: system
+          text: "از جمله زیر فقط شماره موتور را استخراج کن و فقط همان عدد را با فونت\
+            \ انگلیسی برگردان.\nجمله: \n{{#1760735325729.user_input#}}\n"
+        selected: false
+        structured_output:
+          schema:
+            additionalProperties: false
+            properties:
+              engine_id:
+                type: string
+            required: []
+            type: object
+        structured_output_enabled: false
+        title: LLM
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1760900489398'
+      position:
+        x: 694
+        y: 646.5
+      positionAbsolute:
+        x: 694
+        y: 646.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        headers: ''
+        method: get
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTP Request
+        type: http-request
+        url: http://{{#env.lstm_host_addr#}}/api/predict/predict_rul/{{#1760900489398.text#}}
+        variables: []
+      height: 158
+      id: '1760900752943'
+      position:
+        x: 1026
+        y: 557
+      positionAbsolute:
+        x: 1026
+        y: 557
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "def main(body: str) -> dict:\n    import json\n    data = json.loads(body)\n\
+          \    return {\n      \"predicted_rul\": data[\"predicted_rul\"],\n     \
+          \ \"engine_number\": data[\"engine_number\"]\n    }"
+        code_language: python3
+        outputs:
+          engine_number:
+            children: null
+            type: number
+          predicted_rul:
+            children: null
+            type: number
+        selected: false
+        title: Code
+        type: code
+        variables:
+        - value_selector:
+          - '1760900752943'
+          - body
+          value_type: string
+          variable: body
+      height: 51
+      id: '1760909993563'
+      position:
+        x: 1358
+        y: 655
+      positionAbsolute:
+        x: 1358
+        y: 655
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 6e7f30b4-4469-48f4-9cd4-4fd64894c503
+          role: system
+          text: "engine_id: {{#1760909993563.engine_number#}}\npredicted_rul: {{#1760909993563.predicted_rul#}}\n\
+            \nبر اساس مقدار predicted_rul تصمیم بگیر:\nاگر کمتر از {{#env.threshold#}}\
+            \ بود بنویس که موتور {{#1760909993563.engine_number#}}  با داشتن مقدار\
+            \ RUL برابر {{#1760909993563.predicted_rul#}} در شرایط بحرانی است.\nاگر\
+            \ بیشتر از {{#env.threshold#}} بود بنویس که موتور {{#1760909993563.engine_number#}}\
+            \  با داشتن مقدار RUL برابر {{#1760909993563.predicted_rul#}} در شرایط\
+            \ عادی است.\nپاسخ را فارسی و رسمی بنویس.\n "
+        selected: false
+        title: LLM 2
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1760910547856'
+      position:
+        x: 1690
+        y: 628.5
+      positionAbsolute:
+        x: 1690
+        y: 628.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        outputs:
+        - value_selector:
+          - '1760910547856'
+          - text
+          value_type: string
+          variable: text
+        selected: false
+        title: End
+        type: end
+      height: 88
+      id: '1760910738461'
+      position:
+        x: 2022
+        y: 610.5
+      positionAbsolute:
+        x: 2022
+        y: 610.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        classes:
+        - id: '1'
+          name: سؤال درباره وضعیت یا شرایط یک موتور خاص است (مثلاً "حال موتور ۵ چطور
+            است؟")
+        - id: '2'
+          name: سؤال درباره خاموش کردن یا غیرفعال‌سازی همه موتورهای خراب یا در خطر
+            است.
+        - id: '1761161022185'
+          name: سوال‌ یا درخواست‌های دیگر کاربر.
+        instruction: کاربر در ورودی یک سوال یا دستور درباره موتور‌های دیتاست CMAPSS
+          وارد می‌کند که باید بدانیم نوع درخواست او چگونه است.
+        instructions: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: gpt-4
+          provider: langgenius/openai/openai
+        query_variable_selector:
+        - '1760735325729'
+        - user_input
+        selected: false
+        title: Question Classifier
+        type: question-classifier
+        vision:
+          enabled: false
+      height: 239
+      id: '1760991131417'
+      position:
+        x: 362
+        y: 319.5
+      positionAbsolute:
+        x: 362
+        y: 319.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        outputs:
+        - value_selector:
+          - env
+          - not_related_questoin
+          value_type: string
+          variable: not_related_questoin
+        selected: false
+        title: End 2
+        type: end
+      height: 88
+      id: '1761161423558'
+      position:
+        x: 694
+        y: 518.5
+      positionAbsolute:
+        x: 694
+        y: 518.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        headers: ''
+        method: get
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: '1000'
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTP Request 2
+        type: http-request
+        url: http://{{#env.lstm_host_addr#}}/api/predict/engines_with_low_rul/?threshold={{#env.threshold#}}
+        variables: []
+      height: 159
+      id: '1761162982217'
+      position:
+        x: 694
+        y: 319.5
+      positionAbsolute:
+        x: 694
+        y: 319.5
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "def main(body: str) -> dict:\n    import json\n\n    data = json.loads(body)\n\
+          \n    engine_list = [engine[\"engine_number\"] for engine in data.get(\"\
+          low_rul_engines\", [])]\n\n    return {\n        \"engine_list\": engine_list\n\
+          \    }\n"
+        code_language: python3
+        outputs:
+          engine_list:
+            children: null
+            type: array[number]
+        selected: false
+        title: Code (1)
+        type: code
+        variables:
+        - value_selector:
+          - '1761162982217'
+          - body
+          value_type: string
+          variable: body
+      height: 51
+      id: '17611630413860'
+      position:
+        x: 1026
+        y: 319.5
+      positionAbsolute:
+        x: 1026
+        y: 319.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - type: text
+            value: '{{#17611630413860.engine_list#}}'
+          type: raw-text
+        headers: Content-Type:application/json
+        method: POST
+        params: state:OFF
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: '1000'
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTP Request 3
+        type: http-request
+        url: http://{{#env.dt_host_addr#}}/engines/states/set
+        variables: []
+      height: 140
+      id: '1761163537962'
+      position:
+        x: 1358
+        y: 319.5
+      positionAbsolute:
+        x: 1358
+        y: 319.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: '='
+            id: 20d0a58d-8b56-41aa-abe1-79d6a82d13f3
+            value: '200'
+            varType: number
+            variable_selector:
+            - '1761163537962'
+            - status_code
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: IF/ELSE
+        type: if-else
+      height: 123
+      id: '1761163915244'
+      position:
+        x: 1690
+        y: 319.5
+      positionAbsolute:
+        x: 1690
+        y: 319.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        outputs:
+        - value_selector:
+          - env
+          - response_turn_off_done
+          value_type: string
+          variable: response
+        selected: false
+        title: End 3
+        type: end
+      height: 88
+      id: '1761163956890'
+      position:
+        x: 2354
+        y: 464
+      positionAbsolute:
+        x: 2354
+        y: 464
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        outputs:
+        - value_selector:
+          - env
+          - response_faild
+          value_type: string
+          variable: response
+        selected: false
+        title: End 4
+        type: end
+      height: 88
+      id: '1761164230061'
+      position:
+        x: 2686
+        y: 319.5
+      positionAbsolute:
+        x: 2686
+        y: 319.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    viewport:
+      x: -1809.7315526930036
+      y: -216.68479517232106
+      zoom: 1.1545484025785036
+  rag_pipeline_variables: []

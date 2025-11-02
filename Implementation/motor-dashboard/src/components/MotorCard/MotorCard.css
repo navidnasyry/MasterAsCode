@@ -1,0 +1,104 @@
+.motor-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.motor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e74c3c;
+  transition: background 0.3s ease;
+}
+
+.motor-card.online::before {
+  background: #2ecc71;
+}
+
+.motor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.motor-card.online:hover {
+  border-color: #2ecc71;
+}
+
+.motor-card.offline:hover {
+  border-color: #e74c3c;
+}
+
+.motor-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.motor-info {
+  flex: 1;
+}
+
+.motor-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.online {
+  background: #d5f4e6;
+  color: #27ae60;
+}
+
+.status-badge.offline {
+  background: #fdeaea;
+  color: #e74c3c;
+}
+
+.motor-indicator {
+  flex-shrink: 0;
+}
+
+.indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.indicator.online {
+  background: #2ecc71;
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+  animation: pulse-green 2s infinite;
+}
+
+.indicator.offline {
+  background: #e74c3c;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+}
+
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(46, 204, 113, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}

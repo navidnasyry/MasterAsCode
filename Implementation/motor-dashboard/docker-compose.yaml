@@ -1,0 +1,19 @@
+services:
+  motor-dashboard:
+    build: .
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_API_URL=http://10.115.79.45:8001/engines
+    restart: unless-stopped
+
+  # Mock API service for demonstration
+  # mock-api:
+  #   image: node:18-alpine
+  #   working_dir: /app
+  #   ports:
+  #     - "3001:3001"
+  #   volumes:
+  #     - ./mock-api:/app
+  #   command: sh -c "cd /app && npm install && node server.js"
+  #   restart: unless-stopped

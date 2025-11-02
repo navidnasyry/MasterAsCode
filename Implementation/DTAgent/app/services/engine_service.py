@@ -67,3 +67,14 @@ def set_engine_states(engine_list: list[int], state: str):
         engine_states[eng_id] = state.upper()
 
     return get_all_final_states()
+
+    
+def set_all_engine_states(state: str):
+    """Turn all engines ON or OFF."""
+    state = state.upper()
+    if state not in ["ON", "OFF"]:
+        raise ValueError("Invalid state. Must be 'ON' or 'OFF'.")
+    
+    for eng in list(engine_states.keys()):
+        engine_states[int(eng)] = state
+    return get_all_final_states()
