@@ -1,0 +1,14 @@
+services:
+  engine-monitor:
+    build: .
+    ports:
+      - "3001:80"
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_API_BASE_URL=http://10.115.79.45:8000/api
+    networks:
+      - engine-network
+
+networks:
+  engine-network:
+    driver: bridge

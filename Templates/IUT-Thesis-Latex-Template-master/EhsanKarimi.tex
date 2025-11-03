@@ -1,0 +1,63 @@
+%*************************************************
+% A template for MSc Thesis. 
+% Please see "guideline.pdf" first.
+%*************************************************
+% Iman Izadi - Ehsan Karimi, 1400
+% Dept. of Electrical and Computer Engineering, IUT
+%*************************************************
+
+\documentclass[a4paper,fleqn]{report} 
+
+% All the packages and general definitions are included in this file: preamble.tex
+\include{preamble}							
+
+%set precompile dictionary settings
+%اعمال تنظیمات واژه نامه fa-en، en-fa و لیست اختصارات
+\input{dictionary.tex}
+
+%read dictionary document 
+%وارد کردن فهرست کلمات معادل و اختصار از فایل های دیکشنری
+\input{dict_acn.tex}
+%http://qa.parsilatex.com/16166/%D9%85%D8%B4%DA%A9%D9%84-%D8%AF%D8%B1-%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF-%D9%88%D8%A7%DA%98%D9%87-%D9%86%D8%A7%D9%85%D9%87-%D8%A8%D8%A7-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D8%A8%D8%B3%D8%AA%D9%87-glossaries
+
+
+\begin{document}
+
+% The first pages (before abstract) are included in this file: firstpages.tex
+\include{firstpages}
+				
+%print dict and acn pages
+\printabbreviation
+							
+% The abstract of the paper goes here: abstract.tex
+\include{abstract}								
+
+%*****************************************************************
+%% تنظیم مناسب صفحه و فونت برای متن اصلی پایان‌نامه
+\newgeometry{left=2.5cm,right=3cm,top=3cm,bottom=2.5cm,includehead=false,headsep=1cm,footnotesep=.5cm}
+\settextfont{XB Zar}\fontsize{12}{6}\selectfont
+\setlatintextfont{Times New Roman}\fontsize{11}{6}
+\baselineskip=.9cm
+
+% Moving page number to top right
+\pagestyle{myheadings}
+%*****************************************************************
+% Main chapters
+\include{chap1}
+\include{chap2}
+\include{chap3}
+\include{chap4}
+
+
+%% Appendices
+%\appendix
+%\include{app1}
+
+%print dict and acn pages
+\printglossary
+
+\include{references}
+
+\include{abstract_english}
+\include{lastpages}
+\end{document}

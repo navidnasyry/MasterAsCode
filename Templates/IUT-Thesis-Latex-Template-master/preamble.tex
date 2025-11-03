@@ -1,0 +1,191 @@
+%*************************************************
+% All the packages and definitions required for this 
+% project are included here.
+%*************************************************
+% This template is a modified version of the following template:
+% Iman Izadi, 1395
+% Dept. of Electrical and Computer Engineering, IUT
+%*************************************************
+
+
+\usepackage{amsthm,amssymb,amsmath}			% Writing math
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\usepackage{cite} % added by Ehsan %https://tex.stackexchange.com/questions/29191/automatically-reorder-in-text-citations-based-on-numbering-in-bibliography
+
+\usepackage{epsf,graphicx}					%Including graphics
+\usepackage{subfig,graphicx} 
+
+
+\usepackage[a4paper]{geometry}							% Fixing page layout and margins
+\usepackage{titlesec}											% Change chapter and section titles
+\usepackage{setspace}											% Change line spacing
+\usepackage[stable,bottom]{footmisc}					% Move footnotes to the bottom of page
+\usepackage{notoccite}
+%\usepackage{enumitem}
+\usepackage{enumerate}
+\usepackage{comment}
+
+\usepackage{zref-perpage}
+\zmakeperpage[1]{footnote}
+\usepackage{algorithm} %added by Ehsan for algorithms
+
+\usepackage{enumitem}%added by Ehsan for bolding the title of items 
+\newenvironment{descitemize} % a mixture of description and itemize
+{\begin{description}[leftmargin=*,before=\let\makelabel\descitemlabel]}
+	{\end{description}}
+
+\newcommand{\descitemlabel}[1]{%
+	\textbullet\ \textbf{#1}%
+}
+
+
+\usepackage[final]{showkeys} % added by Ehsan to show labels in pdf for easy referencing, 'final' to turn off all the package's functionality
+
+\usepackage[obeyspaces,hyphens,spaces]{url}% added by ehsan
+\renewcommand*{\showkeyslabelformat}[1]{%
+	\fbox{\vbox{\hsize=1.1cm\normalfont\small\url{#1}\par}}}
+%\usepackage[right]{showlabels} %final, margin,  right
+
+\usepackage{indentfirst}			%tab befor each parapraph
+
+\usepackage[hidelinks]{hyperref}				%added by ehsan to link ref number to refferences
+\hypersetup{									% added by ehsan
+%	bookmarks=true,         % show bookmarks bar?
+	unicode=True,          % non-Latin characters in Acrobat’s bookmarks
+	pdftoolbar=true,        % show Acrobat’s toolbar?
+	pdfmenubar=true,        % show Acrobat’s menu?
+	pdfauthor={Ehsan Karimi},     % author
+	pdftitle = {Master Thesis },
+	pdfkeywords={Dementia, 3D Deep Neural Network, Alzheimer Diseas Prediction}, 
+	pdfcreator={Ehsan Karimi},
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=blue,        % color of internal links (change box color with linkbordercolor)
+	citecolor=blue,        % color of links to bibliography
+	filecolor=blue,        % color of file links
+	urlcolor=blue        % color of external links
+}
+
+
+\usepackage[flushleft]{threeparttable} %added by ehsan for table endnotes
+\usepackage{rotating} %added by ehsan to rotate the table
+\newcommand\myfrac[2]{\frac{#1}{#2\mathstrut}} %added by ehsan
+\usepackage{makecell} %added by ehsan, to create a cell with multiple lines in tables
+
+\usepackage{romannum} %added by ehsan for roman numbers
+\usepackage[xindy,acronym,nonumberlist=true]{glossaries}	%added by ehsan for "vaje name" generation
+
+\usepackage{xepersian}										% Persian , option "\KashidaOn" added by ehsan
+
+\defpersianfont\nastaliq{IranNastaliq} %added by ehsan for thank U page
+
+\settextfont{XB Zar}												% Persian font
+%\setdigitfont{Yas}
+\setcounter{tocdepth}{3}%added by ehsan to increas the levels in table of contents
+%\setcounter{secnumdepth}{4}%added by ehsan to increas the levels in table of contents
+%active glossaries
+%\makeglossaries
+
+
+%
+\usepackage{multirow}
+\usepackage{booktabs} %added by ehsan, its imported for table because https://www.latex-tables.com/
+
+
+%added by ehsan to use a3page in the middel of document
+\usepackage{lipsum}
+\makeatletter
+% like \newgeometry, but also allows change of landscape/portrait and paper size
+% to be used with caution!
+\newcommand{\newgeometryfull}[1]{%
+	\clearpage
+	\Gm@restore@org
+	\Gm@initnewgm
+	%  \Gm@newgmtrue
+	\setkeys{Gm}{#1}%
+	%  \Gm@newgmfalse
+	\Gm@process
+	\ifnum\mag=\@m\else\Gm@magtooffset\fi
+	\Gm@changelayout
+	\Gm@showparams{newgeometry}}%
+\makeatother
+
+%% Allow A3 sheets - - New environment
+\newenvironment{a3page}{%
+	\newgeometryfull{a3paper,landscape,width=360 mm,top=25 mm,bottom=25 mm}
+	% set the correct dimension for the PDF viewer
+	\pdfpageheight=\paperheight
+	\pdfpagewidth=\paperwidth
+}{%
+	\restoregeometry
+	% set the correct dimension for the PDF viewer
+	\pdfpageheight=\paperheight
+	\pdfpagewidth=\paperwidth
+}
+
+
+
+
+
+
+
+% Use English digits in equations
+\DefaultMathsDigits
+
+% Default footnotes from left to right
+\setfootnoteLR
+
+% Use English numbers for English footnotes
+\makeatletter
+\def\@makeLTRfnmark{\hbox{\@textsuperscript{\latinfont\@thefnmark}}}
+\renewcommand\@makefntext[1]{%
+    \parindent 1em%
+    \noindent
+    \hb@xt@1.8em{\hss\if@RTL\@makefnmark\else\@makeLTRfnmark\fi}#1}
+\makeatother
+
+% Use dash instead of dot in section numbers
+\SepMark{-}										
+
+
+% Change fonts and margins of section and subsection titles
+% For chapters please see firstpages.tex
+\titlespacing*{\section}{0pt}{1cm}{0.2cm}
+\titleformat{\section}
+  {\fontsize{12}{6}\scshape\bfseries}{\thesection}{1em}{}
+
+\titlespacing*{\subsection}{0pt}{.8cm}{0cm}
+\titleformat{\subsection}
+  {\fontsize{11}{6}\scshape\bfseries}{\thesubsection}{1em}{}
+  
+
+\setcounter{secnumdepth}{3}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+  
+% Fix table of contents for chapters
+\makeatletter 
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+     \refstepcounter{chapter}%
+     \typeout{\@chapapp\space\thechapter.}%
+     \addcontentsline{toc}{chapter}%
+       	{\@chapapp~\protect\numberline{\tartibi{chapter}\,:\space #1}}
+  \else
+  	 \addcontentsline{toc}{chapter}{#1}%
+  \fi
+  \chaptermark{#1}%
+  \addtocontents{lof}{\protect\addvspace{10\p@}}%
+  \addtocontents{lot}{\protect\addvspace{10\p@}}%
+  \@makechapterhead{#2}%
+  \@afterheading}
+  \let\stdl@chapter\l@chapter
+ \renewcommand*{\l@chapter}[2]{\stdl@chapter{{#1}}{}}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%% my changes %%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

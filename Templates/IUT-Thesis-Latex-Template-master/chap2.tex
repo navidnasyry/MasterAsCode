@@ -1,0 +1,138 @@
+% !TeX spellcheck = en_US
+% Chapter 2
+\chapter{مرور}\label{chap:review}
+
+\section{بخش اول}\label{chap:brain}
+
+این یک متن نمونه است...این یک متن نمونه است...این یک متن نمونه است...این یک متن نمونه است...این یک متن نمونه است... این یک متن نمونه است...این یک متن نمونه است...
+برای بیان اکرونیم یک کلمه مانند  \gls{LASSO}، به این صورت عمل کنید.
+   \gls{ML}
+   یا 
+   \gls{DL}
+   یا
+   \gls{FN}
+   یا 
+   \gls{TN}
+   یا
+   \gls{LSTM}
+   یا 
+   \gls{SGL}
+   یا
+   \gls{TP}
+   یا 
+   \gls{FP}
+   یا
+\subsection{زیربخش \gls*{1st}}\label{sec:brain:sub_brain}
+این یک متن نمونه است که به سه مرحله \gls{1st}،
+ \gls{2nd} و \gls{3rd} تقسیم می‌شود. 
+ 
+ برای معادل جمع فارسی در دیکشنری اینطور فراخوان کنید: \glspl{2nd}
+\begin{itemize}
+	\item
+	\gls{1st}: 
+	این یک آیتم نمونه است...
+		\item 
+	\gls{2nd}: 
+	این یک آیتم نمونه است...
+	\item 
+	\gls{3rd}: 
+	این یک آیتم نمونه است...
+\end{itemize}
+
+\subsection{زیربخش دوم}\label{sec:brain:second_sub}
+این یک متن نمونه است...
+
+
+\paragraph{پاراگراف نمونه \gls*{1st}}
+این یک متن نمونه است...
+\paragraph{پاراگراف نمونه \gls*{2nd}}
+این یک متن نمونه است...
+
+\section{معرفی \gls*{dataset}}\label{sec:dataset}
+این بخش نمونه است...
+
+\begin{enumerate}
+	
+\item\textbf{فاز اول یا \lr{English-1}:} 
+این یک متن نمونه است.
+\begin{itemize}
+	\item 
+	این یک آیتم نمونه است...
+	\item 
+	این یک آیتم نمونه است...
+	\item 
+	این یک آیتم نمونه است...
+\end{itemize}
+
+این یک متن نمونه است...
+
+\item\textbf{فاز دوم یا \lr{English-2}:} 
+این یک متن نمونه است...
+
+\item\textbf{فاز سوم یا \lr{English-3}:} 
+این یک متن نمونه است...
+\end{enumerate}
+
+برای کامنت کردن بخشی از پروژه بدون حذف آن، از این دستور استفاده کنید.
+\begin{comment}
+برای کامنت کردن بخشی از پروژه بدون حذف آن، از این دستور استفاده کنید.
+\end{comment}
+
+برای درج جدول \ref{tab:my_table1} و رفرنس‌دهی از این کد استفاده کنید.
+
+\begin{table}[t!]
+	\centering
+	\caption{جدول نمونه افقی}
+	\label{tab:my_table1}
+	\begin{tabular}{rccccc}
+		\toprule			
+		$\text{گروه}$ && $\text{فارسی (English)}$ & $\text{فارسی English}$ & $\text{فارسی English}$ & $\text{فارسی English}$ \\
+		\midrule
+		\rl{جنسیت}&(\rl{مرد - زن})	
+		& $10 - 20$ & $10 - 20$ & $10 - 20$ & $10 - 20$
+		\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+برای درج جدول عمودی \ref{tab:my_table2} و رفرنس‌دهی از این کد استفاده کنید.
+\begin{sidewaystable}
+	\begin{threeparttable}
+		\caption{جدول نمونه عمودی}
+		\label{tab:my_table2}
+		\setlength\tabcolsep{0pt} % make LaTeX figure out intercolumn spacing
+		
+		\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}} cccccccccc}
+			\toprule			
+			$\text{گروه}$ & 
+			$\myfrac{\text{جنسیت}}{\text{مرد - زن}}$ & 
+			$\myfrac{\text{فارسی}}{\text{\lr{mean$\pm $std}}}$ & 
+			$\myfrac{\text{ٍenglish}}{\text{\lr{mean$\pm $std}}}$ & 
+			$\myfrac{\text{فارسی}}{\text{\lr{mean$\pm $std}}}$ & 
+			$\myfrac{\text{\lr{english}}}{\text{\lr{mean$\pm $std}}}$ & 
+			$\myfrac{\text{\lr{ٍenglish}}}{\text{\lr{mean$\pm $std}}}$ & 
+			$\myfrac{\text{ٍenglish}}{\text{\lr{mean$\pm $std}}}$ & 
+			$\myfrac{\text{\lr{ٍenglish}}}{\text{\lr{mean$\pm $std}}}$ & 
+			$\myfrac{\text{\lr{RAVALT-PF}}}{\text{\lr{mean$\pm $std}}}$ \\
+			\midrule
+			فارسی AD & $189 / 153$ & $75.0 \pm 7.8$ & $4.39 \pm 1.67$ & $15.2 \pm 3.0$ & $19.6 \pm 6.7$ & $29.9 \pm 8.1$ & $23.2 \pm 2$ & $22.8 \pm 7.6$ & $89.0 \pm 21.2$ 
+			\\
+			\bottomrule
+		\end{tabular*}
+	\end{threeparttable}
+\end{sidewaystable}
+
+\section{فرمول}\label{sec:formula}
+بنابراین برای هر نقطه $X$ از تصویر سه بعدی دریافتی، رابطه
+\begin{align} \label{eq:n3-main}
+	v(X) = u(X) f(X) + n(X)
+\end{align}
+برقرار است که $v$ سیگنال اندازه‌گیری شده، $u$ سیگنال مورد انتظار بدون اثر \gls{bias} میدان و $f$ یک سیگنال با تغییرات آرام و نماینده \gls{bias} میدان است.
+روابط تبدیل فوریه تابع $f(t)$ و معکوس آن به بیان شده در روابط \ref{eq:fourier} و \ref{eq:afourier}  هستند.
+\begin{align}\label{eq:fourier}
+\mathcal{F}(f(t))= F(w)=\sum_{k=0}^{N-1}f_k e^{-i\frac{2\pi}{N}kn}
+\end{align}
+\begin{align}\label{eq:afourier}
+f_k= F(w)=\frac{1}{N}\sum_{n=0}^{N-1}\mathcal{F}_n e^{-i\frac{2\pi}{N}kn}
+\end{align}
+

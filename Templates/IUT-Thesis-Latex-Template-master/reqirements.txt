@@ -1,0 +1,2 @@
+TeXstudio 2.12.16
+texlive 2017
