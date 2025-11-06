@@ -3,7 +3,8 @@ from typing import Optional, List
 from app.services.engine_service import (
     get_engine_data,
     get_all_final_states,
-    set_engine_states
+    set_engine_states,
+    set_all_engine_states
 )
 
 router = APIRouter(prefix="/engines", tags=["Engines"])

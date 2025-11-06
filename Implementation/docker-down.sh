@@ -8,4 +8,4 @@ docker compose -f ./dify/docker/docker-compose.yaml down
 
 docker compose -f ./motor-dashboard/docker-compose.yaml down
 
-docker compose -f ./engine-monitor/docker-compose.yaml.down
+docker compose -f ./engine-monitor/docker-compose.yaml down

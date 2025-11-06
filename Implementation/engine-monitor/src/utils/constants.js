@@ -1,7 +1,7 @@
 export const DEFAULT_CONFIG = {
   threshold: 50,
-  step: 10,
-  interval: 2000
+  step: 30,
+  interval: 5000
 };
 
 export const STATUS_COLORS = {
