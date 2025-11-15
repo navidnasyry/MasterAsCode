@@ -13,6 +13,16 @@ class PredictionResponse(BaseModel):
     predicted_rul: float
 
 
+class SensorImpact(BaseModel):
+    sensor: str
+    percent: float
+
 class EngineRULResponse(BaseModel):
     engine_number: int
     predicted_rul: float
+    sensor_impacts: List[SensorImpact] = Field(
+        ...,
+        description="List of sensor name and impact percent."
+    )
+
+

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from app.models.lstm_model import load_lstm_model
-from app.services.prediction_service import prepare_engine_sequence, predict_rul
+from app.services.prediction_service import prepare_engine_sequence, predict_rul, get_rul_and_attribution
 from app.schemas.prediction_schemas import EngineData, PredictionResponse, EngineRULResponse
 from app.core.config import MODEL_BASE_PATH
 
@@ -23,7 +23,7 @@ except Exception as e:
 
 
 @router.get("/predict_rul/{engine_number}", response_model=EngineRULResponse)
-def predict_rul_for_engine(engine_number: int):
+def predict_rul_for_engine_api(engine_number: int, k_most_effictive: int = 5):
     """Predict RUL for an engine in test dataset.
     
         Example curl reqeust: 
@@ -37,9 +37,25 @@ def predict_rul_for_engine(engine_number: int):
         return {"error": f"Engine number {engine_number} not found."}
 
     seq_array_engine = prepare_engine_sequence(engine_df, sequence_length, sequence_cols)
-    predicted = predict_rul(model, seq_array_engine)
+    attribution_results = get_rul_and_attribution(model, seq_array_engine, sequence_cols)
+    predicted_rul = attribution_results['rul']
+    sensor_impacts = attribution_results['sensor_impacts']
+    
+    # Get top k sensor impacts
+    print(attribution_results)
+    print(sensor_impacts)
+    top_k_impacts = []
+    for sensor, impact in list(sensor_impacts.items())[:k_most_effictive]:
+        top_k_impacts.append({"sensor": sensor, "percent": round(impact * 100, 2)})
 
-    return {"engine_number": engine_number, "predicted_rul": predicted}
+    print(top_k_impacts)
+    return {"engine_number": engine_number,
+            "predicted_rul": float(predicted_rul),
+            "sensor_impacts": top_k_impacts}
+
+    #predicted = predict_rul(model, seq_array_engine)
+
+    #return {"engine_number": engine_number, "predicted_rul": predicted}
 
 
 # @router.get("/engines_with_low_rul/")

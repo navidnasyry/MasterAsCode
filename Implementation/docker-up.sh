@@ -1,4 +1,5 @@
 #!/bin/bash
+HOST_IP=10.115.79.45
 
 docker compose -f ./DTAgent/docker-compose.yaml up -d
 
