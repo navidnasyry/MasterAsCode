@@ -22,7 +22,7 @@ const StatsPanel = ({ totalEngines, criticalCount, warningCount, currentClock, t
       
       <div className="stat-item">
         <div className="stat-value">{currentClock}</div>
-        <div className="stat-label">Current Clock</div>
+        <div className="stat-label">Current TimeInCycles</div>
       </div>
     </div>
   );

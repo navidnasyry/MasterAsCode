@@ -56,7 +56,7 @@ const Header = ({ onConfigClick, isRunning, currentClock, threshold }) => {
             {isRunning ? 'Monitoring' : 'Stopped'}
           </div>
           <div className="clock-display">
-            ⏰ Current Clock: {currentClock}
+            ⏰ Current TimeInCycles: {currentClock}
           </div>
           <button 
             className="config-btn"

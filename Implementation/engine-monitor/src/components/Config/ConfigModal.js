@@ -40,7 +40,7 @@ const ConfigModal = ({ show, config, onSave, onClose }) => {
           </div>
           
           <div className="form-group">
-            <label htmlFor="step">Clock Step:</label>
+            <label htmlFor="step">TimeInCycles Step:</label>
             <input
               type="number"
               id="step"
@@ -49,7 +49,7 @@ const ConfigModal = ({ show, config, onSave, onClose }) => {
               min="1"
               max="50"
             />
-            <small>How much to increase clock each iteration</small>
+            <small>How much to increase TimeInCycles each iteration</small>
           </div>
           
           <div className="form-group">
