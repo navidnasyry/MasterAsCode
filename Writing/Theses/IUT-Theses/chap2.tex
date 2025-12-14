@@ -1,0 +1,210 @@
+% !TeX spellcheck = en_US
+% Chapter 2
+\chapter{بررسی ادبیات و مبانی نظری}\label{chap:review}
+
+\section{مفاهیم پایه}\label{chap:brain}
+
+\subsection{مقدمه}
+دامنه بررسی (از تئوری DT تا کاربرد LLM) و روش مرور (systematic review بر اساس مقالات IEEE, ScienceDirect, و arXiv تا ۲۰۲۵).
+
+\subsection{دوقلوی دیجیتال}
+تعاریف (Grieves, Tao et al.)، اجزا (فیزیکی، مجازی، ارتباطی)، و تکامل تا Industry ۵.۰.
+
+
+
+\subsection{کاربردهای دوقلوی دیجیتال}
+در هوافضا، تولید، و نگهداری پیش‌بینی‌کننده (با تمرکز بر موتورهای جت).
+
+\subsection{عامل هوشمند}
+عریف (autonomy, reactivity)، معماری‌ها (BDI).
+
+\subsection{سیستم‌های چندعاملی}
+مفاهیم همکاری، پلتفرم‌ها (JADE)، و نقش در سیستم‌های توزیع‌شده.
+
+\subsection{دوقلوهای دیجیتال چندعاملی}
+ادغام MAS با DT برای تصمیم‌گیری پویا (بر اساس surveyهای ۲۰۲۴ مانند "The Role of Multi-Agents in Digital Twin Implementation")
+
+\subsection{هوش مصنوعی در دوقلوهای دیجیتال}
+نقش AI در شبیه‌سازی و پیش‌بینی.
+
+\subsection{یادگیری عمیق و کاربرد آن در دوقلوهای دیجیتال}
+تکنیک‌های DL برای پردازش داده‌های زمانی.
+
+
+\subsection{لایه توجه و سازوکار آن در مدل‌های یادگیری عمیق}
+توضیح attention mechanism در transformerها و کاربرد در پیش‌بینی سری‌های زمانی.
+
+
+\subsection{شبکه‌های عصبی بازگشتی و کاربرد آن در دوقلوهای دیجیتال}
+معرفی RNN, LSTM, GRU، و استفاده در پیش‌بینی RUL (با مثال از CMAPSS).
+
+
+\subsection{مدل‌های زبانی بزرگ}
+تعریف \glspl{LLM}
+
+
+تعریف LLM (مانند GPT-4o در ۲۰۲۵)، قابلیت‌های reasoning، و ابزارهای workflow مانند Dify یا LangChain برای ادغام با DT.
+
+\subsection{جمع‌بندی}
+ارتباط مفاهیم با معماری پیشنهادی شما.
+
+
+\section{مرور کارهای مرتبط}
+
+\subsection{مقالات مرتبط با دوقلوهای دیجیتال}
+
+بررسی surveyهای کلی مانند "Digital twin: Data exploration, architecture, implementation and future" (۲۰۲۴) و "A new era for digital twins: progress and industry adoption" (۲۰۲۵). جدول مقایسه کاربردها.
+
+\subsection{مقالات مرتبط با معماری دوقلوهای دیجیتال}
+
+تمرکز بر معماری‌های لایه‌ای مانند "Smart City Digital Twins: A Modular and Adaptive Architecture" (۲۰۲۴) و "Architectural Design for Digital Twin Networks" (۲۰۲۵). تحلیل چگونگی الهام‌بخشی به معماری ۵ لایه‌ای شما.
+
+\subsection{مقالات مرتبط با دوقلوهای دیجیتال چندعاملی}
+کارهای اخیر مانند "Advancing Robotic Systems with Distributed Multi-Agent Digital Twins" (۲۰۲۵)، "Multi-Agent Systems for Manufacturing Digital Twins" (۲۰۲۵)، و "Agent-based digital twins for collaborative machine intelligence" (۲۰۲۵). بحث در مورد کاربرد در هوافضا (مانند "Developing a Digital Twin for Testing Multi-Agent Systems in Advanced Air Mobility"، ۲۰۲۵).
+
+\subsection{مقالات مرتبط با کاربردهای مدل‌های زبانی بزرگ در دوقلوهای دیجیتال}
+
+مقالات ۲۰۲۴-۲۰۲۵ مانند "Integrating large language model and digital twins in the context of Industry 5.0" (۲۰۲۵)، "Leveraging Large Language Models for Enhanced Digital Twin Modeling" (۲۰۲۵)، و "Large language models-enabled digital twins for precision medicine" (۲۰۲۵). تأکید بر ادغام برای تعامل هوشمند.
+
+
+\subsection{مقالات مرتبط با داده ساختار \lr{CMAPSS}}
+کارهای پیش‌بینی RUL مانند "Linear Methods for Predictive Maintenance: The Case of NASA C-MAPSS" (۲۰۲۵)، "A deep learning-based prognostic approach for predicting turbofan engine RUL" (۲۰۲۵)، و "Remaining useful life prediction of turbofan engines using LSTM" (۲۰۲۵). مقایسه با روش‌های DL و پیشنهاد بهبود با MAS و LLM.
+
+\subsection{تحلیل شکاف‌ها و نتیجه‌گیری فصل}
+شناسایی کمبودها (مانند عدم ادغام LLM در MAS-DT برای توضیح‌پذیری) و جایگاه نوآوری شما.
+
+
+
+
+
+%برای بیان اکرونیم یک کلمه مانند  \gls{LASSO}، به این صورت عمل کنید.
+%   \gls{ML}
+%   یا 
+%   \gls{DL}
+%   یا
+%   \gls{FN}
+%   یا 
+%   \gls{TN}
+%   یا
+%   \gls{LSTM}
+%   یا 
+%   \gls{SGL}
+%   یا
+%   \gls{TP}
+%   یا 
+%   \gls{FP}
+
+%\subsection{زیربخش \gls*{1st}}\label{sec:brain:sub_brain}
+%این یک متن نمونه است که به سه مرحله \gls{1st}،
+% \gls{2nd} و \gls{3rd} تقسیم می‌شود. 
+% 
+% برای معادل جمع فارسی در دیکشنری اینطور فراخوان کنید: \glspl{2nd}
+%\begin{itemize}
+%	\item
+%	\gls{1st}: 
+%	این یک آیتم نمونه است...
+%		\item 
+%	\gls{2nd}: 
+%	این یک آیتم نمونه است...
+%	\item 
+%	\gls{3rd}: 
+%	این یک آیتم نمونه است...
+%\end{itemize}
+%
+%\subsection{زیربخش دوم}\label{sec:brain:second_sub}
+%این یک متن نمونه است...
+%
+%
+%\paragraph{پاراگراف نمونه \gls*{1st}}
+%این یک متن نمونه است...
+%\paragraph{پاراگراف نمونه \gls*{2nd}}
+%این یک متن نمونه است...
+%
+%\section{معرفی \gls*{dataset}}\label{sec:dataset}
+%این بخش نمونه است...
+%
+%\begin{enumerate}
+%	
+%\item\textbf{فاز اول یا \lr{English-1}:} 
+%این یک متن نمونه است.
+%\begin{itemize}
+%	\item 
+%	این یک آیتم نمونه است...
+%	\item 
+%	این یک آیتم نمونه است...
+%	\item 
+%	این یک آیتم نمونه است...
+%\end{itemize}
+%
+%این یک متن نمونه است...
+%
+%\item\textbf{فاز دوم یا \lr{English-2}:} 
+%این یک متن نمونه است...
+%
+%\item\textbf{فاز سوم یا \lr{English-3}:} 
+%این یک متن نمونه است...
+%\end{enumerate}
+%
+%برای کامنت کردن بخشی از پروژه بدون حذف آن، از این دستور استفاده کنید.
+%\begin{comment}
+%برای کامنت کردن بخشی از پروژه بدون حذف آن، از این دستور استفاده کنید.
+%\end{comment}
+%
+%برای درج جدول \ref{tab:my_table1} و رفرنس‌دهی از این کد استفاده کنید.
+%
+%\begin{table}[t!]
+%	\centering
+%	\caption{جدول نمونه افقی}
+%	\label{tab:my_table1}
+%%	\begin{tabular}{rccccc}
+%%		\toprule			
+%%		$\text{گروه}$ && $\text{فارسی (English)}$ & $\text{فارسی English}$ & $\text{فارسی English}$ & $\text{فارسی English}$ \\
+%%		\midrule
+%%		\rl{جنسیت}&(\rl{مرد - زن})	
+%%		& $10 - 20$ & $10 - 20$ & $10 - 20$ & $10 - 20$
+%%		\\
+%%		\bottomrule
+%%	\end{tabular}
+%\end{table}
+%
+%برای درج جدول عمودی \ref{tab:my_table2} و رفرنس‌دهی از این کد استفاده کنید.
+%\begin{sidewaystable}
+%	\begin{threeparttable}
+%		\caption{جدول نمونه عمودی}
+%		\label{tab:my_table2}
+%		\setlength\tabcolsep{0pt} % make LaTeX figure out intercolumn spacing
+%		
+%%		\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}} cccccccccc}
+%%			\toprule			
+%%			$\text{گروه}$ & 
+%%			$\myfrac{\text{جنسیت}}{\text{مرد - زن}}$ & 
+%%			$\myfrac{\text{فارسی}}{\text{\lr{mean$\pm $std}}}$ & 
+%%			$\myfrac{\text{ٍenglish}}{\text{\lr{mean$\pm $std}}}$ & 
+%%			$\myfrac{\text{فارسی}}{\text{\lr{mean$\pm $std}}}$ & 
+%%			$\myfrac{\text{\lr{english}}}{\text{\lr{mean$\pm $std}}}$ & 
+%%			$\myfrac{\text{\lr{ٍenglish}}}{\text{\lr{mean$\pm $std}}}$ & 
+%%			$\myfrac{\text{ٍenglish}}{\text{\lr{mean$\pm $std}}}$ & 
+%%			$\myfrac{\text{\lr{ٍenglish}}}{\text{\lr{mean$\pm $std}}}$ & 
+%%			$\myfrac{\text{\lr{RAVALT-PF}}}{\text{\lr{mean$\pm $std}}}$ \\
+%%			\midrule
+%%			فارسی AD & $189 / 153$ & $75.0 \pm 7.8$ & $4.39 \pm 1.67$ & $15.2 \pm 3.0$ & $19.6 \pm 6.7$ & $29.9 \pm 8.1$ & $23.2 \pm 2$ & $22.8 \pm 7.6$ & $89.0 \pm 21.2$ 
+%%			\\
+%%			\bottomrule
+%%		\end{tabular*}
+%	\end{threeparttable}
+%\end{sidewaystable}
+%
+%\section{فرمول}\label{sec:formula}
+%بنابراین برای هر نقطه $X$ از تصویر سه بعدی دریافتی، رابطه
+%\begin{align} \label{eq:n3-main}
+%	v(X) = u(X) f(X) + n(X)
+%\end{align}
+%برقرار است که $v$ سیگنال اندازه‌گیری شده، $u$ سیگنال مورد انتظار بدون اثر \gls{bias} میدان و $f$ یک سیگنال با تغییرات آرام و نماینده \gls{bias} میدان است.
+%روابط تبدیل فوریه تابع $f(t)$ و معکوس آن به بیان شده در روابط \ref{eq:fourier} و \ref{eq:afourier}  هستند.
+%\begin{align}\label{eq:fourier}
+%\mathcal{F}(f(t))= F(w)=\sum_{k=0}^{N-1}f_k e^{-i\frac{2\pi}{N}kn}
+%\end{align}
+%\begin{align}\label{eq:afourier}
+%f_k= F(w)=\frac{1}{N}\sum_{n=0}^{N-1}\mathcal{F}_n e^{-i\frac{2\pi}{N}kn}
+%\end{align}
+
