@@ -1,0 +1,10 @@
+(progn
+  (searchpath ".;C:/Users/Navid/AppData/Local/Programs/MiKTeX/xindy/modules;C:/Users/Navid/AppData/Local/Programs/MiKTeX/xindy/modules/base")
+  (xindy:startup
+    :idxstyle "F:\\University\\IUT-Master\\Project\\MasterAsCode\\MasterAsCode\\Writing\\Theses\\IUT-Theses\\KZPDagd02D"
+    :rawindex "F:\\University\\IUT-Master\\Project\\MasterAsCode\\MasterAsCode\\Writing\\Theses\\IUT-Theses\\YzEmGAokWK"
+    :output "EhsanKarimi.bls"
+    :logfile "EhsanKarimi.blg"
+    
+    )
+  (exit))
