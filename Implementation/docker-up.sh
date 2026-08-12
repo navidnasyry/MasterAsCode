@@ -1,5 +1,5 @@
 #!/bin/bash
-export HOST_IP=10.58.213.45
+export HOST_IP=192.168.24.4
 
 docker compose -f ./DTAgent/docker-compose.yaml up -d
 
