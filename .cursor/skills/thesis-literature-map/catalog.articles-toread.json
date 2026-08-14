@@ -1,0 +1,595 @@
+[
+  {
+    "path": "A Quality-Oriented Digital Twin Modelling Method for Manufacturing .pdf",
+    "folder": ".",
+    "filename": "A Quality-Oriented Digital Twin Modelling Method for Manufacturing .pdf",
+    "title": "Available online at www.sciencedirect.com",
+    "authors": "30th International Conference on Flexible Automation and Intelligent Manufacturing (FAIM2021)",
+    "year": "2020",
+    "doi": "10.1016/j.promfg.2020.10.044",
+    "abstract_snip": "The quality of a product is highly dependent on manufacturing processes. The recent development of industrial information technologies, such  as Cyber-Physical Production Systems, Industrial Internet of Things, and Big Manufacturing Data Analytics has empowered the digitalization of  manufacturing processes and promoted the concept of Digital Twin ",
+    "tags": [
+      "DigitalTwin",
+      "MAS"
+    ],
+    "combos": [
+      "DigitalTwin+MAS"
+    ],
+    "error": ""
+  },
+  {
+    "path": "An Agent-Based Architecture of the Digital Twin for an Emergency Department.pdf",
+    "folder": ".",
+    "filename": "An Agent-Based Architecture of the Digital Twin for an Emergency Department.pdf",
+    "title": "An Agent-Based Architecture of the Digital Twin for an Emergency Department",
+    "authors": "Thierry Moyaux, Yinling Liu, Guillaume Bouleux and Vincent Cheutet",
+    "year": "2023",
+    "doi": "10.3390/su15043412",
+    "abstract_snip": "The concept of Digital Twin (DT) seems promising to improve the management of patient pathways in Emergency Departments (EDs). This article proposes an agent-based architecture of a DT designed for that purpose. The core of this DT is its Information System (IS), which is regularly synchronised on the IS of the Physical Twin (PT). The agents model ",
+    "tags": [
+      "DigitalTwin"
+    ],
+    "combos": [],
+    "error": ""
+  },
+  {
+    "path": "Developing_a_digital_twin_for_testing_multi-agent_systems-2023.pdf",
+    "folder": ".",
+    "filename": "Developing_a_digital_twin_for_testing_multi-agent_systems-2023.pdf",
+    "title": "Developing a Digital Twin for Testing Multi-Agent",
+    "authors": "Centre for Autonomous and Cyberphysical Systems",
+    "year": "",
+    "doi": "",
+    "abstract_snip": "—Emerging unmanned aircraft system (UAS) and ad- vanced air mobility (AAM) ecosystems rely on the development, certification and deployment of new and potentially intelligent technologies and algorithms. To promote a more efficient devel- opment life cycle, this work presents a digital twin architecture and environment to support the rapid prototyp",
+    "tags": [
+      "DigitalTwin",
+      "MAS"
+    ],
+    "combos": [
+      "DigitalTwin+MAS"
+    ],
+    "error": ""
+  },
+  {
+    "path": "Digital twin-enabled automated anomaly detection and bottleneck.pdf",
+    "folder": ".",
+    "filename": "Digital twin-enabled automated anomaly detection and bottleneck.pdf",
+    "title": "Digital twin-enabled automated anomaly detection and bottleneck identification in complex manufacturing systems using a multi-agent approach",
+    "authors": "Christina Latsou",
+    "year": "2023",
+    "doi": "10.1016/j.jmsy.2023.02.008",
+    "abstract_snip": "Digital twin (DT) models are increasingly being used to improve the performance of complex manufacturing  systems. In this context, DTs automatically enabling anomaly detection, such as increase in orders, and bottle - neck identification, such as shortage of products, can significantly enhance decision-making to mitigate the  consequences of the i",
+    "tags": [
+      "DigitalTwin",
+      "MAS"
+    ],
+    "combos": [
+      "DigitalTwin+MAS"
+    ],
+    "error": ""
+  },
+  {
+    "path": "Digital-Twin-Integration-in-Multi-Agent-Cyber-Physical-Manufacturing-Systems.pdf",
+    "folder": ".",
+    "filename": "Digital-Twin-Integration-in-Multi-Agent-Cyber-Physical-Manufacturing-Systems.pdf",
+    "title": "See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/356059201",
+    "authors": "See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/356059201",
+    "year": "2021",
+    "doi": "10.1016/j.ifacol.2021.08.096",
+    "abstract_snip": "Complex manufacturing and supply chain systems  consist of  concurrent labour-intensive  processes and procedures with repetitive time-consuming tasks and multiple quality checks. These features  may pose challenges for the efficient operation and management , while manual tasks may significantly  increase human errors or near misses, having impact",
+    "tags": [
+      "DigitalTwin",
+      "MAS"
+    ],
+    "combos": [
+      "DigitalTwin+MAS"
+    ],
+    "error": ""
+  },
+  {
+    "path": "DT+Ontology/124-universal-digital-twin-land-use.pdf",
+    "folder": "DT+Ontology",
+    "filename": "124-universal-digital-twin-land-use.pdf",
+    "title": "DCE_2100021 1..28",
+    "authors": "Jethro Akroyd1,2 , Zachary Harper 1, David Soutar 1, Feroz Farazi 1,2, Amit Bhave 3,",
+    "year": "2021",
+    "doi": "10.1017/dce.2021.21",
+    "abstract_snip": "This article develops an ontological description of land use and applies it to incorporate geospatial information describing land coverage into a knowledge-graph-based Universal Digital Twin. Sources of data relating to land use in the UK have been surveyed. The Crop Map of England (CROME) is produced annually by the UK Government and was identifie",
+    "tags": [
+      "DigitalTwin",
+      "Ontology"
+    ],
+    "combos": [
+      "DigitalTwin+Ontology"
+    ],
+    "error": ""
+  },
+  {
+    "path": "DT+Ontology/146-Digital twin-based zero-touch management.pdf",
+    "folder": "DT+Ontology",
+    "filename": "146-Digital twin-based zero-touch management.pdf",
+    "title": "Digital Twin-Based Zero-Touch Management for IoT",
+    "authors": "Jiali Ma, Yuanbo Guo, Chen Fang and Qi Zhang",
+    "year": "2022",
+    "doi": "10.3390/electronics11244104",
+    "abstract_snip": "The rapid development of the Internet of Things (IoT) requires network automation, to improve management efﬁciency and reduce manual operations. Zero-touch network is a promising technology for empowering network management automation by creating virtualized networks for software-based solutions. However, the traditional software-deﬁned network (SD",
+    "tags": [
+      "DigitalTwin",
+      "Ontology"
+    ],
+    "combos": [
+      "DigitalTwin+Ontology"
+    ],
+    "error": ""
+  },
+  {
+    "path": "DT+Ontology/147-creating-occupant-centered-digital-twins-using-the-occupant-feedback-ontology-implemented-in-a.pdf",
+    "folder": "DT+Ontology",
+    "filename": "147-creating-occupant-centered-digital-twins-using-the-occupant-feedback-ontology-implemented-in-a.pdf",
+    "title": "Creating occupant-centered digital twins using the Occupant Feedback Ontology implemented in a smartwatch app",
+    "authors": "Alex Donkers, Bauke de Vries, Dujuan Yang",
+    "year": "2024",
+    "doi": "10.3233/SW-223254",
+    "abstract_snip": ". Occupant feedback enables building managers to improve occupants’ health, comfort, and satisfaction. However, acquiring continuous occupant feedback and integrating this feedback with other building information is challenging. This paper presents a scalable method to acquire continuous occupant feedback and directly integrate this with other buil",
+    "tags": [
+      "DigitalTwin",
+      "Ontology"
+    ],
+    "combos": [
+      "DigitalTwin+Ontology"
+    ],
+    "error": ""
+  },
+  {
+    "path": "DT+Ontology/150-19.Cognitivetwinconstructionforsystemofsystemsoperationbasedonsemanticintegrationandhigh-levelarchitecture.pdf",
+    "folder": "DT+Ontology",
+    "filename": "150-19.Cognitivetwinconstructionforsystemofsystemsoperationbasedonsemanticintegrationandhigh-levelarchitecture.pdf",
+    "title": "See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/359249990",
+    "authors": "See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/359249990",
+    "year": "2022",
+    "doi": "10.3233/ICA-220677",
+    "abstract_snip": ". With the increasing complexity of engineered systems, digital twins (DTs) have been widely used to support integrated modeling, simulation, and decision-making of the system of systems (SoS). However, when integrating DTs of each constituent system, it is challenging to implement complexity management, interface deﬁnition, and service integration",
+    "tags": [
+      "DigitalTwin",
+      "Ontology"
+    ],
+    "combos": [
+      "DigitalTwin+Ontology"
+    ],
+    "error": ""
+  },
+  {
+    "path": "DT+Ontology/154 - heritage digital twin a bicycle made for two.pdf",
+    "folder": "DT+Ontology",
+    "filename": "154 - heritage digital twin a bicycle made for two.pdf",
+    "title": "HDT-latest version",
+    "authors": "Achille Felicetti",
+    "year": "",
+    "doi": "",
+    "abstract_snip": "The paper concerns the definition of a novel ontology for cultural heritage based on the concept of digital twin. The ontology, called Heritage Digital Twin ontology, is a compatible extension of the well-known CIDOC CRM ISO standard for cultural heritage documentation and incorporates all the different documentation systems presently in use for cu",
+    "tags": [
+      "DigitalTwin",
+      "Ontology"
+    ],
+    "combos": [
+      "DigitalTwin+Ontology"
+    ],
+    "error": ""
+  },
+  {
+    "path": "DT+Ontology/156 - Monitoring_and_Predicting_carbon_emissions_R2_Clean.pdf",
+    "folder": "DT+Ontology",
+    "filename": "156 - Monitoring_and_Predicting_carbon_emissions_R2_Clean.pdf",
+    "title": "Digital twin with Machine learning for predictive monitoring of CO2",
+    "authors": "equivalent from existing buildings. Energy and Buildings, 284, Article 112851.",
+    "year": "2023",
+    "doi": "10.1016/j.enbuild.2023.112851",
+    "abstract_snip": "The revolution of the industry 4.0 presents a new era of digital transformation for the  construction industry, advancing towards the concept of digital twins , while on the other  hand it faces the global challenge of reducing carbon emissions from operational assets.  The current research gap in the application of digital twin s for achieving net",
+    "tags": [
+      "DigitalTwin",
+      "Ontology"
+    ],
+    "combos": [
+      "DigitalTwin+Ontology"
+    ],
+    "error": ""
+  },
+  {
+    "path": "DT+Ontology/34-Kitchenham-2007Systematicreviews5-8.pdf",
+    "folder": "DT+Ontology",
+    "filename": "34-Kitchenham-2007Systematicreviews5-8.pdf",
+    "title": "Undertaking systematic reviews",
+    "authors": "A satisfied Microsoft Office User",
+    "year": "2007",
+    "doi": "",
+    "abstract_snip": "11,262 READS 177,300 2 authors: Barbara Kitchenham Keele University 307 PUBLICATIONS   52,672 CITATIONS",
+    "tags": [
+      "Ontology"
+    ],
+    "combos": [],
+    "error": ""
+  },
+  {
+    "path": "DT+Ontology/Ontologies in digital twins A systematic literature review.pdf",
+    "folder": "DT+Ontology",
+    "filename": "Ontologies in digital twins A systematic literature review.pdf",
+    "title": "Ontologies in digital twins: A systematic literature review",
+    "authors": "Erkan Karabulut",
+    "year": "2024",
+    "doi": "10.5281/zenodo.8",
+    "abstract_snip": "journal homepage: www.elsevier.com/locate/fgcs Ontologies in digital twins: A systematic literature review Erkan Karabulut a,∗, Salvatore F. Pileggi b, Paul Groth a, Victoria Degeler a a University of Amsterdam, Science Park 904, Amsterdam, 1098 XH, North Holland, The Netherlands b University of Technology Sydney, 15 Broadway, Ultimo, 2007, New Sou",
+    "tags": [
+      "DigitalTwin",
+      "Ontology"
+    ],
+    "combos": [
+      "DigitalTwin+Ontology"
+    ],
+    "error": ""
+  },
+  {
+    "path": "DT+Ontology/Reference architecture and ontology framework for digital twin construction.pdf",
+    "folder": "DT+Ontology",
+    "filename": "Reference architecture and ontology framework for digital twin construction.pdf",
+    "title": "Reference architecture and ontology framework for digital twin construction",
+    "authors": "Jonas Schlenger",
+    "year": "",
+    "doi": "10.1016/j.autcon.2025.106111",
+    "abstract_snip": ",∗, Kacper Pluta c,d , Alwyn Mathew e, Timson Yeung b , Rafael Sacks b , André Borrmann a a Chair of Computational Modeling and Simulation, School of Engineering and Design, Technical University of Munich, Arcisstraße 21, 80333, Munich, Germany b Faculty of Civil and Environmental Engineering, Technion - Israel Institute of Technology, 32000, Haifa",
+    "tags": [
+      "DigitalTwin",
+      "Ontology"
+    ],
+    "combos": [
+      "DigitalTwin+Ontology"
+    ],
+    "error": ""
+  },
+  {
+    "path": "DT+Ontology/sensors-24-03978.pdf",
+    "folder": "DT+Ontology",
+    "filename": "sensors-24-03978.pdf",
+    "title": "Digital Twin Sensors in Cultural Heritage Ontology Applications",
+    "authors": "Franco Niccolucci and Achille Felicetti",
+    "year": "2024",
+    "doi": "10.3390/s24123978",
+    "abstract_snip": "This paper concerns the extension of the Heritage Digital Twin Ontology introduced in previous research to describe the reactivity of digital twins used for cultural heritage documentation by including the semantic description of sensors and activators and all of the process of interacting with the real world. After analysing previous work on the u",
+    "tags": [
+      "DigitalTwin",
+      "Ontology"
+    ],
+    "combos": [
+      "DigitalTwin+Ontology"
+    ],
+    "error": ""
+  },
+  {
+    "path": "DT+SI/Adaptive-Swarm-Intelligent-Offloading-Based-on-Digital-Twin-assisted-Prediction-in-VEC.pdf",
+    "folder": "DT+SI",
+    "filename": "Adaptive-Swarm-Intelligent-Offloading-Based-on-Digital-Twin-assisted-Prediction-in-VEC.pdf",
+    "title": "See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/376675658",
+    "authors": "See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/376675658",
+    "year": "2023",
+    "doi": "10.1109/TMC.2023.3344645",
+    "abstract_snip": "—V ehicular Edge Computing (VEC) is the transporta- tion version of Mobile Edge Computing (MEC). In VEC, task ofﬂoading enables vehicles to ofﬂoad computing tasks to nearby Roadside Units (RSUs), thereby reducing the computation cost. Recent trends in task ofﬂoading cause a proliferation of studies in academia. However, the existing ofﬂoading schem",
+    "tags": [
+      "DigitalTwin",
+      "SwarmIntelligence"
+    ],
+    "combos": [],
+    "error": ""
+  },
+  {
+    "path": "DT+SI/An Intelligent Monitoring and Warning Framework.pdf",
+    "folder": "DT+SI",
+    "filename": "An Intelligent Monitoring and Warning Framework.pdf",
+    "title": "An Intelligent Monitoring and Warning Framework in Drone Swarm Digital Twin Systems",
+    "authors": "An Intelligent Monitoring and Warning Framework",
+    "year": "",
+    "doi": "10.1109/ICC51166.2024.10622736",
+    "abstract_snip": "—In drone swarms, where multiple drones collaborate closely to achieve shared objectives within constrained spatial domains, the intricacies of these interrelated actions can lead to potential issues. Despite rigorous pre-deployment planning, the inherent probability of complications persists. These compli- cations stem from onboard computational r",
+    "tags": [
+      "DigitalTwin",
+      "SwarmIntelligence"
+    ],
+    "combos": [],
+    "error": ""
+  },
+  {
+    "path": "DT+SI/Exploring 6G Potential for Industrial Digital Twinning and Swarm Intelligence in Obstacle Rich.pdf",
+    "folder": "DT+SI",
+    "filename": "Exploring 6G Potential for Industrial Digital Twinning and Swarm Intelligence in Obstacle Rich.pdf",
+    "title": "Title line 1",
+    "authors": "James Irvine",
+    "year": "",
+    "doi": "",
+    "abstract_snip": "- With the advent of 6G technology, the demand for  efficient and intelligent systems in industrial applications has  surged, driving the need for advanced solutions in target  localization. Utilizing swarm robots to locate unknown targets  involves navigating increasingly complex environments. Digital  Twinning (DT) offers a robust solution by cre",
+    "tags": [
+      "DigitalTwin",
+      "SwarmIntelligence"
+    ],
+    "combos": [],
+    "error": ""
+  },
+  {
+    "path": "Large-scale field demonstration of an interoperable and ontology-based.pdf",
+    "folder": ".",
+    "filename": "Large-scale field demonstration of an interoperable and ontology-based.pdf",
+    "title": "Large-scale field demonstration of an i...g framework for building digital twins",
+    "authors": "",
+    "year": "",
+    "doi": "",
+    "abstract_snip": "",
+    "tags": [
+      "DigitalTwin"
+    ],
+    "combos": [],
+    "error": ""
+  },
+  {
+    "path": "MADT+LLM+LSTM/An aircraft engine remaining useful life prediction method based on predictive vector angle minimization and feature fusion gate improved transformer model.pdf",
+    "folder": "MADT+LLM+LSTM",
+    "filename": "An aircraft engine remaining useful life prediction method based on predictive vector angle minimization and feature fusion gate improved transformer model.pdf",
+    "title": "An aircraft engine remaining useful life prediction method based on",
+    "authors": "Remaining useful life (RUL) prediction is crucial for achieving intelligent and predictive maintenance of aircraft",
+    "year": "",
+    "doi": "10.1016/j.jmsy.2024.08.025",
+    "abstract_snip": "Remaining useful life (RUL) prediction is crucial for achieving intelligent and predictive maintenance of aircraft  engines. In practical applications, advance prediction values smaller than the true values can prevent serious  deferred maintenance accidents. Using asymmetric loss functions directly leads to noticeable accuracy degra - dation, and ",
+    "tags": [
+      "CMAPSS",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM"
+    ],
+    "error": ""
+  },
+  {
+    "path": "MADT+LLM+LSTM/Asymmetric Loss Functions for Deep Learning_Early Predictions of Remaining Useful Life in_Aerospace Gas Turbine Engines.pdf",
+    "folder": "MADT+LLM+LSTM",
+    "filename": "Asymmetric Loss Functions for Deep Learning_Early Predictions of Remaining Useful Life in_Aerospace Gas Turbine Engines.pdf",
+    "title": "Asymmetric Loss Functions for Deep Learning",
+    "authors": "Divish Rengasamy1, Benjamin Rothwell 1, Grazziela P Figueredo 2,3",
+    "year": "",
+    "doi": "",
+    "abstract_snip": "—Asymmetric loss functions have been successfully applied to deep learning for image analysis and imbalanced classiﬁcation. In this paper, we extend the use of particular types of weighted loss functions, namely asymmetric loss functions, to investigate how predictions of engine remaining useful life (RUL) in aerospace are affected. Within prognost",
+    "tags": [
+      "CMAPSS",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM"
+    ],
+    "error": ""
+  },
+  {
+    "path": "MADT+LLM+LSTM/Automated Machine Learning for Remaining Useful Life Predictions.pdf",
+    "folder": "MADT+LLM+LSTM",
+    "filename": "Automated Machine Learning for Remaining Useful Life Predictions.pdf",
+    "title": "Automated Machine Learning for Remaining Useful",
+    "authors": "",
+    "year": "",
+    "doi": "",
+    "abstract_snip": "—Being able to predict the remaining useful life (RUL) of an engineering system is an important task in prognostics and health management. Recently, data-driven approaches to RUL predictions are becoming prevalent over model-based approaches since no underlying physical knowledge of the engineering system is required. Yet, this just replaces requir",
+    "tags": [
+      "CMAPSS",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM"
+    ],
+    "error": ""
+  },
+  {
+    "path": "MADT+LLM+LSTM/grok_report_1.pdf",
+    "folder": "MADT+LLM+LSTM",
+    "filename": "grok_report_1.pdf",
+    "title": "grok_report_1",
+    "authors": "",
+    "year": "",
+    "doi": "",
+    "abstract_snip": "",
+    "tags": [
+      "LSTM"
+    ],
+    "combos": [],
+    "error": ""
+  },
+  {
+    "path": "MADT+LLM+LSTM/Integrating Large Language Model and Digital Twins in the Context of Industry 5.0 Framework Challenges and Opportunities.pdf",
+    "folder": "MADT+LLM+LSTM",
+    "filename": "Integrating Large Language Model and Digital Twins in the Context of Industry 5.0 Framework Challenges and Opportunities.pdf",
+    "title": "See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/388862128",
+    "authors": "Chong Chen",
+    "year": "2025",
+    "doi": "10.1016/j.rcim.2025.102982",
+    "abstract_snip": "In Industry 5.0, where human ingenuity is combined with cutting -edge technologies such as  artificial intelligence (AI) and robotics to revolutionize manufacturing with a focus on  sustainability and human well-being, Digital Twins (DT) have become essential for real -time  optimization. However, the complexity of managing DT for large -scale syst",
+    "tags": [
+      "DigitalTwin",
+      "LSTM",
+      "LLM"
+    ],
+    "combos": [
+      "DigitalTwin+LLM"
+    ],
+    "error": ""
+  },
+  {
+    "path": "MADT+LLM+LSTM/Leveraging Large Language Models for Enhanced Digi.pdf",
+    "folder": "MADT+LLM+LSTM",
+    "filename": "Leveraging Large Language Models for Enhanced Digi.pdf",
+    "title": "Leveraging Large Language Models for Enhanced Digital Twin Modeling: Trends, Methods, and Challenges",
+    "authors": "Linyao Yang; Shi Luo; Xi Cheng; Lei Yu;",
+    "year": "",
+    "doi": "",
+    "abstract_snip": "Digital twin technology is a transformative innovation driving the digital transformation and intelligent optimization of manufac- turing systems. By integrating real-time data with computational models, digital twins enable continuous monitoring, simulation, prediction, and optimization, e ffectively bridging the gap between the physical and digit",
+    "tags": [
+      "DigitalTwin",
+      "LSTM",
+      "LLM"
+    ],
+    "combos": [
+      "DigitalTwin+LLM"
+    ],
+    "error": ""
+  },
+  {
+    "path": "MADT+LLM+LSTM/LLM experiments with simulation Large Language Model Multi Agent System for Simulation Model Parametrization in Digital Twin.pdf",
+    "folder": "MADT+LLM+LSTM",
+    "filename": "LLM experiments with simulation Large Language Model Multi Agent System for Simulation Model Parametrization in Digital Twin.pdf",
+    "title": "LLM experiments with simulation Large L...Model Parametrization in Digital Twins",
+    "authors": "",
+    "year": "",
+    "doi": "",
+    "abstract_snip": "",
+    "tags": [
+      "DigitalTwin",
+      "LSTM"
+    ],
+    "combos": [],
+    "error": ""
+  },
+  {
+    "path": "MADT+LLM+LSTM/Multi-Agent Systems for Manufacturing Digital Twins A Perspective on Agency and Large Language Models.pdf",
+    "folder": "MADT+LLM+LSTM",
+    "filename": "Multi-Agent Systems for Manufacturing Digital Twins A Perspective on Agency and Large Language Models.pdf",
+    "title": "IFAC PapersOnLine 59-10 (2025) 1612–1617",
+    "authors": "Interest in agent -based systems and digital twins has surged",
+    "year": "2025",
+    "doi": "10.1016/j.ifacol.2025.09.271",
+    "abstract_snip": "concepts typical o f  industrial applications.  Similarly, because of their reliance on  predefined algorithms and extremely large and generalized  datasets with significant training requirements, current LLMs  are not viewed as well suited for tasks requiring near real-time  response to system changes on order of minutes, even seconds. This paper ",
+    "tags": [
+      "DigitalTwin",
+      "LSTM",
+      "LLM"
+    ],
+    "combos": [
+      "DigitalTwin+LLM"
+    ],
+    "error": ""
+  },
+  {
+    "path": "MADT+LLM+LSTM/Predictive Analytics Based on Digital Twins Generative AI and ChatGPT.pdf",
+    "folder": "MADT+LLM+LSTM",
+    "filename": "Predictive Analytics Based on Digital Twins Generative AI and ChatGPT.pdf",
+    "title": "Predictive Analytics Based on Digital Twins, Generative AI, and ChatGPT",
+    "authors": "Predictive Analytics Based on Digital Twins, Generative AI, and ChatGPT",
+    "year": "",
+    "doi": "10.54808/WMSCI2023.01.168",
+    "abstract_snip": "ChatGPT (Chat Generative Pre -Trained Transformer) is one of  the latest technologies in modern Artificial Intelligence (AI) and  probably the technology with the highest impact in this area for  the near future.   The latest version of ChatGPT – GPT-4 has improved in several  areas, including Predictive Analytics.   Generative AI and Ghat GPT can ",
+    "tags": [
+      "DigitalTwin",
+      "LSTM",
+      "LLM"
+    ],
+    "combos": [
+      "DigitalTwin+LLM"
+    ],
+    "error": ""
+  },
+  {
+    "path": "MADT+LLM+LSTM/Remaining Useful Life Prediction Using Attention-LSTM Neural Network of Aircraft Engines.pdf",
+    "folder": "MADT+LLM+LSTM",
+    "filename": "Remaining Useful Life Prediction Using Attention-LSTM Neural Network of Aircraft Engines.pdf",
+    "title": "Remaining Useful Life Prediction Using Attention-LSTM Neural",
+    "authors": "essential for the effective implementation of Prognostics and",
+    "year": "2021",
+    "doi": "10.36001/ijphm.2025.v16i2.4274",
+    "abstract_snip": "Accurate prediction of the Remaining Useful Life (RUL) is essential for the effective implementation of Prognostics and Health Management (PHM) in aerospace, particularly in en- hancing aero-engine reliability and forecasting potential fail- ures to reduce maintenance costs and human-related risks. The NASA Commercial Modular Aero-Propulsion System",
+    "tags": [
+      "CMAPSS",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM"
+    ],
+    "error": ""
+  },
+  {
+    "path": "Reference architecture and ontology framework for digital twin construction.pdf",
+    "folder": ".",
+    "filename": "Reference architecture and ontology framework for digital twin construction.pdf",
+    "title": "Reference architecture and ontology framework for digital twin construction",
+    "authors": "Jonas Schlenger",
+    "year": "",
+    "doi": "10.1016/j.autcon.2025.106111",
+    "abstract_snip": ",∗, Kacper Pluta c,d , Alwyn Mathew e, Timson Yeung b , Rafael Sacks b , André Borrmann a a Chair of Computational Modeling and Simulation, School of Engineering and Design, Technical University of Munich, Arcisstraße 21, 80333, Munich, Germany b Faculty of Civil and Environmental Engineering, Technion - Israel Institute of Technology, 32000, Haifa",
+    "tags": [
+      "DigitalTwin",
+      "Ontology"
+    ],
+    "combos": [
+      "DigitalTwin+Ontology"
+    ],
+    "error": ""
+  },
+  {
+    "path": "Short Survey - The Role of Multi-Agents in Digital Twin Implementation.pdf",
+    "folder": ".",
+    "filename": "Short Survey - The Role of Multi-Agents in Digital Twin Implementation.pdf",
+    "title": "The Role of Multi-Agents in Digital Twin Implementation: Short Survey",
+    "authors": "Inrecentyears,DigitalTwin(DT)technologyhasemergedasasignificanttechnologicaladvancement.Adig-",
+    "year": "2024",
+    "doi": "10.1145/3697350",
+    "abstract_snip": "Inrecentyears,DigitalTwin(DT)technologyhasemergedasasignificanttechnologicaladvancement.Adig- italtwinisadigitalrepresentationofaphysicalassetthatmirrorsitsdatamodel,behaviour,andinteractions with other physical assets. Digital Twin aims at achieving adaptability, seamless data integration, modelling, simulation, automation, and real-time data mana",
+    "tags": [
+      "DigitalTwin",
+      "MAS"
+    ],
+    "combos": [
+      "DigitalTwin+MAS"
+    ],
+    "error": ""
+  },
+  {
+    "path": "sustainability-15-03470.pdf",
+    "folder": ".",
+    "filename": "sustainability-15-03470.pdf",
+    "title": "Generic Multi-Layered Digital-Twin-Framework-Enabled Asset Lifecycle Management for the Sustainable Mining Industry",
+    "authors": "Nabil El Bazi, Mustapha Mabrouki, Oussama Laayati, Nada Ouhabi, Hicham El Hadraoui, Fatima-Ezzahra Hammouch and Ahmed Chebak",
+    "year": "2023",
+    "doi": "10.3390/su15043470",
+    "abstract_snip": "In the era of digitalization, many technologies are evolving, namely, the Internet of Things (IoT), big data, cloud computing, artiﬁcial intelligence (IA), and digital twin (DT) which has gained signiﬁcant traction in a variety of sectors, including the mining industry. The use of DT in the mining industry is driven by its potential to improve efﬁc",
+    "tags": [
+      "DigitalTwin"
+    ],
+    "combos": [],
+    "error": ""
+  },
+  {
+    "path": "Towards Agrirobot Digital Twins Agri-RO5—A Multi-Agent Architecture for Dynamic Fleet Simulation.pdf",
+    "folder": ".",
+    "filename": "Towards Agrirobot Digital Twins Agri-RO5—A Multi-Agent Architecture for Dynamic Fleet Simulation.pdf",
+    "title": "Towards Agrirobot Digital Twins: Agri-RO5—A Multi-Agent Architecture for Dynamic Fleet Simulation",
+    "authors": "Jorge Gutiérrez Cejudo, Francisco Enguix Andrés, Marin Lujak, Carlos Carrascosa Casamayor, Alberto Fernandez, Luís Hernández López",
+    "year": "2024",
+    "doi": "10.3390/electronics13010080",
+    "abstract_snip": "In this paper, we propose a multi-agent-based architecture for a Unity3D simulation of dynamic agrirobot-fleet-coordination methods. The architecture is based on a Robot Operating System (ROS) and Agrobots-SIM package that extends the existing package Patrolling SIM made for multi- robot patrolling. The Agrobots-SIM package accommodates dynamic mul",
+    "tags": [
+      "DigitalTwin",
+      "MAS"
+    ],
+    "combos": [
+      "DigitalTwin+MAS"
+    ],
+    "error": ""
+  },
+  {
+    "path": "Towards developing Digital Twin enabled.pdf",
+    "folder": ".",
+    "filename": "Towards developing Digital Twin enabled.pdf",
+    "title": "Towards developing Digital Twin enabled",
+    "authors": "Stefano Mariani1, Marco Picone 1, and Alessandro Ricci 2",
+    "year": "",
+    "doi": "",
+    "abstract_snip": ". The Multi-Agent Systems (MASs) literature provides ab- stractions, techniques, and development platforms to design and imple- ment the virtual environment within which agents operate. However, coupling such an environment with aphysical counterpart is still cumber- some, as existing approaches deal with the issue in an ad-hoc way, with- out gener",
+    "tags": [
+      "DigitalTwin",
+      "MAS"
+    ],
+    "combos": [
+      "DigitalTwin+MAS"
+    ],
+    "error": ""
+  }
+]

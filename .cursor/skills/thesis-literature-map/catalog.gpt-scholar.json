@@ -1,0 +1,777 @@
+[
+  {
+    "id": 1,
+    "key": "gptscholar1_2026",
+    "title": "Digital Twin AI: Opportunities and Challenges from Large Language Models to World Models",
+    "authors": "R. Zhou, D. Chen, Z. Jia, Y. Su, Y. Liu, Y. Lu, D. Shi et al.",
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "doi": "",
+    "url": "https://arxiv.org/abs/2601.01321",
+    "relevance_note": "⭐⭐⭐⭐⭐ LLM + Digital Twin",
+    "summary_fa": "این مقاله یکی از منابع مهم برای معماری کلی **DT–LLM** در سال ۲۰۲۶ است. نویسندگان مسیر تکامل Digital Twin را از مدل‌های یادگیری ماشین به سمت مدل‌های زبانی بزرگ و سپس World Models بررسی می‌کنند. کاربردهای مورد بحث شامل تولید، هوافضا، رباتیک و سیستم‌های هوشمند است. برای پروژه‌ای که قصد دارد LLM را به‌عنوان لایه استدلال و تعامل روی Digital Twin قرار دهد، این مقاله بیشتر نقش **چارچوب مفهومی و نقشه راه** دارد تا یک مدل اختصاصی CMAPSS.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "LLM"
+    ],
+    "combos": [
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LLM",
+      "DigitalTwin+LLM",
+      "CMAPSS+LLM+DigitalTwin"
+    ],
+    "priority_score": 8,
+    "quality_hint": "preprint",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای شکاف پژوهشی LLM داخل pipeline پیش‌بینی RUL روی CMAPSS"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 2,
+    "key": "gptscholar2_2026",
+    "title": "Cross-domain Digital Twin Architecture for Predictive Maintenance via Machine Learning and Large Language Models",
+    "authors": "J. Williams, G. Jones, T. Berg, L. Birt, A. Stowe et al.",
+    "year": "2026",
+    "venue": "Computers & Industrial Engineering",
+    "doi": "",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0360835226001154",
+    "relevance_note": "⭐⭐⭐⭐⭐ DT + ML + LLM + Predictive Maintenance",
+    "summary_fa": "یک معماری Digital Twin برای نگهداری پیشگویانه ارائه می‌کند که **پیام‌رسانی بلادرنگ، یادگیری نظارت‌شده، visualization و LLM روی edge** را در یک سیستم واحد ترکیب می‌کند. از نظر معماری، این مقاله یکی از نزدیک‌ترین منابع به ایده‌ای است که در آن مدل RUL مانند LSTM نقش موتور پیش‌بینی را دارد و LLM در لایه بالاتر مسئول تفسیر، توضیح و تصمیم‌یار است.",
+    "tags": [
+      "DigitalTwin",
+      "LSTM",
+      "LLM"
+    ],
+    "combos": [
+      "DigitalTwin+LLM"
+    ],
+    "priority_score": 5,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای لایه استدلال/تعامل LLM روی DT"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 3,
+    "key": "gptscholar3_2026",
+    "title": "D2M (Design-to-Manufacturing) by Integrating Digital Twins and Large Language Models: Conceptual Framework",
+    "authors": "Z. Zhang, J. Li, J. Xiong, D. Tang, Q. Wang, D. Guo",
+    "year": "2026",
+    "venue": "Digital Twin",
+    "doi": "10.1080/27525783.2026.2645373",
+    "url": "https://www.tandfonline.com/doi/abs/10.1080/27525783.2026.2645373",
+    "relevance_note": "⭐⭐⭐⭐⭐ DT + LLM",
+    "summary_fa": "یک چارچوب مفهومی برای ادغام LLM و Digital Twin در فرایند Design-to-Manufacturing ارائه می‌کند. اگرچه CMAPSS محور اصلی آن نیست، اما برای طراحی لایه **LLM-as-Reasoner** در یک Digital Twin صنعتی بسیار مرتبط است؛ مخصوصاً برای تبدیل داده‌های ساختاریافته Twin به توضیحات، تصمیم‌ها و تعامل زبان طبیعی.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "LLM"
+    ],
+    "combos": [
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LLM",
+      "DigitalTwin+LLM",
+      "CMAPSS+LLM+DigitalTwin"
+    ],
+    "priority_score": 8,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": false,
+    "thesis_usage_notes": [
+      "برای شکاف پژوهشی LLM داخل pipeline پیش‌بینی RUL روی CMAPSS"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 4,
+    "key": "gptscholar4_2026",
+    "title": "Generative AI-Driven Digital Twin in the Manufacturing Internet of Things: A Comprehensive Survey",
+    "authors": "X. Fu, M. Qin, P. Pace, C. Savaglio, W. Li et al.",
+    "year": "2026",
+    "venue": "IEEE Internet of Things Journal",
+    "doi": "",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11357935/",
+    "relevance_note": "⭐⭐⭐⭐⭐ Generative AI + DT",
+    "summary_fa": "یک مرور جامع از استفاده GenAI در Digital Twinهای صنعتی و IIoT است. تمرکز مقاله روی موضوعاتی مانند داده‌های ناهمگون، synchronization، مدل‌سازی Twin و استفاده از AI مولد برای افزایش intelligence سیستم است. برای بخش literature review پروژه شما بسیار ارزشمند است، زیرا ارتباط بین **sensor data → DT → AI/LLM → decision** را در سطح معماری بررسی می‌کند.",
+    "tags": [
+      "DigitalTwin",
+      "LLM"
+    ],
+    "combos": [
+      "DigitalTwin+LLM"
+    ],
+    "priority_score": 5,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای لایه استدلال/تعامل LLM روی DT"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 5,
+    "key": "gptscholar5_2026",
+    "title": "Digital Twin Designs with Generative AI: Crafting a Comprehensive Framework for Manufacturing Systems",
+    "authors": "O. Mata, P. Ponce, C. Perez, M. Ramirez et al.",
+    "year": "2026",
+    "venue": "Journal of Intelligent Manufacturing",
+    "doi": "10.1007/s10845-025-02583-8",
+    "url": "https://doi.org/10.1007/s10845-025-02583-8",
+    "relevance_note": "⭐⭐⭐⭐⭐ DT + Generative AI",
+    "summary_fa": "چارچوبی برای طراحی Digital Twinهای مجهز به Generative AI در سیستم‌های تولیدی ارائه می‌کند. نکته مهم برای کار شما، ادغام دانش انسانی و GenAI با ساختار Digital Twin است. این مقاله بیشتر برای طراحی معماری سطح سیستم مناسب است و مستقیماً مدل RUL مبتنی بر CMAPSS را هدف نمی‌گیرد.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "LLM"
+    ],
+    "combos": [
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LLM",
+      "DigitalTwin+LLM",
+      "CMAPSS+LLM+DigitalTwin"
+    ],
+    "priority_score": 8,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": false,
+    "thesis_usage_notes": [
+      "برای شکاف پژوهشی LLM داخل pipeline پیش‌بینی RUL روی CMAPSS"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 6,
+    "key": "gptscholar6_2026",
+    "title": "Digital Twin Framework for Interpretable Aero-Engine RUL Prediction via Multi-Branch LSTM and Unity Visualization",
+    "authors": "A. Wan, Z. Zhu, K. Al-Bukhaiti, R. Yin et al.",
+    "year": "2026",
+    "venue": "IEEE Transactions",
+    "doi": "",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11491907/",
+    "relevance_note": "⭐⭐⭐⭐⭐ CMAPSS/N-CMAPSS + LSTM + Digital Twin",
+    "summary_fa": "از **N-CMAPSS DS01** برای پیش‌بینی Remaining Useful Life موتور هواپیما استفاده می‌کند و یک معماری **Multi-Branch LSTM** را با Digital Twin و visualization در Unity ترکیب می‌کند. این مورد از مهم‌ترین نتایج برای پروژه شماست، زیرا دقیقاً در تقاطع **Aero-engine + CMAPSS + LSTM + Digital Twin** قرار دارد. تفاوت اصلی با ایده سه‌گانه شما این است که لایه LLM در این معماری محور اصلی نیست.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "LSTM",
+      "LLM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM",
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LLM",
+      "DigitalTwin+LLM",
+      "CMAPSS+LLM+DigitalTwin",
+      "CMAPSS+LSTM+DigitalTwin"
+    ],
+    "priority_score": 11,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای شکاف پژوهشی LLM داخل pipeline پیش‌بینی RUL روی CMAPSS",
+      "برای ترکیب LSTM/RUL با لایه Digital Twin موتور"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 7,
+    "key": "gptscholar7_2026",
+    "title": "A Digital Twin-Enabled Deep Learning Framework for Remaining Useful Life Prediction of Turbofan Engines",
+    "authors": "N. I. Knai, B. Arun, B. V. Manikandan, S. S. Abdullah et al.",
+    "year": "2026",
+    "venue": "International Journal of Research and Multidisciplinary",
+    "doi": "",
+    "url": "http://ijrm.net/index.php/ijrm/article/view/51",
+    "relevance_note": "⭐⭐⭐⭐⭐ CMAPSS + LSTM + Digital Twin",
+    "summary_fa": "یک چارچوب Deep Learning مجهز به Digital Twin برای RUL موتورهای turbofan ارائه می‌کند و از **NASA C-MAPSS** برای ارزیابی استفاده می‌کند. LSTM هسته پیش‌بینی degradation است و Digital Twin برای ایجاد representation دیجیتال از وضعیت موتور استفاده می‌شود. از لحاظ ایده کلی، یکی از نزدیک‌ترین مقالات به ترکیب **CMAPSS + LSTM + DT** است.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM",
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LSTM+DigitalTwin"
+    ],
+    "priority_score": 8,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای ترکیب LSTM/RUL با لایه Digital Twin موتور"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 8,
+    "key": "gptscholar8_2026",
+    "title": "A Physics-Informed Intelligent Digital Twin Using Multi-Task CNN–LSTM for Acoustic Emission-Based Fault Prognostics in Safety-Critical Systems",
+    "authors": "A. Karkadakattil",
+    "year": "2026",
+    "venue": "Journal of Intelligent Manufacturing and Special Equipment",
+    "doi": "",
+    "url": "https://www.emerald.com/jimse/article/7/1/33/1336171",
+    "relevance_note": "⭐⭐⭐⭐ DT + CNN-LSTM + Prognostics",
+    "summary_fa": "یک Digital Twin هوشمند physics-informed را با **Multi-task CNN–LSTM** ترکیب می‌کند. کاربرد اصلی acoustic emission و fault prognostics است، بنابراین CMAPSS هسته اصلی آن نیست؛ بااین‌حال از نظر معماری برای شما بسیار مهم است، زیرا نشان می‌دهد چگونه می‌توان **مدل temporal مانند LSTM را داخل Digital Twin** قرار داد.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM",
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LSTM+DigitalTwin"
+    ],
+    "priority_score": 7,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای ترکیب LSTM/RUL با لایه Digital Twin موتور"
+    ],
+    "read_priority": "Medium"
+  },
+  {
+    "id": 9,
+    "key": "gptscholar9_2026",
+    "title": "A Multi-Class Predictive Maintenance Framework for Jet Engines Using the C-MAPSS Dataset",
+    "authors": "B. Dong, X. Zhang, L. Hou, C. Yan, Y. Feng, W. Zhu, L. Lin",
+    "year": "2026",
+    "venue": "Machines",
+    "doi": "",
+    "url": "https://www.mdpi.com/2075-1702/14/6/695",
+    "relevance_note": "⭐⭐⭐⭐ CMAPSS + Bi-LSTM + Predictive Maintenance",
+    "summary_fa": "از NASA C-MAPSS برای health assessment موتورهای جت استفاده شده و **Bidirectional LSTM** با روش‌های دیگر مقایسه می‌شود. نتایج گزارش‌شده نشان می‌دهد Bi-LSTM در subsetهای مختلف عملکرد مناسبی دارد. این مقاله برای بخش baseline پروژه شما مفید است، زیرا می‌توانید LSTM/Bi-LSTM را به‌عنوان predictive engine در معماری Digital Twin استفاده کنید.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM",
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LSTM+DigitalTwin"
+    ],
+    "priority_score": 7,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای ترکیب LSTM/RUL با لایه Digital Twin موتور"
+    ],
+    "read_priority": "Medium"
+  },
+  {
+    "id": 10,
+    "key": "gptscholar10_2026",
+    "title": "Towards Decision Transformer for Remaining Useful Life Prediction: A Sequence Modeling Based Approach",
+    "authors": "S. Shata, A. Aboelhassan",
+    "year": "2026",
+    "venue": "IEEE Access",
+    "doi": "",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11568459/",
+    "relevance_note": "⭐⭐⭐⭐ CMAPSS + Transformer + RUL",
+    "summary_fa": "به‌جای اتکای صرف به LSTM، Decision Transformer را برای RUL بررسی می‌کند و نتایج را روی چهار subset اصلی C-MAPSS ارزیابی می‌کند. اهمیت آن برای پروژه شما این است که می‌توان LSTM را به‌عنوان baseline و Transformer/LLM را به‌عنوان نسل جدیدتر sequence modeling در نظر گرفت.",
+    "tags": [
+      "CMAPSS",
+      "LSTM",
+      "Transformer"
+    ],
+    "combos": [
+      "CMAPSS+LSTM"
+    ],
+    "priority_score": 4,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای baseline پیش‌بینی RUL با LSTM/Bi-LSTM"
+    ],
+    "read_priority": "Medium"
+  },
+  {
+    "id": 11,
+    "key": "gptscholar11_2026",
+    "title": "DiTA-RUL: Diffusion–Transformer Augmentation for CMAPSS",
+    "authors": "Y. Tafakor, A. Jahan, R. Tavakoli et al.",
+    "year": "2026",
+    "venue": "2026 International Conference",
+    "doi": "",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11620896/",
+    "relevance_note": "⭐⭐⭐⭐ CMAPSS + Transformer + RUL",
+    "summary_fa": "از diffusion برای augmentation و Transformer برای RUL استفاده می‌کند. در معماری آن، RNN/LSTM نیز به‌عنوان مقایسه در نظر گرفته شده است. برای پروژه شما از این جهت مهم است که نشان می‌دهد **CMAPSS در حال حرکت از LSTMهای کلاسیک به Transformer-based prognostics** است؛ بنابراین می‌توان LLM را در لایه reasoning و Transformer/RUL model را در لایه prediction قرار داد.",
+    "tags": [
+      "CMAPSS",
+      "LSTM",
+      "LLM",
+      "Transformer"
+    ],
+    "combos": [
+      "CMAPSS+LSTM",
+      "CMAPSS+LLM"
+    ],
+    "priority_score": 7,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای شکاف پژوهشی LLM داخل pipeline پیش‌بینی RUL روی CMAPSS"
+    ],
+    "read_priority": "Medium"
+  },
+  {
+    "id": 12,
+    "key": "gptscholar12_2026",
+    "title": "Starnet: Stacked Transfer-Aware for Robust Remaining Useful Life Prediction for C-MAPSS Multi-Regime Engines",
+    "authors": "D. Kapoor, D. Gupta, S. Agarwal, M. Uppal et al.",
+    "year": "2026",
+    "venue": "",
+    "doi": "",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11394718/",
+    "relevance_note": "⭐⭐⭐⭐ CMAPSS + RUL + transfer learning",
+    "summary_fa": "روی مسئله robustness در شرایط چندرژیمی C-MAPSS تمرکز دارد و مدل transfer-aware ارائه می‌کند. در نتایج، مدل پیشنهادی با LSTM و CNN-LSTM مقایسه شده است. مقاله مستقیماً DT/LLM ندارد، اما برای بخش **RUL prediction engine** یک گزینه مناسب برای مقایسه با LSTM محسوب می‌شود.",
+    "tags": [
+      "CMAPSS",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM"
+    ],
+    "priority_score": 4,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای baseline پیش‌بینی RUL با LSTM/Bi-LSTM"
+    ],
+    "read_priority": "Medium"
+  },
+  {
+    "id": 13,
+    "key": "gptscholar13_2026",
+    "title": "Multi-Scale Mixed-Learning and Evaluation Prediction Method for the Remaining Useful Life of Aero-Engine",
+    "authors": "S. Chang, D. Zhao, J. Liu, H. Wang et al.",
+    "year": "2026",
+    "venue": "Journal of Computational Design and Engineering",
+    "doi": "",
+    "url": "https://academic.oup.com/jcde/article-abstract/13/2/151/8431413",
+    "relevance_note": "⭐⭐⭐⭐ C-MAPSS + RUL",
+    "summary_fa": "یک روش multi-scale برای RUL موتور هواپیما ارائه می‌کند و روی C-MAPSS ارزیابی شده است. مقاله به محدودیت‌هایی نظیر از دست رفتن بخشی از اطلاعات زمانی توسط مکانیزم‌های متداول LSTM اشاره دارد. برای طراحی مدل hybrid آینده، این مقاله می‌تواند به توجیه عبور از LSTM ساده به معماری‌های چندمقیاسی کمک کند.",
+    "tags": [
+      "CMAPSS",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM"
+    ],
+    "priority_score": 4,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای baseline پیش‌بینی RUL با LSTM/Bi-LSTM"
+    ],
+    "read_priority": "Medium"
+  },
+  {
+    "id": 14,
+    "key": "gptscholar14_2026",
+    "title": "LKG-STNet: A Large Language Model-Assisted Knowledge Graph-Guided Spatiotemporal Network for Aero-Engine Remaining Useful Life Prediction",
+    "authors": "P. Qiu, J. Yan, H. Xu, Y. Yu",
+    "year": "2026",
+    "venue": "Advanced Engineering Informatics",
+    "doi": "",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1474034626005008",
+    "relevance_note": "⭐⭐⭐⭐⭐ **LLM + C-MAPSS + RUL**",
+    "summary_fa": "این مقاله احتمالاً یکی از **مهم‌ترین مقالات برای ایده شما** است. از LLM برای کمک به ایجاد/استفاده از knowledge graph و سپس یک شبکه spatiotemporal برای RUL موتور هواپیما استفاده می‌کند و نتایج روی C-MAPSS گزارش شده‌اند. بنابراین برخلاف بسیاری از مقالات LLM، اینجا LLM صرفاً chatbot نیست، بلکه در pipeline پیش‌بینی degradation وارد می‌شود. **اهمیت برای پروژه شما:** بسیار بالا؛ می‌توان معماری آن را یک گام جلوتر برد و خروجی RUL/health state را وارد Digital Twin کرد.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "LLM"
+    ],
+    "combos": [
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LLM",
+      "DigitalTwin+LLM",
+      "CMAPSS+LLM+DigitalTwin"
+    ],
+    "priority_score": 8,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای شکاف پژوهشی LLM داخل pipeline پیش‌بینی RUL روی CMAPSS"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 15,
+    "key": "gptscholar15_2026",
+    "title": "Large Language Models in Manufacturing: A Comprehensive Review",
+    "authors": "M. Maghanaki, M. Shahin, F. F. Chen",
+    "year": "2026",
+    "venue": "The International Journal of Advanced Manufacturing Technology",
+    "doi": "10.1007/s00170-026-18711-4",
+    "url": "https://doi.org/10.1007/s00170-026-18711-4",
+    "relevance_note": "⭐⭐⭐⭐ LLM + Manufacturing + CMAPSS",
+    "summary_fa": "یک مرور جامع از کاربرد LLMها در تولید است که داده‌های time-series و نمونه‌هایی مانند NASA C-MAPSS را نیز بررسی می‌کند. برای شناسایی جایگاه LLM در predictive maintenance و تفاوت آن با مدل‌های تخصصی time-series مانند LSTM منبع خوبی است.",
+    "tags": [
+      "CMAPSS",
+      "LSTM",
+      "LLM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM",
+      "CMAPSS+LLM"
+    ],
+    "priority_score": 7,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": false,
+    "thesis_usage_notes": [
+      "برای شکاف پژوهشی LLM داخل pipeline پیش‌بینی RUL روی CMAPSS"
+    ],
+    "read_priority": "Medium"
+  },
+  {
+    "id": 16,
+    "key": "gptscholar16_2026",
+    "title": "Generative AI and Digital Twin Integration for Predictive Maintenance in Industry 5.0 Manufacturing Systems: A Systematic Literature Review and Future Research Directions",
+    "authors": "B. Paul, M. D. A. H. Abir, R. Rahman, M. D. T. A. Towfiq et al.",
+    "year": "2026",
+    "venue": "Research Square / preprint",
+    "doi": "",
+    "url": "https://www.researchsquare.com/article/rs-10590522/latest",
+    "relevance_note": "⭐⭐⭐⭐⭐ GenAI + DT + Predictive Maintenance + LLM/Agents",
+    "summary_fa": "مروری سیستماتیک بر ادغام Generative AI و Digital Twin برای predictive maintenance در Industry 5.0 است. به استفاده از LLM، agentها و مدل‌های زمانی برای تحلیل داده‌های صنعتی می‌پردازد و CMAPSS را نیز در بحث benchmarkها مطرح می‌کند. برای پیدا کردن **research gap** در معماری سه‌گانه شما بسیار مفید است، هرچند preprint است.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "LLM"
+    ],
+    "combos": [
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LLM",
+      "DigitalTwin+LLM",
+      "CMAPSS+LLM+DigitalTwin"
+    ],
+    "priority_score": 8,
+    "quality_hint": "preprint",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای شکاف پژوهشی LLM داخل pipeline پیش‌بینی RUL روی CMAPSS"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 17,
+    "key": "gptscholar17_2026",
+    "title": "A Standards-Aligned Hybrid AI–Digital Twin Framework for Robust Predictive Maintenance Under Data Scarcity",
+    "authors": "D. Park, J. Jeong, J. Kang, D. Shin",
+    "year": "2026",
+    "venue": "Applied Sciences",
+    "doi": "",
+    "url": "https://www.mdpi.com/2076-3417/16/11/5303",
+    "relevance_note": "⭐⭐⭐⭐⭐ DT + AI + LSTM + C-MAPSS",
+    "summary_fa": "چارچوب hybrid AI–Digital Twin برای predictive maintenance تحت شرایط کمبود داده ارائه می‌کند. در آن Domain-Knowledge Enhanced LSTM مطرح شده و mapping سنسورها و داده‌ها مورد توجه قرار گرفته است. مقاله برای طراحی معماری‌ای که در آن **C-MAPSS به‌عنوان digital testbed** و LSTM به‌عنوان health estimator استفاده شود بسیار مناسب است.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM",
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LSTM+DigitalTwin"
+    ],
+    "priority_score": 8,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای ترکیب LSTM/RUL با لایه Digital Twin موتور"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 18,
+    "key": "gptscholar18_2026",
+    "title": "Multi-Agent System-Driven Digital Twins for Predictive Maintenance: Architectures, Technologies and Open Research Challenges",
+    "authors": "K. A. Coulibaly, M. Hamlich",
+    "year": "2026",
+    "venue": "arXiv",
+    "doi": "",
+    "url": "https://arxiv.org/abs/2607.21873",
+    "relevance_note": "⭐⭐⭐⭐⭐ MAS + DT + Predictive Maintenance",
+    "summary_fa": "یک systematic review بسیار مرتبط با ایده **Multi-Agent Digital Twin برای predictive maintenance** است. معماری‌های distributed DT، agent collaboration و کاربردهای predictive maintenance را بررسی می‌کند و C-MAPSS نیز در بحث benchmarkها ظاهر می‌شود. برای بخش معماری multi-agent پروژه شما منبع کلیدی محسوب می‌شود.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "MAS"
+    ],
+    "combos": [
+      "CMAPSS+DigitalTwin",
+      "DigitalTwin+MAS"
+    ],
+    "priority_score": 5,
+    "quality_hint": "preprint",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای معماری دوقلوی دیجیتال چندعاملی"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 19,
+    "key": "gptscholar19_2026",
+    "title": "Self-Evolving Digital Twins in Flexible Manufacturing: A Large Language Model-Powered Multi-Agent Approach",
+    "authors": "D. Gao, X. Wen, J. Lv, J. Si, C. Wang, J. Bao",
+    "year": "2026",
+    "venue": "Digital Engineering",
+    "doi": "",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2950550X26000129",
+    "relevance_note": "⭐⭐⭐⭐⭐ **LLM + Multi-Agent + Digital Twin**",
+    "summary_fa": "یکی از **مهم‌ترین مقالات برای ایده سه‌گانه شما** است. یک Digital Twin برای خطوط تولید انعطاف‌پذیر را با **LLM-powered Multi-Agent System** ترکیب می‌کند. عامل‌های مختلف می‌توانند وظایف تخصصی داشته باشند و LLM به coordination/reasoning کمک کند. اگر مدل RUL مبتنی بر CMAPSS را به چنین معماری‌ای متصل کنید، تقریباً به معماری پیشنهادی پژوهشی شما می‌رسید.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "MAS",
+      "LLM"
+    ],
+    "combos": [
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LLM",
+      "DigitalTwin+LLM",
+      "DigitalTwin+MAS",
+      "CMAPSS+LLM+DigitalTwin",
+      "MAS+LLM+DigitalTwin"
+    ],
+    "priority_score": 11,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای شکاف پژوهشی LLM داخل pipeline پیش‌بینی RUL روی CMAPSS",
+      "برای معماری چندعاملی + LLM روی DT"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 20,
+    "key": "gptscholar20_2026",
+    "title": "A Digital Twin Framework for Enhancing Human–Agentic AI–Machine Collaboration",
+    "authors": "B. Nicoletti, A. Appolloni",
+    "year": "2026",
+    "venue": "Journal of Intelligent Manufacturing",
+    "doi": "10.1007/s10845-025-02637-x",
+    "url": "https://doi.org/10.1007/s10845-025-02637-x",
+    "relevance_note": "⭐⭐⭐⭐⭐ Agentic AI + DT",
+    "summary_fa": "چارچوبی برای همکاری انسان، Agentic AI و ماشین با Digital Twin ارائه می‌کند. از نظر شما، اهمیت اصلی مقاله در معماری **human → agent → digital twin → physical asset** است. این ساختار می‌تواند لایه تصمیم‌گیری پس از پیش‌بینی RUL را شکل دهد.",
+    "tags": [
+      "DigitalTwin",
+      "MAS"
+    ],
+    "combos": [
+      "DigitalTwin+MAS"
+    ],
+    "priority_score": 5,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": false,
+    "thesis_usage_notes": [
+      "برای معماری دوقلوی دیجیتال چندعاملی"
+    ],
+    "read_priority": "Medium"
+  },
+  {
+    "id": 21,
+    "key": "gptscholar21_2026",
+    "title": "Agentic Digital Twin-Embedded Maintenance Methodology for Energy Equipment: A Self-Evolving Operational Paradigm",
+    "authors": "W. Cong, W. Tao, B. Jinsong",
+    "year": "2026",
+    "venue": "Journal of Manufacturing Systems",
+    "doi": "",
+    "url": "https://www.sciencedirect.com/science/article/pii/S027861252500281X",
+    "relevance_note": "⭐⭐⭐⭐⭐ Agentic AI + DT + Maintenance",
+    "summary_fa": "Digital Twin را درون یک maintenance methodology مبتنی بر agentic AI قرار می‌دهد و به سمت سیستم self-evolving حرکت می‌کند. نکته مهم این است که Twin صرفاً visualization نیست؛ بلکه محیطی برای مشاهده وضعیت، تصمیم‌گیری و adaptation عامل‌هاست. این مفهوم برای تبدیل RUL prediction به **autonomous maintenance decision** بسیار مهم است.",
+    "tags": [
+      "DigitalTwin",
+      "MAS"
+    ],
+    "combos": [
+      "DigitalTwin+MAS"
+    ],
+    "priority_score": 5,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای معماری دوقلوی دیجیتال چندعاملی"
+    ],
+    "read_priority": "Medium"
+  },
+  {
+    "id": 22,
+    "key": "gptscholar22_2026",
+    "title": "Digital Twin-Enabled Adaptive Robotics: Multi-Agent Reasoning over Language, Vision, and Structured Database",
+    "authors": "S. Nambiar, O. Ikechukwu, R. Chiramel Paul et al.",
+    "year": "2026",
+    "venue": "Journal of Intelligent Manufacturing / Taylor & Francis indexing",
+    "doi": "10.1080/21693277.2026.2708530",
+    "url": "https://doi.org/10.1080/21693277.2026.2708530",
+    "relevance_note": "⭐⭐⭐⭐⭐ DT + Multi-Agent + LLM + multimodal data",
+    "summary_fa": "یک Digital Twin adaptive را با **multi-agent reasoning، language، vision و structured databases** ترکیب می‌کند. از نظر معماری، بسیار نزدیک به نسل جدید سیستم‌هایی است که در آنها LLM نقش reasoning layer دارد و agentها وظایف تخصصی را انجام می‌دهند. اگر sensor/RUL data حاصل از CMAPSS یا یک engine twin به آن افزوده شود، معماری موردنظر شما قابل تصور است.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "MAS",
+      "LLM"
+    ],
+    "combos": [
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LLM",
+      "DigitalTwin+LLM",
+      "DigitalTwin+MAS",
+      "CMAPSS+LLM+DigitalTwin",
+      "MAS+LLM+DigitalTwin"
+    ],
+    "priority_score": 11,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": false,
+    "thesis_usage_notes": [
+      "برای شکاف پژوهشی LLM داخل pipeline پیش‌بینی RUL روی CMAPSS",
+      "برای معماری چندعاملی + LLM روی DT"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 23,
+    "key": "gptscholar23_2026",
+    "title": "Agentic Digital Twins: Bridging Model-Based and AI-Driven Decision-Making Support for a New Era of Supply Chain and Operations Management",
+    "authors": "D. Ivanov",
+    "year": "2026",
+    "venue": "International Journal of Production Research",
+    "doi": "10.1080/00207543.2026.2630277",
+    "url": "https://www.tandfonline.com/doi/abs/10.1080/00207543.2026.2630277",
+    "relevance_note": "⭐⭐⭐⭐⭐ Agentic AI + DT + decision support",
+    "summary_fa": "مفهوم Agentic Digital Twin را برای تصمیم‌گیری در سیستم‌های پیچیده معرفی می‌کند. ارزش مقاله برای کار شما این است که Digital Twin را از یک مدل passive به یک محیط **model-based + AI-driven decision-making** تبدیل می‌کند؛ دقیقاً همان جهتی که می‌توان بعد از پیش‌بینی RUL دنبال کرد.",
+    "tags": [
+      "DigitalTwin",
+      "MAS"
+    ],
+    "combos": [
+      "DigitalTwin+MAS"
+    ],
+    "priority_score": 5,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": false,
+    "thesis_usage_notes": [
+      "برای معماری دوقلوی دیجیتال چندعاملی"
+    ],
+    "read_priority": "Medium"
+  },
+  {
+    "id": 24,
+    "key": "gptscholar24_2026",
+    "title": "Integrating Digital Twins, Data Management and Artificial Intelligence for Predictive Maintenance in Aviation: A Comprehensive Review",
+    "authors": "S. Mehdipour, A. Habibzadeh, N. Esmi et al.",
+    "year": "2026",
+    "venue": "Digital Twins and Applications / Wiley",
+    "doi": "10.1049/dgt2.70029",
+    "url": "https://ietresearch.onlinelibrary.wiley.com/doi/abs/10.1049/dgt2.70029",
+    "relevance_note": "⭐⭐⭐⭐⭐ Aviation + DT + AI + C-MAPSS",
+    "summary_fa": "مروری تخصصی بر predictive maintenance در هوانوردی، Digital Twin، AI و benchmarkهایی نظیر C-MAPSS است. برای ساخت بخش مرور ادبیات هوافضایی پروژه شما بسیار مناسب است و نشان می‌دهد C-MAPSS چگونه می‌تواند به‌عنوان bridge بین مدل‌های آزمایشگاهی RUL و معماری Digital Twin استفاده شود.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin"
+    ],
+    "combos": [
+      "CMAPSS+DigitalTwin"
+    ],
+    "priority_score": 5,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": false,
+    "thesis_usage_notes": [
+      "برای مرور ادبیات و موقعیت‌یابی شکاف پژوهشی"
+    ],
+    "read_priority": "High"
+  },
+  {
+    "id": 25,
+    "key": "gptscholar25_2026",
+    "title": "A Novel Framework for Secure and Interoperable Digital Twins in the Industrial Metaverse",
+    "authors": "V. G. Menon et al.",
+    "year": "2026",
+    "venue": "Enterprise Information Systems",
+    "doi": "10.1080/17517575.2026.2659635",
+    "url": "https://www.tandfonline.com/doi/abs/10.1080/17517575.2026.2659635",
+    "relevance_note": "⭐⭐⭐⭐ C-MAPSS + LSTM + DT",
+    "summary_fa": "چارچوبی برای Digital Twinهای امن و interoperable ارائه می‌کند و C-MAPSS، LSTM و Digital Twin را در مثال‌ها/معماری مطرح می‌کند. برای پروژه‌هایی که علاوه بر prediction به synchronization، interoperability و deployment فکر می‌کنند مفید است.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM",
+      "CMAPSS+DigitalTwin",
+      "CMAPSS+LSTM+DigitalTwin"
+    ],
+    "priority_score": 7,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": false,
+    "thesis_usage_notes": [
+      "برای ترکیب LSTM/RUL با لایه Digital Twin موتور"
+    ],
+    "read_priority": "Medium"
+  },
+  {
+    "id": 26,
+    "key": "gptscholar26_2026",
+    "title": "Digital Twin-Assisted Multi-Objective Optimization Method Based on Multi-Agent Reinforcement Learning for Five-Axis CNC Machining",
+    "authors": "J. Li, J. Li, X. Zhou, J. An",
+    "year": "2026",
+    "venue": "Processes",
+    "doi": "",
+    "url": "https://www.mdpi.com/2227-9717/14/13/2139",
+    "relevance_note": "⭐⭐⭐⭐ DT + Multi-Agent RL",
+    "summary_fa": "Digital Twin را با Multi-Agent Reinforcement Learning برای optimization فرایند ماشین‌کاری ترکیب می‌کند. CMAPSS و LSTM در آن محور اصلی نیستند، ولی از نظر **DT → agents → optimization/action** مکمل بسیار خوبی برای معماری predictive-maintenance شماست.",
+    "tags": [
+      "CMAPSS",
+      "DigitalTwin",
+      "MAS",
+      "LSTM"
+    ],
+    "combos": [
+      "CMAPSS+LSTM",
+      "CMAPSS+DigitalTwin",
+      "DigitalTwin+MAS",
+      "CMAPSS+LSTM+DigitalTwin"
+    ],
+    "priority_score": 7,
+    "quality_hint": "journal/conference",
+    "source": "gpt-scholar.md",
+    "needs_verification": true,
+    "thesis_usage_notes": [
+      "برای ترکیب LSTM/RUL با لایه Digital Twin موتور"
+    ],
+    "read_priority": "Medium"
+  }
+]

@@ -9,16 +9,16 @@
 
 
 \usepackage{amsthm,amssymb,amsmath}			% Writing math
-\usepackage{array}        % For basic tabular
-\usepackage{tabularx}     % For tabularx environment  
-\usepackage{tabularray}
+\usepackage{multirow}
+\usepackage{booktabs}
 
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 
 \usepackage{cite} % added by Ehsan %https://tex.stackexchange.com/questions/29191/automatically-reorder-in-text-citations-based-on-numbering-in-bibliography
 
 \usepackage{epsf,graphicx}					%Including graphics
-\usepackage{subfig,graphicx} 
+\usepackage{subfig,graphicx}
+\usepackage{float}							% [H] float placement used in chapters 
 
 
 \usepackage[a4paper]{geometry}							% Fixing page layout and margins
@@ -78,9 +78,17 @@
 
 \usepackage{romannum} %added by ehsan for roman numbers
 \usepackage[xindy,acronym,nonumberlist=true]{glossaries}	%added by ehsan for "vaje name" generation
-
+\usepackage{lipsum}
 
 \usepackage{xepersian}										% Persian , option "\KashidaOn" added by ehsan
+
+% bidi 2025/09 still calls \tbl_save_outer_table_cols: inside tabular/array,
+% but the current LaTeX kernel renamed that to \tbl_init_cell_data_for_table:.
+% Without this alias, \begin{tabular} raises "Undefined control sequence".
+\ExplSyntaxOn
+\cs_if_exist:NF \tbl_save_outer_table_cols:
+  { \cs_gset_eq:NN \tbl_save_outer_table_cols: \tbl_init_cell_data_for_table: }
+\ExplSyntaxOff
 
 \defpersianfont\nastaliq{IranNastaliq} %added by ehsan for thank U page
 
@@ -92,13 +100,7 @@
 %\makeglossaries
 
 
-%
-\usepackage{multirow}
-\usepackage{booktabs} %added by ehsan, its imported for table because https://www.latex-tables.com/
-
-
 %added by ehsan to use a3page in the middel of document
-\usepackage{lipsum}
 \makeatletter
 % like \newgeometry, but also allows change of landscape/portrait and paper size
 % to be used with caution!
