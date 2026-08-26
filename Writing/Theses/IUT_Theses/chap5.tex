@@ -117,11 +117,11 @@
 
 \begin{table}[ht]
 	\centering
-	\caption{مقایسه عملکرد مدل پایه و مدل \lr{V3} روی \lr{FD001}}
+	\caption{مقایسه عملکرد مدل پایه و مدل \lr{V2} روی \lr{FD001}}
 	\label{tab:lstm-results-final}
 	\begin{tabular}{p{4cm}p{3cm}p{3cm}p{3cm}}
 		\toprule
-		\textbf{معیار} & \textbf{\lr{Baseline}} & \textbf{\lr{V3}} & \textbf{تغییر} \\
+		\textbf{معیار} & \textbf{\lr{Baseline}} & \textbf{\lr{V2}} & \textbf{تغییر} \\
 		\midrule
 		\lr{MAE} & ۱۷٫۵۶ & \textbf{۱۷٫۲۱} & بهبود محدود \\
 		$R^2$ & ۰٫۲۴ & \textbf{۰٫۷۱} & بهبود قابل توجه \\
@@ -138,7 +138,7 @@
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.82\textwidth]{images/metric_comparison.png}
-	\caption{مقایسه معیارهای کمی مدل پایه و مدل \lr{V3}}
+	\caption{مقایسه معیارهای کمی مدل پایه و مدل \lr{V2}}
 	\label{fig:metric-comparison-final}
 \end{figure}
 
@@ -164,7 +164,7 @@
 یکی از ویژگی‌های اصلی طراحی مدل نهایی، استفاده از تابع زیان \lr{Pinball} با $\tau=0.125$ است. انگیزه این انتخاب، ایجاد یک مدل صرفاً دقیق‌تر از نظر میانگین خطا نبوده است، بلکه هدف، ایجاد گرایش کنترل‌شده به سمت کم‌برآورد \gls{RUL} بوده است.
 
 
-در آزمایش حاضر، نسبت کم‌برآورد از ۴۷ درصد در مدل پایه به ۸۷ درصد در مدل \lr{V3} افزایش یافته است.
+در آزمایش حاضر، نسبت کم‌برآورد از ۴۷ درصد در مدل پایه به ۸۷ درصد در مدل \lr{V2} افزایش یافته است.
 
 \begin{figure}[H]
 	\centering
