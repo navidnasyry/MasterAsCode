@@ -1,3 +1,39 @@
+فهرست شما ترکیبی از منابع معتبر، رکوردهای تکراری، و چند مدخل با نشانه‌های جدیِ خطا یا ناقص‌بودن است. ابتدا مدخل‌ها را از نظر قالب BibTeX، تکرار کلید/DOI، ناسازگاری نوع منبع و سپس از طریق پایگاه‌های ناشر، DOI، Crossref و مخازن رسمی بررسی می‌کنم؛ خروجی را در دو جدول جدا می‌دهم: «موارد نیازمند بررسی اعتبار» و «اطلاعات اصلاح‌شده/تکمیل‌شده».
+در بررسی اولیه چند خطای قطعی مشخص شد: مدخل `rahman2024smartcitydt` از نظر آکولاد اضافی نامعتبر است، `mathur2001reasoning` باید `inproceedings` باشد نه `article`، چند مدخل تکراری‌اند، و چند عنوان/نویسنده با DOI یا ناشر همخوانی ندارند. اکنون منابع باقی‌مانده، به‌ویژه مدخل‌های ۲۰۲۵ و ۲۰۲۶ و موارد دارای DOI، را به‌صورت گروهی با رکوردهای اولیه ناشر یا نمایه‌های معتبر تطبیق می‌دهم.
+​نتایج راستی‌آزمایی این بخش، اصلاحات زیر را قطعیییدشده |
+|---|---|---|
+ | مشخصات تأییدشده |
+|---|---|---|
+| `barricelli2019survey` | `article` | Barricelli, B. R., Casiraghi, E., & Fogli, D. (2019). *A Survey on Digital Twin: Definitions, Characteristics, Applications, and Design Implications*. **IEEE Access, 7**, 167653--167671. DOI: `10.1109/ACCESS.2019.2953499` |
+| `grieves2017digitaltwin` | `incollection` | Grieves, M., & Vickers, J. (2017). *Digital Twin: Mitigating Unpredictable, Undesirable Emergent Behavior in Complex Systems*. In *Transdisciplinary Perspectives on Complex Systems*, pp. 85--113. Springer. DOI: `10.1007/978-3-319-38756-7_4` |
+| `dorri2018mas` | `article` | Dorri, A., Kanhere, S. S., & Jurdak, R. (2018). *Multi-Agent Systems: A Survey*. **IEEE Access, 6**, 28573--28593. DOI: `10.1109/ACCESS.2018.2831228` |
+| `marah2024madtwin` | `article` | Marah, H., & Challenger, M. (2024). *MADTwin: a framework for multi-agent digital twin development: smart warehouse case study*. **Annals of Mathematics and Artificial Intelligence, 92**, 975--1005. DOI: `10.1007/s10472-023-09872-z` |
+| `rojek2023ai` | `article` | Rojek, I., Jasiulewicz-Kaczmarek, M., Piechowski, M., & Mikołajewski, D. (2023). *An Artificial Intelligence Approach for Improving Maintenance to Supervise Machine Failures and Support Their Repair*. **Applied Sciences, 13**(8), 4971. DOI: `10.3390/app13084971` |
+| `frederick2007cmapss` | `techreport` | Frederick, D. K., DeCastro, J. A., & Commercial Modular Aero-Propulsion System Simulation (C-MAPSS Guide for the Commercial Modular Aero-Propulsion System Simulation (C-MAPSS)*. NASA/TM-2007-215026. |
+| `balaji2010mas` | `incollection` | Balaji, P. G., & Srinivasan, D. (2010). *An Introduction to Multi-Agent Systems*. In *Innovations in Multi-Agent Systems and Applications – 1*, pp. 1--27. Springer. DOI: `10.1007/978-3-642-14435-6_1` |
+| `dani2023smartcity` Lubis, F. F., Nugraha, H., Supangkat, S. H., Lubis, F. F., Nugraha, I. G. B. B., et al. (2023). *Development of a Smart City Platform Based on Digital Twin Technology for Monitoring and Supporting Decision-Making*. **Sustainability, 15**(18), 14002. DOI: `10.3390/su151814002` |
+| `tan2023iovehicles` | `article` | Tan, C., Li, X., Gao, L., Luan, T. H., Qu, Y., Xiang, Y., & Lu, R. (2023). *Digital Twin Enabled Remote Data Sharing for Internet of Vehicles: System and Incentive Design*. **IEEE Transactions on Vehicular Technology, 72**(10), 13474--13489. DOI: `10.1109/TVT.2023.3275591` |
+
+دو تصحیح مهم دیگر:
+
+- مدخل `mathur2001reasoning` باید از نوع `inproceedings` باشد، نه `article`.
+- گزارش C-MAPSS نباید با `NASA/TM-2007-214956` ثبت شود؛ این شماره مربوط به گزارشی دیگر درباره ذرات خاک ماه است. شماره صحیح راهنمای C-MAPSS، `NASA/TM-2007-215026` است.
+- مدرک NASA با شناسه `19700021741` عنوان رسمی *Apollo 13 – Houston, we've got a problem* و شماره `NASA-EP-76` دارد؛ عنوان «The Ill-Fated Space Odyssey of Apollo 13» عنوان رسمی آن نیست.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==================================================
 بله. من فهرستی که فرستادید را با جست‌وجوی وب و تطبیق با صفحات ناشر/منابع کتاب‌شناختی بررسی کردم. **نتیجه مهم این است که این bibliography در وضعیت فعلی قابل اعتماد نیست**؛ تعدادی DOI کاملاً معتبرند، اما تعداد قابل‌توجهی از DOIهای 2024–2026 به‌احتمال بسیار زیاد **ساختگی یا اشتباه نسبت‌داده‌شده** هستند. علاوه بر آن، چند DOI معتبر به **مقاله‌ای کاملاً متفاوت** تعلق دارند.
 
 ### جمع‌بندی سریع

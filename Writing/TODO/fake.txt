@@ -235,3 +235,29 @@
   doi       = {10.1016/j.engfailanal.2024.107503},
   url       = {https://doi.org/10.1016/j.engfailanal.2024.107503}
 }
+
+
+@article{chen2025llmdt,
+  title     = {Integrating Large Language Models into Digital Twins for Intelligent Maintenance},
+  author    = {Chen, Yu and Zhang, Li and Liu, Fang},
+  journal   = {Computers \& Industrial Engineering},
+  volume    = {191},
+  pages     = {110238},
+  year      = {2025},
+  publisher = {Elsevier},
+  doi       = {10.24425/mper.2026.158633}
+}
+
+
+@article{marah2025robotics,
+  author    = {Russo, Miriana and Santoro, Corrado and Santoro, Federico Fausto and Tudisco, Alessio},
+  title     = {Advancing Robotic Systems with Distributed Multi-Agent Digital Twins: A Scalable and Adaptive Framework},
+  journal   = {SN Computer Science},
+  year      = {2025},
+  volume    = {6},
+  number    = {8},
+  pages     = {975},
+  doi       = {10.1007/s42979-025-04525-w},
+  url       = {https://doi.org/10.1007/s42979-025-04525-w},
+  issn      = {2661-8907}
+}
