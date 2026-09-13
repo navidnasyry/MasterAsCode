@@ -1,0 +1,37 @@
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#eef1f4",
+    "primaryTextColor": "#1a1a1a",
+    "primaryBorderColor": "#1f3a5f",
+    "lineColor": "#1f3a5f",
+    "actorBkg": "#eef1f4",
+    "actorBorder": "#1f3a5f",
+    "actorTextColor": "#1a1a1a",
+    "signalColor": "#1f3a5f",
+    "signalTextColor": "#1a1a1a",
+    "noteBkgColor": "#eef1f4",
+    "noteBorderColor": "#1f3a5f",
+    "noteTextColor": "#1a1a1a"
+  }
+}}%%
+sequenceDiagram
+    autonumber
+    participant L as "عامل تعامل زبانی"
+    actor U as "کاربر"
+    participant M as "عامل پایش"
+    participant P as "عامل پیش‌بینی عمر مفید باقیمانده"
+    participant D as "عامل دوقلوی دیجیتال"
+    participant I as "لایه ادغام"
+    participant S as "عامل شبیه‌سازی"
+
+    S->>I: چرخه t موتور k
+    I->>D: پنجره هنجارشده
+    D->>P: درخواست پیش‌بینی
+    P-->>D: عمر مفید باقیمانده و اهمیت حسگرها
+    D->>M: انتشار عمر مفید باقیمانده
+    M-->>D: حالت پایش
+    U->>L: چرا عمر مفید باقیمانده موتور k کاهش یافته است
+    L->>D: پرس‌وجوی وضعیت و توضیح
+    D-->>L: عمر مفید باقیمانده و حالت پایش و حسگرهای مؤثر
+    L-->>U: توضیح زبان طبیعی

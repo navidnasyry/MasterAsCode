@@ -1,0 +1,34 @@
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#eef1f4",
+    "primaryTextColor": "#1a1a1a",
+    "primaryBorderColor": "#1f3a5f",
+    "lineColor": "#1f3a5f",
+    "actorBkg": "#eef1f4",
+    "actorBorder": "#1f3a5f",
+    "actorTextColor": "#1a1a1a",
+    "signalColor": "#1f3a5f",
+    "signalTextColor": "#1a1a1a",
+    "noteBkgColor": "#eef1f4",
+    "noteBorderColor": "#1f3a5f",
+    "noteTextColor": "#1a1a1a"
+  }
+}}%%
+sequenceDiagram
+    autonumber
+    participant M as "عامل پایش"
+    participant P as "عامل پیش‌بینی عمر مفید باقیمانده"
+    participant D as "عامل دوقلوی دیجیتال"
+    participant L as "عامل تعامل زبانی"
+    actor U as "کاربر"
+
+    U->>L: پرسش زبان طبیعی عمر مفید باقیمانده موتور k چیست
+    Note over L: ترجمه به فراخوان ابزار بدون دسترسی مستقیم به LSTM
+    L->>D: درخواست وضعیت و پیش‌بینی موتور k
+    D->>P: ارسال پنجره حسگرهای هنجارشده
+    P-->>D: عمر مفید باقیمانده تخمینی و اهمیت حسگرها
+    D->>M: انتشار مقدار عمر مفید باقیمانده
+    M-->>D: حالت عادی یا هشدار یا بحرانی
+    D-->>L: وضعیت زنده و عمر مفید باقیمانده و حالت پایش
+    L-->>U: پاسخ زبان طبیعی توضیح‌پذیر
