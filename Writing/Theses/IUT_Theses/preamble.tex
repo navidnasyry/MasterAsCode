@@ -71,6 +71,7 @@
 }
 
 
+
 \usepackage[flushleft]{threeparttable} %added by ehsan for table endnotes
 \usepackage{rotating} %added by ehsan to rotate the table
 \newcommand\myfrac[2]{\frac{#1}{#2\mathstrut}} %added by ehsan
@@ -82,6 +83,66 @@
 
 \usepackage{xepersian}										% Persian , option "\KashidaOn" added by ehsan
 
+%% ── رنگ و باکس ───────────────────────────────────────────────
+\usepackage{xcolor}
+\usepackage{mdframed}
+% \usepackage{hyperref}
+
+%% ── رنگ‌ها ────────────────────────────────────────────────────
+\definecolor{userBg}{HTML}{EBF4FF}
+\definecolor{userBorder}{HTML}{2563EB}
+\definecolor{botBg}{HTML}{F5F5F5}
+\definecolor{botBorder}{HTML}{64748B}
+\definecolor{sectionColor}{HTML}{1E3A5F}
+\definecolor{exampleColor}{HTML}{166534}
+\definecolor{criticalRed}{HTML}{991B1B}
+\definecolor{warningOrange}{HTML}{92400E}
+
+
+%% ── محیط پرسش کاربر ──────────────────────────────────────────
+\newmdenv[
+  backgroundcolor = userBg,
+  linecolor       = userBorder,
+  linewidth       = 2pt,
+  leftline        = true,
+  rightline       = false,
+  topline         = false,
+  bottomline      = false,
+  innerleftmargin = 10pt,
+  innerrightmargin= 10pt,
+  innertopmargin  = 6pt,
+  innerbottommargin=6pt,
+  skipabove       = 8pt,
+  skipbelow       = 4pt,
+]{userBox}
+ 
+%% ── محیط پاسخ دستیار ─────────────────────────────────────────
+\newmdenv[
+  backgroundcolor = botBg,
+  linecolor       = botBorder,
+  linewidth       = 2pt,
+  leftline        = true,
+  rightline       = false,
+  topline         = false,
+  bottomline      = false,
+  innerleftmargin = 10pt,
+  innerrightmargin= 10pt,
+  innertopmargin  = 6pt,
+  innerbottommargin=6pt,
+  skipabove       = 4pt,
+  skipbelow       = 8pt,
+]{botBox}
+
+%% ── دستوری برای عنوان بخش‌های پاسخ ──────────────────────────
+\newcommand{\qaSection}[2]{%
+  \vspace{6pt}%
+  {\color{sectionColor}\textbf{#1.\ #2}}%
+  \vspace{2pt}%
+}
+ 
+%% ── دستوری برای مثال‌ها ──────────────────────────────────────
+\newcommand{\exLabel}{\textit{\textcolor{exampleColor}{مثال‌ها:}}}
+ 
 % bidi 2025/09 still calls \tbl_save_outer_table_cols: inside tabular/array,
 % but the current LaTeX kernel renamed that to \tbl_init_cell_data_for_table:.
 % Without this alias, \begin{tabular} raises "Undefined control sequence".
