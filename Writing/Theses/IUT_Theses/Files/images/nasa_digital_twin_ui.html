@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Nasa Engin Digital Twin</title>
+<style>
+  :root{
+    --bg: #f4f5f7;
+    --panel: #ffffff;
+    --border: #e2e5ea;
+    --text: #1c2230;
+    --muted: #5b6472;
+    --blue: #2563eb;
+    --blue-dark: #1d4ed8;
+    --green: #22c55e;
+    --badge: #334155;
+  }
+  * { box-sizing: border-box; }
+  body{
+    margin:0;
+    background: var(--bg);
+    font-family: "Vazirmatn","Tahoma","Segoe UI",sans-serif;
+    color: var(--text);
+    font-size: 22px;
+    line-height: 1.9;
+  }
+  .browserbar{
+    background:#e9ebee;
+    padding:14px 24px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    border-bottom:1px solid var(--border);
+    font-size:18px;
+    color:#333;
+  }
+  .browserbar .url{
+    flex:1;
+    background:#fff;
+    border-radius:20px;
+    padding:8px 20px;
+    border:1px solid var(--border);
+    direction:ltr;
+    text-align:left;
+  }
+  .layout{
+    display:flex;
+    min-height: 900px;
+  }
+  .sidebar{
+    width: 420px;
+    background: var(--panel);
+    border-left: 1px solid var(--border);
+    padding: 32px 28px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom: 28px;
+  }
+  .brand .icon{
+    width:56px; height:56px;
+    background:#fde8d0;
+    border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:30px;
+  }
+  .brand h1{
+    font-size: 26px;
+    margin:0;
+    font-weight:700;
+  }
+  .tabs{
+    display:flex;
+    gap: 30px;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 28px;
+    font-size: 22px;
+  }
+  .tabs .tab{
+    padding-bottom: 14px;
+    color: var(--muted);
+    cursor:pointer;
+  }
+  .tabs .tab.active{
+    color: var(--blue);
+    border-bottom: 3px solid var(--blue);
+    font-weight: 700;
+  }
+  label{
+    display:block;
+    font-size: 22px;
+    font-weight:700;
+    margin-bottom: 14px;
+  }
+  .input-box{
+    background:#f1f3f6;
+    border-radius: 14px;
+    padding: 20px 22px;
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+  .actions{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  .btn-clear{
+    background:#fff;
+    border:2px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-size: 20px;
+    color: var(--text);
+    cursor:pointer;
+  }
+  .btn-exec{
+    background: var(--blue);
+    color:#fff;
+    border:none;
+    border-radius: 12px;
+    padding: 14px 34px;
+    font-size: 20px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+  }
+  .chat{
+    flex:1;
+    padding: 48px 56px;
+    overflow-y:auto;
+  }
+  .greeting{
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+  .intro{
+    font-size: 27px;
+    line-height: 2;
+    margin-bottom: 36px;
+  }
+  .intro b{ font-weight:800; }
+  .section{
+    border-top: 2px solid var(--border);
+    padding: 34px 0;
+  }
+  .section-title{
+    display:flex;
+    align-items:center;
+    gap: 16px;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 18px;
+  }
+  .num-badge{
+    background: var(--badge);
+    color:#fff;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 20px;
+    flex-shrink:0;
+  }
+  .section-body{
+    font-size: 25px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+  .examples-label{
+    display:flex;
+    align-items:center;
+    gap: 14px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .dot{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--green);
+    flex-shrink:0;
+  }
+  ul.examples{
+    margin: 0;
+    padding-right: 34px;
+    font-size: 24px;
+    line-height: 2.1;
+  }
+  .poweredby{
+    padding: 24px 28px;
+    font-size: 18px;
+    color: var(--muted);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .poweredby b{
+    font-size: 22px;
+    color:#1c2230;
+  }
+</style>
+</head>
+<body>
+
+<div class="browserbar">
+  <span>&#8592; &#8594; &#8635; &#8962;</span>
+  <div class="url">localhost/workflow/KQg3wB8mXeEaDOdi</div>
+  <span>&#128269; New Chrome available</span>
+</div>
+
+<div class="layout">
+  <div class="sidebar">
+    <div class="brand">
+      <div class="icon">🤖</div>
+      <h1>Nasa Engin Digital Twin</h1>
+    </div>
+    <div class="tabs">
+      <div class="tab active">Run Once</div>
+      <div class="tab">Run Batch</div>
+    </div>
+    <label>user_input</label>
+    <div class="input-box">چه کمکی میتونی به من بکنی؟</div>
+    <div class="actions">
+      <button class="btn-clear">Clear</button>
+      <button class="btn-exec">▶ Execute</button>
+    </div>
+  </div>
+
+  <div class="chat">
+    <div class="greeting">👋 سلام!</div>
+    <div class="intro">
+      من <b>ناسا</b> هستم و می‌توانم دربارهٔ وضعیت و عملکرد موتورهای شبیه‌سازی‌شده من دوقلوی مجازی موتورهای <b>CMAPSS</b> به تو کمک کنم.<br>
+      کارهایی که می‌توانی از من بخواهی عبارت‌اند از:
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <div class="num-badge">1</div>
+        بررسی وضعیت یک موتور خاص
+      </div>
+      <div class="section-body">می‌توانم وضعیت عملکردی یک موتور مشخص را برای برایت تحلیل کنم.</div>
+      <div class="examples-label"><div class="dot"></div>مثال‌ها:</div>
+      <ul class="examples">
+        <li>موتور ۴ در چه شرایطی است؟</li>
+        <li>موتور ۱۰ چه زمانی خراب می‌شود؟</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <div class="num-badge">2</div>
+        خاموش کردن موتورهای در خطر
+      </div>
+      <div class="section-body">می‌توانم موتورهایی را که در خطر خرابی هستند خاموش کنم تا از آسیب بیشتر جلوگیری شود.</div>
+      <div class="examples-label"><div class="dot"></div>مثال‌ها:</div>
+      <ul class="examples">
+        <li>موتورهای در خطر را خاموش کن.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <div class="num-badge">3</div>
+        خاموش کردن همهٔ موتورها
+      </div>
+      <div class="section-body">می‌توانم در صورت نیاز، همهٔ موتورها را به‌طور همزمان خاموش کنم.</div>
+      <div class="examples-label"><div class="dot"></div>مثال‌ها:</div>
+      <ul class="examples">
+        <li>همهٔ موتورها را خاموش کن.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">
+        <div class="num-badge">3</div>
+        روشن کردن همهٔ موتورها
+      </div>
+      <div class="section-body">می‌توانم همهٔ موتورها را روشن کنم تا دوباره سیستم فعال شود.</div>
+      <div class="examples-label"><div class="dot"></div>مثال‌ها:</div>
+      <ul class="examples">
+        <li>همهٔ موتورها را روشن کن.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="poweredby">POWERED BY <b>Dify</b></div>
+
+</body>
+</html>

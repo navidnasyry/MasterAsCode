@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/open-sans@5/400.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/open-sans@5/400-italic.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource-variable/recursive@5/index.css"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 2rem;
+        background: #ffffff;
+        font-family: "Open Sans", Tahoma, Arial, sans-serif;
+      }
+
+      .mermaid {
+        direction: rtl;
+        text-align: right;
+        font-family: Tahoma, Arial, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <pre class="mermaid">
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontFamily": "Tahoma, Arial, sans-serif",
+    "primaryColor": "#eef1f4",
+    "primaryTextColor": "#1a1a1a",
+    "primaryBorderColor": "#1f3a5f",
+    "actorBkg": "#eef3a5f",
+    "actorBkg": "#eef1f4",
+    "actorBorder": "#1f3a5f",
+    "actorTextColor": "#1a1a1a",
+    "signalColor": "#1f3a5f",
+    "signalTextColor": "#1a1a1a",
+    "noteBkgColor": "#eef1f4",
+    "noteBorderColor": "#1f3a5f",
+    "noteTextColor": "#1a1a1a",
+    "actorFontFamily": "Tahoma, Arial, sans-serif",
+    "messageFontFamily": "Tahoma, Arial, sans-serif",
+    "noteFontFamily": "Tahoma, Arial, sans-serif"
+  },
+  "sequence": {
+    "messageAlign": "right",
+    "noteAlign": "right",
+    "mirrorActors": false
+  }
+}}%%
+sequenceDiagram
+    autonumber
+    participant M as عامل پایش
+    participant P as عامل پیش‌بینی عمر مفید باقیمانده
+    participant D as عامل دوقلوی دیجیتال
+    participant L as عامل تعامل زبانی
+    actor U as کاربر
+
+    U->>L: پرسش زبان طبیعی: عمر مفید باقیمانده موتور k چیست؟
+    Note over L: ترجمه به فراخوان ابزار بدون دسترسی مستقیم به LSTM
+    L->>D: درخواست وضعیت و پیش‌بینی موتور k
+    D->>P: ارسال پنجره حسگرهای هنجارشده
+    P-->>D: عمر مفید باقیمانده تخمینی و اهمیت حسگرها
+    D->>M: انتشار مقدار عمر مفید باقیمانده
+    M-->>D: حالت عادی یا هشدار یا بحرانی
+    D-->>L: وضعیت زنده و عمر مفید باقیمانده و حالت پایش
+    L-->>U: پاسخ زبان طبیعی توضیح‌پذیر
+    </pre>
+
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@12/dist/mermaid.esm.min.mjs";
+
+      mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: "loose"
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{fontspec}        % XeLaTeX essential
+\usepackage{tabularx}        % tabularx tables
+\usepackage{array}           % Required by tabularx
+
+\begin{document}
+
+% Basic tabularx with X columns (auto-expand to fill width)
+\begin{tabularx}{\textwidth}{ |X|X|X| }
+\hline
+Column 1 & Column 2 & Column 3 \\
+\hline
+Text that wraps automatically & More text & Even more text here \\
+\hline
+\end{tabularx}
+
+% With booktabs (better looking)
+\begin{tabularx}{0.8\textwidth}{ X X X }
+\toprule
+Header 1 & Header 2 & Header 3 \\
+\midrule
+Cell content & More cell content & Final cell \\
+\bottomrule
+\end{tabularx}
+
+\end{document}
