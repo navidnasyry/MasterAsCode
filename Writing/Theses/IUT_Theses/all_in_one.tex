@@ -1,3 +1,927 @@
+%*****************************************************************
+% all_in_one.tex — کامل پایان‌نامه در یک فایل
+%*****************************************************************
+
+% ساخته‌شده از فایل‌های Writing/Theses/IUT_Theses با ترتیب EhsanKarimi.tex
+% فایل‌های ادغام‌شده: preamble, dictionary, dict_acn, firstpages, abstract,
+% chap1–chap6, references, abstract_english, lastpages
+% توجه: my_ref.bib همچنان به‌صورت جداگانه کنار این فایل لازم است.
+
+%*****************************************************************
+% Document class (از EhsanKarimi.tex)
+%*****************************************************************
+
+%*************************************************
+% A template for MSc Thesis.
+% Please see "guideline.pdf" first.
+%*************************************************
+% Iman Izadi - Ehsan Karimi, 1400
+% Dept. of Electrical and Computer Engineering, IUT
+%*************************************************
+
+\documentclass[a4paper,fleqn]{report}
+
+%*****************************************************************
+% preamble.tex
+%*****************************************************************
+
+%*************************************************
+% All the packages and definitions required for this 
+% project are included here.
+%*************************************************
+% This template is a modified version of the following template:
+% Iman Izadi, 1395
+% Dept. of Electrical and Computer Engineering, IUT
+%*************************************************
+
+
+\usepackage{amsthm,amssymb,amsmath}			% Writing math
+\usepackage{multirow}
+\usepackage{booktabs}
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\usepackage{cite} % added by Ehsan %https://tex.stackexchange.com/questions/29191/automatically-reorder-in-text-citations-based-on-numbering-in-bibliography
+
+\usepackage{epsf,graphicx}					%Including graphics
+\usepackage{subfig,graphicx}
+\usepackage{float}							% [H] float placement used in chapters 
+
+
+\usepackage[a4paper]{geometry}							% Fixing page layout and margins
+\usepackage{titlesec}											% Change chapter and section titles
+\usepackage{setspace}											% Change line spacing
+\usepackage[stable,bottom]{footmisc}					% Move footnotes to the bottom of page
+\usepackage{notoccite}
+%\usepackage{enumitem}
+\usepackage{enumerate}
+\usepackage{comment}
+
+\usepackage{zref-perpage}
+\zmakeperpage[1]{footnote}
+\usepackage{algorithm} %added by Ehsan for algorithms
+
+\usepackage{enumitem}%added by Ehsan for bolding the title of items 
+\newenvironment{descitemize} % a mixture of description and itemize
+{\begin{description}[leftmargin=*,before=\let\makelabel\descitemlabel]}
+	{\end{description}}
+
+\newcommand{\descitemlabel}[1]{%
+	\textbullet\ \textbf{#1}%
+}
+
+
+\usepackage[final]{showkeys} % added by Ehsan to show labels in pdf for easy referencing, 'final' to turn off all the package's functionality
+
+\usepackage[obeyspaces,hyphens,spaces]{url}% added by ehsan
+\renewcommand*{\showkeyslabelformat}[1]{%
+	\fbox{\vbox{\hsize=1.1cm\normalfont\small\url{#1}\par}}}
+%\usepackage[right]{showlabels} %final, margin,  right
+
+\usepackage{indentfirst}			%tab befor each parapraph
+
+\usepackage[hidelinks]{hyperref}				%added by ehsan to link ref number to refferences
+\hypersetup{									% added by ehsan
+%	bookmarks=true,         % show bookmarks bar?
+	unicode=True,          % non-Latin characters in Acrobat’s bookmarks
+	pdftoolbar=true,        % show Acrobat’s toolbar?
+	pdfmenubar=true,        % show Acrobat’s menu?
+	pdfauthor={Ehsan Karimi},     % author
+	pdftitle = {Master Thesis },
+	pdfkeywords={Dementia, 3D Deep Neural Network, Alzheimer Diseas Prediction}, 
+	pdfcreator={Ehsan Karimi},
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=blue,        % color of internal links (change box color with linkbordercolor)
+	citecolor=blue,        % color of links to bibliography
+	filecolor=blue,        % color of file links
+	urlcolor=blue        % color of external links
+}
+
+
+
+\usepackage[flushleft]{threeparttable} %added by ehsan for table endnotes
+\usepackage{rotating} %added by ehsan to rotate the table
+\newcommand\myfrac[2]{\frac{#1}{#2\mathstrut}} %added by ehsan
+\usepackage{makecell} %added by ehsan, to create a cell with multiple lines in tables
+
+\usepackage{romannum} %added by ehsan for roman numbers
+\usepackage[nomain,acronym,nonumberlist=true]{glossaries}	%added by ehsan for "vaje name" generation; nomain: جلوگیری از تداخل واژه‌نامه english با main
+\usepackage{lipsum}
+
+\usepackage{xepersian}										% Persian , option "\KashidaOn" added by ehsan
+
+%% ── رنگ و باکس ───────────────────────────────────────────────
+\usepackage{xcolor}
+\usepackage{mdframed}
+% \usepackage{hyperref}
+
+%% ── رنگ‌ها ────────────────────────────────────────────────────
+\definecolor{userBg}{HTML}{EBF4FF}
+\definecolor{userBorder}{HTML}{2563EB}
+\definecolor{botBg}{HTML}{F5F5F5}
+\definecolor{botBorder}{HTML}{64748B}
+\definecolor{sectionColor}{HTML}{1E3A5F}
+\definecolor{exampleColor}{HTML}{166534}
+\definecolor{criticalRed}{HTML}{991B1B}
+\definecolor{warningOrange}{HTML}{92400E}
+
+
+%% ── محیط پرسش کاربر ──────────────────────────────────────────
+\newmdenv[
+  backgroundcolor = userBg,
+  linecolor       = userBorder,
+  linewidth       = 2pt,
+  leftline        = true,
+  rightline       = false,
+  topline         = false,
+  bottomline      = false,
+  innerleftmargin = 10pt,
+  innerrightmargin= 10pt,
+  innertopmargin  = 6pt,
+  innerbottommargin=6pt,
+  skipabove       = 8pt,
+  skipbelow       = 4pt,
+]{userBox}
+ 
+%% ── محیط پاسخ دستیار ─────────────────────────────────────────
+\newmdenv[
+  backgroundcolor = botBg,
+  linecolor       = botBorder,
+  linewidth       = 2pt,
+  leftline        = true,
+  rightline       = false,
+  topline         = false,
+  bottomline      = false,
+  innerleftmargin = 10pt,
+  innerrightmargin= 10pt,
+  innertopmargin  = 6pt,
+  innerbottommargin=6pt,
+  skipabove       = 4pt,
+  skipbelow       = 8pt,
+]{botBox}
+
+%% ── دستوری برای عنوان بخش‌های پاسخ ──────────────────────────
+\newcommand{\qaSection}[2]{%
+  \vspace{6pt}%
+  {\color{sectionColor}\textbf{#1.\ #2}}%
+  \vspace{2pt}%
+}
+ 
+%% ── دستوری برای مثال‌ها ──────────────────────────────────────
+\newcommand{\exLabel}{\textit{\textcolor{exampleColor}{مثال‌ها:}}}
+ 
+% bidi 2025/09 still calls \tbl_save_outer_table_cols: inside tabular/array,
+% but the current LaTeX kernel renamed that to \tbl_init_cell_data_for_table:.
+% Without this alias, \begin{tabular} raises "Undefined control sequence".
+\ExplSyntaxOn
+\cs_if_exist:NF \tbl_save_outer_table_cols:
+  { \cs_gset_eq:NN \tbl_save_outer_table_cols: \tbl_init_cell_data_for_table: }
+\ExplSyntaxOff
+
+\defpersianfont\nastaliq{IranNastaliq} %added by ehsan for thank U page
+
+\settextfont{XB Zar}												% Persian font
+%\setdigitfont{Yas}
+\setcounter{tocdepth}{3}%added by ehsan to increas the levels in table of contents
+%\setcounter{secnumdepth}{4}%added by ehsan to increas the levels in table of contents
+%active glossaries
+%\makeglossaries
+
+
+%added by ehsan to use a3page in the middel of document
+\makeatletter
+% like \newgeometry, but also allows change of landscape/portrait and paper size
+% to be used with caution!
+\newcommand{\newgeometryfull}[1]{%
+	\clearpage
+	\Gm@restore@org
+	\Gm@initnewgm
+	%  \Gm@newgmtrue
+	\setkeys{Gm}{#1}%
+	%  \Gm@newgmfalse
+	\Gm@process
+	\ifnum\mag=\@m\else\Gm@magtooffset\fi
+	\Gm@changelayout
+	\Gm@showparams{newgeometry}}%
+\makeatother
+
+%% Allow A3 sheets - - New environment
+\newenvironment{a3page}{%
+	\newgeometryfull{a3paper,landscape,width=360 mm,top=25 mm,bottom=25 mm}
+	% set the correct dimension for the PDF viewer
+	\pdfpageheight=\paperheight
+	\pdfpagewidth=\paperwidth
+}{%
+	\restoregeometry
+	% set the correct dimension for the PDF viewer
+	\pdfpageheight=\paperheight
+	\pdfpagewidth=\paperwidth
+}
+
+
+
+
+
+
+
+% Use English digits in equations
+%\DefaultMathsDigits
+
+% Default footnotes from left to right
+%\setfootnoteLR
+
+
+% Use English numbers for English footnotes
+%\makeatletter
+%\def\@makeLTRfnm\dfrac{ar}{den}k{\hbox{\@textsuperscript{\latinfont\@@thefnmark}}}
+%\renewcommand\@makefntext[1]{%
+	%    \parindent 1em%
+	%    \noindent
+	%    \hb@xt@1.8em{\hss\if@RTL\@makefnmark\else\@makeLTRfnmark\fi}#1}
+%\makeatother
+% Use dash instead of dot in section numbers
+\SepMark{-}										
+
+
+% Change fonts and margins of section and subsection titles
+% For chapters please see firstpages.tex
+\titlespacing*{\section}{0pt}{1cm}{0.2cm}
+\titleformat{\section}
+  {\fontsize{12}{6}\scshape\bfseries}{\thesection}{1em}{}
+
+\titlespacing*{\subsection}{0pt}{.8cm}{0cm}
+\titleformat{\subsection}
+  {\fontsize{11}{6}\scshape\bfseries}{\thesubsection}{1em}{}
+  
+
+\setcounter{secnumdepth}{3}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+  
+% Fix table of contents for chapters
+\makeatletter 
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+     \refstepcounter{chapter}%
+     \typeout{\@chapapp\space\thechapter.}%
+     \addcontentsline{toc}{chapter}%
+       	{\@chapapp~\protect\numberline{\tartibi{chapter}\,:\space #1}}
+  \else
+  	 \addcontentsline{toc}{chapter}{#1}%
+  \fi
+  \chaptermark{#1}%
+  \addtocontents{lof}{\protect\addvspace{10\p@}}%
+  \addtocontents{lot}{\protect\addvspace{10\p@}}%
+  \@makechapterhead{#2}%
+  \@afterheading}
+  \let\stdl@chapter\l@chapter
+ \renewcommand*{\l@chapter}[2]{\stdl@chapter{{#1}}{}}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%% my changes %%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%*****************************************************************
+% dictionary.tex
+%*****************************************************************
+
+%%%%%%%%%%%%%%%%%%%%
+%% تعریف استایل برای واژه نامه فارسی به انگلیسی،%%%%%% ============================================================================================================
+
+%%% تنظیمات مربوط به بسته  glossaries
+%%% تعریف استایل برای واژه نامه فارسی به انگلیسی، در این استایل واژه‌های فارسی در سمت راست و واژه‌های انگلیسی در سمت چپ خواهند آمد. از حالت گروه ‌بندی استفاده می‌کنیم، 
+%%% یعنی واژه‌ها در گروه‌هایی به ترتیب حروف الفبا مرتب می‌شوند، مثلا:
+%%% الف
+%%% اقتصاد ................................... Economy
+%%% اشکال ........................................ Failure
+%%% ش
+%%% شبکه ...................................... Network
+\newglossarystyle{myFaToEn}{%
+	\renewenvironment{theglossary}{}{}
+	\renewcommand*{\glsgroupskip}{\vskip 10mm}
+	\renewcommand*{\glsgroupheading}[1]{\subsection*{\glsgetgrouptitle{##1}}}
+	\renewcommand*{\glossentry}[2]{\noindent\glsentryname{##1}\dotfill\space \glsentrytext{##1}
+		
+	}
+}
+
+%% % تعریف استایل برای واژه نامه انگلیسی به فارسی، در این استایل واژه‌های فارسی در سمت راست و واژه‌های انگلیسی در سمت چپ خواهند آمد. از حالت گروه ‌بندی استفاده می‌کنیم، 
+%% % یعنی واژه‌ها در گروه‌هایی به ترتیب حروف الفبا مرتب می‌شوند، مثلا:
+%% % E
+%%% Economy ............................... اقتصاد
+%% % F
+%% % Failure................................... اشکال
+%% %N
+%% % Network ................................. شبکه
+
+\newglossarystyle{myEntoFa}{%
+	%%% این دستور در حقیقت عملیات گروه‌بندی را انجام می‌دهد. بدین صورت که واژه‌ها در بخش‌های جداگانه گروه‌بندی می‌شوند، 
+	%%% عنوان بخش همان نام حرفی است که هر واژه در آن گروه با آن شروع شده است. 
+	\renewenvironment{theglossary}{}{}
+	\renewcommand*{\glsgroupskip}{\vskip 10mm}
+	\renewcommand*{\glsgroupheading}[1]{\begin{LTR} \subsection*{\glsgetgrouptitle{##1}} \end{LTR}}
+	%%% در این دستور نحوه نمایش واژه‌ها می‌آید. در این جا واژه فارسی در سمت راست و واژه انگلیسی در سمت چپ قرار داده شده است، و بین آن با نقطه پر می‌شود. 
+	\renewcommand*{\glossentry}[2]{\noindent\glsentrytext{##1}\dotfill\space \glsentryname{##1}
+			
+	}
+}
+
+%%% تعیین استایل برای فهرست اختصارات
+\newglossarystyle{myAbbrlist}{%
+	%%% این دستور در حقیقت عملیات گروه‌بندی را انجام می‌دهد. بدین صورت که اختصارات‌ در بخش‌های جداگانه گروه‌بندی می‌شوند، 
+	%%% عنوان بخش همان نام حرفی است که هر اختصار در آن گروه با آن شروع شده است. 
+	\renewenvironment{theglossary}{}{}
+	\renewcommand*{\glsgroupskip}{\vskip 7mm}
+	\renewcommand*{\glsgroupheading}[1]{\begin{LTR} \subsection*{\glsgetgrouptitle{##1}} \end{LTR}}
+	%%% در این دستور نحوه نمایش اختصارات می‌آید. در این جا حالت کوچک اختصار در سمت چپ و حالت بزرگ در سمت راست قرار داده شده است، و بین آن با نقطه پر می‌شود. 
+	\renewcommand*{\glossentry}[2]{\noindent\glsentrytext{##1}\space\dotfill\space \Glsentrylong{##1}
+		
+	}
+	%%% تغییر نام محیط abbreviation به فهرست اختصارات
+	\renewcommand*{\acronymname}{\rl{فهرست اختصارات}}
+}
+
+%%% برای اجرا xindy بر روی فایل .tex و تولید واژه‌نامه‌ها و فهرست اختصارات و فهرست نمادها یکسری  فایل تعریف شده است.‌ Latex داده های مربوط به واژه نامه و .. را در این 
+%%%  فایل‌ها نگهداری می‌کند. مهم‌ترین option‌ این قسمت این است که 
+%%% عنوان واژه‌نامه‌ها و یا فهرست اختصارات و یا فهرست نمادها را می‌توانید در این‌جا مشخص کنید. 
+%%% در این جا عباراتی مثل glg، gls، glo و ... پسوند فایل‌هایی است که برای xindy بکار می‌روند. 
+
+\newglossary[blg]{persian}{bls}{blo}{واژه‌نامه فارسی به انگلیسی}
+\newglossary[glg]{english}{gls}{glo}{واژه‌نامه انگلیسی به فارسی}
+\makenoidxglossaries
+\glsdisablehyper
+%%% تعاریف مربوط به تولید واژه نامه و فهرست اختصارات و فهرست نمادها
+%%%  در این فایل یکسری دستورات عمومی برای وارد کردن واژه‌نامه آمده است.
+%%%  به دلیل این‌که قرار است این دستورات پایه‌ای را بازنویسی کنیم در این‌جا تعریف می‌کنیم. 
+\let\oldgls\gls
+\let\oldglspl\glspl
+
+\makeatletter
+
+\renewrobustcmd*{\gls}{\@ifstar\@msgls\@mgls}
+\newcommand*{\@mgls}[1] {\ifthenelse{\equal{\glsentrytype{#1}}{english}}{\oldgls{#1}\glsuseri{f-#1}}{\lr{\oldgls{#1}}}}
+\newcommand*{\@msgls}[1]{\ifthenelse{\equal{\glsentrytype{#1}}{english}}{\glstext{#1}\glsuseri{f-#1}}{\lr{\glsentryname{#1}}}}
+
+\renewrobustcmd*{\glspl}{\@ifstar\@msglspl\@mglspl}
+\newcommand*{\@mglspl}[1] {\ifthenelse{\equal{\glsentrytype{#1}}{english}}{\oldglspl{#1}\glsuseri{f-#1}}{\oldglspl{#1}}}
+\newcommand*{\@msglspl}[1]{\ifthenelse{\equal{\glsentrytype{#1}}{english}}{\glsplural{#1}\glsuseri{f-#1}}{\glsentryplural{#1}}}
+
+\makeatother
+
+\newcommand{\newword}[4]{
+	\newglossaryentry{#1}     {type={english},name={\lr{#2}},plural={#4},text={#3},description={}}
+	\newglossaryentry{f-#1} {type={persian},name={#3},text={\lr{#2}},description={}}
+}
+
+%%% بر طبق این دستور، در اولین باری که واژه مورد نظر از واژه‌نامه وارد شود، پاورقی زده می‌شود. 
+\defglsentryfmt[english]{\glsgenentryfmt\ifglsused{\glslabel}{}{\LTRfootnote{\glsentryname{\glslabel}}}}
+
+% این دستور اختصارات را علاوه بر فهرست اختصارات در پاورقی هم می‌آورد
+\defglsentryfmt[acronym]{\glsentryname{\glslabel}\ifglsused{\glslabel}{}{\LTRfootnote{\glsentrydesc{\glslabel}}}} % main (changed by ehsan)
+%این دستور جایگزین دستور قبلی شده توسط ehsan و اختصارات را فقط در فهرست اختصارات می آورد و پاورقی نمیزند
+%\defglsentryfmt[acronym]{\glsentryname{\glslabel}\ifglsused{\glslabel}{}{}} % added by ehsan
+
+%%%%%% ============================================================================================================
+
+%%============================ دستور برای قرار دادن فهرست اختصارات 
+\newcommand{\printabbreviation}{
+	\cleardoublepage
+	\phantomsection
+	\baselineskip=.75cm
+	%% با این دستور عنوان فهرست اختصارات به فهرست مطالب اضافه می‌شود. 
+	%\addcontentsline{toc}{chapter}{فهرست اختصارات} % main (changed by ehsan)
+	\addcontentsline{toc}{section}{فهرست اختصارات}  % added by ehsan
+	\setglossarystyle{myAbbrlist}
+	\begin{LTR}
+		\Oldprintglossary[type=acronym]	
+	\end{LTR}
+	\clearpage
+}%
+
+\newcommand{\printacronyms}{\printabbreviation}
+%%% در این جا محیط هر دو واژه نامه را باز تعریف کرده ایم، تا اولا مشکل قرار دادن صفحه اضافی را حل کنیم، ثانیا عنوان واژه نامه ها را با دستور addcontentlist وارد فهرست مطالب کرده ایم.
+\let\Oldprintglossary\printnoidxglossary
+\renewcommand{\printglossary}{
+	\let\appendix\relax
+	\glsaddall[types={english,persian}]
+	
+%\begin{comment}
+	%% تنظیم کننده فاصله بین خطوط در این قسمت
+	\clearpage
+	\phantomsection
+	%% این دستور موجب این می‌شود که واژه‌نامه‌ها در  حالت دو ستونی نوشته شود. 
+%	\twocolumn{}
+	\onecolumn{}
+	%% با این دستور عنوان واژه‌نامه به فهرست مطالب اضافه می‌شود. 
+%	\addcontentsline{toc}{chapter}{واژه نامه انگلیسی به فارسی} % main (changed by ehsan)
+	\addcontentsline{toc}{section}{واژه نامه انگلیسی به فارسی}  % added by ehsan
+	\setglossarystyle{myEntoFa}
+	\Oldprintglossary[type=english]
+%	\end{comment}
+	
+	\clearpage
+	\phantomsection
+	%% با این دستور عنوان واژه‌نامه به فهرست مطالب اضافه می‌شود. 
+%	\addcontentsline{toc}{chapter}{واژه نامه فارسی به انگلیسی} % main (changed by ehsan)
+	\addcontentsline{toc}{section}{واژه نامه فارسی به انگلیسی}  % added by ehsan
+	\setglossarystyle{myFaToEn}
+	\Oldprintglossary[type=persian]
+	\onecolumn{}
+}%
+
+%%%%%%
+
+%*****************************************************************
+% dict_acn.tex
+%*****************************************************************
+
+
+%this is derived by ehsan karimi
+%see more: http://www.parsilatex.com/wiki/%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C_%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF_%D9%88%D8%A7%DA%98%D9%87%E2%80%8C%D9%86%D8%A7%D9%85%D9%87
+% یادداشت: موارد کامنت‌شده حذف نشده‌اند تا در صورت نیاز بعداً فعال شوند.
+% برچسب‌ها: [در متن استفاده نشده] | [تکراری از <کلید>]
+%_______________________________ ACN list ____________________________________
+
+% \newacronym{ML}{ML}{Machine Learning}
+% \newacronym{DL}{DL}{Deep Learning}
+\newacronym{GPT}{GPT}{Generative Pre-trained Transformer.}
+% [در متن استفاده نشده] \newacronym{DBN}{DBN}{Deep Blief Network}
+% [در متن استفاده نشده] \newacronym{SVM}{SVM}{Support Vector Machine}
+% [در متن استفاده نشده] \newacronym{CNN}{CNN}{Convlutional Neural Network}
+% [در متن استفاده نشده] \newacronym{SGL}{SGL}{Sparse Group Lasso}
+\newacronym{LSTM}{LSTM}{Long Short-Term Memory}
+% RUL به‌صورت واژه فارسی در فهرست واژه‌نامه تعریف شده است.
+% [در متن استفاده نشده] \newacronym{Bi-LSTM}{Bi-LSTM}{Bidirectional Long Short-Term Memory}
+
+% [در متن استفاده نشده] \newacronym{TP}{TP}{True Positives}
+% [در متن استفاده نشده] \newacronym{FP}{FP}{False Positives}
+% [در متن استفاده نشده] \newacronym{TN}{TN}{True Negetives}
+% [در متن استفاده نشده] \newacronym{FN}{FN}{False Negetives}
+
+% [در متن استفاده نشده] \newacronym{LASSO}{LASSO}{Least Absolute Shrinkage and Selection Operator}
+% [در متن استفاده نشده] \newacronym{RFP}{RFP}{Random Feature Projection}
+% [در متن استفاده نشده] \newacronym{CART}{CART}{Classification and Regression Trees}
+
+% [در متن استفاده نشده] \newacronym{VOI}{VOI}{Volume Of Interest}
+% [در متن استفاده نشده] \newacronym{GA}{GA}{Genetic Algorithm}
+% [در متن استفاده نشده] \newacronym{RFE}{RFE}{Recursive Feature Elimination}
+% [در متن استفاده نشده] \newacronym{GRU}{GRU}{Gated Recurrent Unit}
+% [در متن استفاده نشده] \newacronym{AE}{AE}{Autoencoder}
+% [در متن استفاده نشده] \newacronym{LLM–DT}{LLM–DT}{Large Language Model-Digital Twin}
+
+
+% [در متن استفاده نشده] \newacronym{FDR}{FDR}{Fisher's Discriminant Ratio}
+\newacronym{CMAPSS}{CMAPSS}{Commercial Modular Aero-Propulsion System Simulation}
+
+%_______________________________ Dict list ____________________________________
+% [در متن استفاده نشده] \newword{1st}{First}{اول}{اول‌ها}
+% [در متن استفاده نشده] \newword{2nd}{Second}{دوم}{دوم‌ها}
+% [در متن استفاده نشده] \newword{3rd}{Third}{سوم}{سوم‌ها}
+
+%%%%%%%%%%%%%%%%
+
+% [در متن استفاده نشده] \newword{variance}{Variance}{واریانس}{}
+% [در متن استفاده نشده] \newword{bias}{Bias}{سوگیری}{}
+% [در متن استفاده نشده] \newword{dataset}{Data Set}{مجموعه داده}{مجموعه‌های داده}
+% [تکراری از Noise] \newword{noise}{Noise}{نویز}{}
+
+\newword{LLM}{Large Language Model}{مدل زبانی بزرگ}{مدل‌های زبانی بزرگ}
+% [در متن استفاده نشده] \newword{reactive maintenance}{Reactive Maintenance}{نگهداری واکنشی}{نگهداری‌های واکنشی}
+% [در متن استفاده نشده] \newword{preventive maintenance}{Preventive Maintenance}{نگهداری پیشگیرانه}{نگهداری‌های پیشگیرانه}
+\newword{predictive maintenance}{Predictive Maintenance}{نگهداری پیش‌بینانه}{نگهداری‌های پیش‌بینانه}
+\newword{Digital Twins}{Digital Twins}{دوقلوی دیجیتال}{دوقلو‌های دیجیتال}
+\newword{MAS}{Multi Agent System}{سیستم‌ چندعاملی}{سیستم‌های چندعاملی}
+\newword{Monitoring}{Monitoring}{پایش}{}
+\newword{EmtityLayer}{Entity Layer}{لایه موجودیت}{لایه‌های موجودیت}
+\newword{DataCollectionLayer}{Data Collection Layer}{لایه جمع‌آوری داده}{لایه‌های جمع‌آوری داده}
+\newword{IntegrationLayer}{Integration Layer}{لایه ادغام}{لایه‌های ادغام}
+\newword{DigitalTwinAgentsLayer}{Digital Twin Agents Layer}{لایه عامل‌های دوقلوی دیجیتال}{لایه‌های عامل‌های دوقلوی دیجیتال}
+\newword{ApplicationAgentsLayer}{Application Agents Layer}{لایه عامل‌های کاربرد}{لایه‌های عامل‌های کاربرد}
+% [در متن استفاده نشده] \newword{PLM}{Product Lifecycle Management}{مدیریت چرخه عمر محصول}{مدیریت چرخه عمر محصولات}
+\newword{Physical Entity}{Physical Entity}{موجودیت فیزیکی}{موجودیت‌های فیزیکی}
+\newword{Digital Model}{Digital Model}{مدل دیجیتال}{مدل‌های دیجیتال}
+\newword{Data Connection}{Data Connection}{پیوند داده‌ای}{پیوند‌های داده‌ای}
+\newword{AI}{Artificial Intelligence}{هوش مصنوعی}{}
+\newword{ML}{Machine Learning}{یادگیری ماشین}{}
+\newword{DL}{Deep Learning}{یادگیری عمیق}{}
+\newword{RL}{Reinforcement Learning}{یادگیری تقویتی}{یادگیری تقویتی}
+\newword{DTSH}{Digital Shadow}{سایه دیجیتال}{سایه دیجیتال}
+\newword{DTM}{Digital Model}{مدل دیجیتال}{مدل دیجیتال} % معادل Digital Model؛ هر دو کلید در متن به‌کار رفته‌اند
+\newword{Unidirectional}{Unidirectional}{یک‌طرفه}{یک‌طرفه}
+\newword{Bidirectional}{Bidirectional}{دوطرفه}{دوطرفه}
+\newword{Intelligent Agent}{Intelligent Agent}{عامل هوشمند}{عامل‌های هوشمند}
+\newword{Autonomy}{Autonomy}{خودمختاری}{}
+\newword{Reactivity}{Reactivity}{واکنش‌پذیری}{}
+\newword{Proactiveness}{Proactiveness}{پیش‌فعالی}{}
+\newword{Sociability}{Sociability}{اجتماع‌پذیری}{}
+\newword{MA-DT}{Multi Agent Digital Twins}{دوقلوی دیجیتال چندعاملی}{دوقلو‌های دیجیتال چندعاملی}
+\newword{IoT}{Internet of Things}{اینترنت اشیاء}{}
+\newword{AIoT}{Artificial Intelligence of Things}{هوش مصنوعی اشیاء}{}
+\newword{Industry45}{Industry4 and 5}{صنعت نسل چهارم و پنجم}{صنعت‌های نسل چهارم و پنجم}
+\newword{IDTAI}{Industrial DT Adoption Index}{شاخص بلوغ صنعتی}{}
+% [در متن استفاده نشده] \newword{LCM}{Life Cycle Modeling}{چرخه عمر محصول}{چرخه عمر محصولات}
+% [در متن استفاده نشده] \newword{DSI}{Digital Sustainability Index}{شاخص پایداری دیجیتال}{شاخص‌های پایداری دیجیتال}
+% [در متن استفاده نشده] \newword{ESDTA}{Edge-Synchronized DT Architecture}{معماری دوقلوی دیجیتال هم‌زمان در لبه}{معماری‌های دوقلوی دیجیتال هم‌زمان در لبه}
+% [در متن استفاده نشده] \newword{CRL}{Collaborative Reinforcement Learning}{یادگیری تقویتی اشتراکی}{یادگیری‌های تقویتی اشتراکی}
+% [در متن استفاده نشده] \newword{DMADT}{Distributed Multi-Agent Digital Twin}{دوقلوی دیجیتال چندعاملی توزیع‌شده}{دوقلو‌های دیجیتال چندعاملی توزیع‌شده}
+% [در متن استفاده نشده] \newword{Ontology}{Ontology}{هستی‌شناسی}{هستی‌شناسی‌ها}
+% [در متن استفاده نشده] \newword{CDT}{Collaborative Digital Twin}{دوقلوی دیجیتال همکار}{دوقلو‌های دیجیتال همکار}
+% [در متن استفاده نشده] \newword{EDT}{Explainable Digital Twin}{دوقلوی دیجیتال توضیح‌پذیر}{دوقلو‌های دیجیتال توضیح‌پذیر}
+\newword{Turbofan}{Turbofan}{موتور جت توربینی}{موتورهای جت توربینی}
+\newword{Normalization}{Normalization}{هنجارسازی}{}
+\newword{Noise}{Noise}{اختلال}{}
+% [در متن استفاده نشده] \newword{AdaptiveMemoryGate}{AdaptiveMemoryGate}{دروازه حافظه تطبیقی}{دروازه‌های حافظه تطبیقی}
+% [در متن استفاده نشده] \newword{AttentionLayer}{Attention Layer}{لایه توجه}{لایه‌های توجه}
+\newword{Underestimate}{Underestimate}{کم‌ برآورد کردن}{}
+\newword{PinballLoss}{Pinball Loss (Quantile Loss)}{تابع زیان کوانتیل}{}
+% [تکراری از PinballLoss] \newword{QuantileLoss}{Quantile Loss}{تابع زیان کوانتیل}{}
+% [در متن استفاده نشده] \newword{DataStream}{Data Stream}{جریان داده}{جریان‌های داده}
+% [در متن استفاده نشده] \newword{KnowledgeFlow}{Knowledge Flow}{جریان دانش}{جریان‌های دانش}
+\newword{Protocol}{Protocol}{قرارداد}{قراردادها}
+\newword{Platform}{Platform}{سکو}{سکوها}
+% [در متن استفاده نشده] \newword{Container}{Container}{محفظه}{محفظه‌ها}
+% [در متن استفاده نشده] \newword{Hyperparameter}{Hyperparameter}{ابرپارامتر}{ابرپارامترها}
+% [در متن استفاده نشده] \newword{Prompt}{Prompt}{پیشانه}{پیشانه‌ها}
+% [در متن استفاده نشده] \newword{Script}{Script}{بنده‌نامه}{بنده‌نامه‌ها}
+% [در متن استفاده نشده] \newword{Buffer}{Buffer}{میان‌گیر}{میان‌گیرها}
+% [در متن استفاده نشده] \newword{Cache}{Cache}{نهانگاه}{نهانگاه‌ها}
+\newword{Mechanism}{Mechanism}{سازوکار}{سازوکارها}
+\newword{Workflow}{Workflow}{روندکار}{روندکارها}
+% [در متن استفاده نشده] \newword{Client}{Client}{کارخواه}{کارخواه‌ها}
+% [در متن استفاده نشده] \newword{Operator}{Operator}{بهره‌بردار}{بهره‌برداران}
+% [در متن استفاده نشده] \newword{Demo}{Demonstration}{نمایش آزمایشی}{نمایش‌های آزمایشی}
+% [در متن استفاده نشده] \newword{Dict}{Dictionary}{نگاشت}{نگاشت‌ها}
+% [در متن استفاده نشده] \newword{Ecosystem}{Ecosystem}{زیست‌بوم}{زیست‌بوم‌ها}
+% [در متن استفاده نشده] \newword{Prognostics}{Prognostics}{پیش‌آگاهی}{}
+\newword{Dashboard}{Dashboard}{تابلو وضعیت}{تابلوهای وضعیت}
+% [در متن استفاده نشده] \newword{Strategy}{Strategy}{راهبرد}{راهبردها}
+\newword{RUL}{Remaining Useful Life}{عمر مفید باقیمانده}{عمرهای مفید باقیمانده}
+\newword{Baseline}{Baseline}{خط مبنا}{خطوط مبنا}
+\newword{Passive}{Passive}{منفعل}{منفعل}
+\newword{Cognitive}{Cognitive}{شناختی}{شناختی}
+\newword{Decision-oriented}{Decision-oriented}{تصمیم‌محور}{تصمیم‌محور}
+\newword{Agentic Digital Twin}{Agentic Digital Twin}{دوقلوی دیجیتال عامل محور}{دوقلو‌های دیجیتال عامل محور}
+\newword{Agentic Predictive Maintenance}{Agentic Predictive Maintenance}{نگهداری پیش‌بینانه عامل محور}{نگهداری‌های پیش‌بینانه عامل محور}
+\newword{Transformer}{Transformer}{تبدیل‌گر}{تبدیل‌گر‌ها}
+% [در متن استفاده نشده] \newword{Regression}{Regression}{رگرسیون}{رگرسیون‌ها}
+
+% [در متن استفاده نشده] \newword{PearsonCorrelation}{Pearson Correlation}{همبستگی پیرسون}{همبستگی‌های پیرسون}
+% [در متن استفاده نشده] \newword{Collinearity}{Collinearity}{هم‌خطی}{هم‌خطی‌ها}
+% [در متن استفاده نشده] \newword{SlidingWindow}{Sliding Window}{پنجره لغزنده}{پنجره‌های لغزنده}
+% [در متن استفاده نشده] \newword{Dropout}{Dropout}{حذف تصادفی}{حذف‌های تصادفی}
+% [در متن استفاده نشده] \newword{DenseLayer}{Dense Layer}{لایه کاملاً متصل}{لایه‌های کاملاً متصل}
+% [در متن استفاده نشده] \newword{Attention}{Attention}{توجه}{توجه‌ها}
+% [در متن استفاده نشده] \newword{TemporalAttention}{Temporal Attention}{توجه زمانی}{توجه‌های زمانی}
+% [در متن استفاده نشده] \newword{FeatureImportance}{Feature Importance}{اهمیت ویژگی}{اهمیت‌های ویژگی}
+% [در متن استفاده نشده] \newword{Explainability}{Explainability}{توضیح‌پذیری}{}
+% [در متن استفاده نشده] \newword{ToolCalling}{Tool Calling}{فراخوانی ابزار}{فراخوانی‌های ابزار}
+% [در متن استفاده نشده] \newword{IntentClassification}{Intent Classification}{طبقه‌بندی نیت}{طبقه‌بندی‌های نیت}
+% [در متن استفاده نشده] \newword{Event}{Event}{رویداد}{رویدادها}
+% [در متن استفاده نشده] \newword{Latency}{Latency}{تأخیر}{تأخیرها}
+% [در متن استفاده نشده] \newword{CognitiveDigitalTwin}{Cognitive Digital Twin}{دوقلوی دیجیتال شناختی}{دوقلوهای دیجیتال شناختی}
+% [در متن استفاده نشده] \newword{UncertaintyQuantification}{Uncertainty Quantification}{کمّی‌سازی عدم‌قطعیت}{}
+% [در متن استفاده نشده] \newword{PolicyGateway}{Policy Gateway}{درگاه سیاست}{درگاه‌های سیاست}
+% [در متن استفاده نشده] \newword{SafetyCritical}{Safety-critical}{حیاتی از نظر ایمنی}{}
+% [در متن استفاده نشده] \newword{Pearson}{Pearson}{پیرسون}{}
+% [در متن استفاده نشده] \newword{API}{Application Programming Interface}{رابط برنامه‌نویسی کاربردی}{رابط‌های برنامه‌نویسی کاربردی}
+% [در متن استفاده نشده] \newword{ETL}{Extract Transform Load}{استخراج، تبدیل و بارگذاری}{}
+% [در متن استفاده نشده] \newword{CyberPhysicalSystem}{Cyber-Physical System}{سامانه سایبری--فیزیکی}{سامانه‌های سایبری--فیزیکی}
+% [در متن استفاده نشده] \newword{RealTime}{Real-Time}{بی‌درنگ}{}
+% [در متن استفاده نشده] \newword{QuantileRegression}{Quantile Regression}{رگرسیون کوانتیلی}{رگرسیون‌های کوانتیلی}
+% [در متن استفاده نشده] \newword{ConservativePrediction}{Conservative Prediction}{پیش‌بینی محافظه‌کارانه}{پیش‌بینی‌های محافظه‌کارانه}
+
+% [تکراری از PearsonCorrelation؛ در متن استفاده نشده] \newword{Pearson Correlation}{Pearson Correlation}{همبستگی پیرسون}{همبستگی‌های پیرسون}
+% [در متن استفاده نشده] \newword{Feature Selection}{Feature Selection}{انتخاب ویژگی}{انتخاب ویژگی‌ها}
+% [تکراری از SlidingWindow؛ در متن استفاده نشده] \newword{Sliding Window}{Sliding Window}{پنجره لغزان}{پنجره‌های لغزان}
+% [در متن استفاده نشده] \newword{Padding}{Padding}{تکمیل}{تکمیل‌ها}
+% [در متن استفاده نشده] \newword{Data Leakage}{Data Leakage}{نشت اطلاعات}{نشت‌های اطلاعات}
+% [در متن استفاده نشده] \newword{Bias Ratio}{Bias Ratio}{نسبت سوگیری}{نسبت‌های سوگیری}
+% [در متن استفاده نشده] \newword{NASA Score}{NASA Score}{امتیاز ناسا}{امتیازهای ناسا}
+% [در متن استفاده نشده] \newword{Response Time}{Response Time}{زمان پاسخ}{زمان‌های پاسخ}
+% [در متن استفاده نشده] \newword{Command Accuracy}{Command Accuracy}{صحت فرمان}{صحت فرمان‌ها}
+% [در متن استفاده نشده] \newword{Explanation Quality}{Explanation Quality}{کیفیت توضیح}{کیفیت توضیح‌ها}
+% [در متن استفاده نشده] \newword{Data Contract}{Data Contract}{قرارداد داده}{قراردادهای داده}
+% [در متن استفاده نشده] \newword{State Synchronization}{State Synchronization}{همگام‌سازی وضعیت}{همگام‌سازی‌های وضعیت}
+% [در متن استفاده نشده] \newword{Health State}{Health State}{وضعیت سلامت}{وضعیت‌های سلامت}
+\newword{run-to-failure}{run-to-failure}{حرکت به سوی شکست}{حرکت به سوی شکست}
+
+\newword{Quantile}{Quantile}{چندک}{چندک‌ها}
+% [تکراری از QuantileRegression؛ در متن استفاده نشده] \newword{Quantile Regression}{Quantile Regression}{رگرسیون چندک}{رگرسیون‌های چندک}
+% [تکراری از PinballLoss] \newword{Quantile Loss}{Quantile Loss}{تابع زیان چندک}{توابع زیان چندک}
+\newword{Orchestration}{Orchestration}{هماهنگ‌سازی}{هماهنگ‌سازی}
+% [تکراری از PinballLoss] \newword{Pinball Loss}{Pinball Loss}{تابع زیان پین‌بال}{توابع زیان پین‌بال}
+\newword{End Point}{End Point}{نقطه پایانی}{نقاط پایانی}
+\newword{Warning}{Warning}{هشدار}{هشدار}
+\newword{Critical}{Critical}{بحرانی}{بحرانی}
+
+%*****************************************************************
+% آغاز سند
+%*****************************************************************
+
+\begin{document}
+
+%*****************************************************************
+% firstpages.tex
+%*****************************************************************
+
+%*************************************************
+% In this file the first few pages are typeset.
+% Make changes accordingly.
+%*************************************************
+
+% شماره صفحات با حروف
+\pagenumbering{adadi}
+
+%***************************
+% Page 0: white paper
+%***************************
+\thispagestyle{empty}
+\begin{center}
+	~\vfill
+%	\includegraphics[scale=1]{images/besm.jpg}
+	~\vfill
+\end{center}
+\pagebreak
+
+%***************************
+% Page 1: Besmelah
+%***************************
+\thispagestyle{empty}
+\begin{center}
+	~\vfill
+	\includegraphics[scale=1]{images/besm.jpg}
+	~\vfill
+\end{center}
+\pagebreak
+
+%***************************
+% Page 2: Title
+%***************************
+\thispagestyle{empty}
+\newgeometry{left=3cm,right=3cm,top=2cm}
+\begin{center}
+\includegraphics[height=3cm]{images/iut_logo.png}
+\vspace{0.4cm}
+
+{\large
+	\textbf{دانشگاه صنعتی اصفهان}\\
+	دانشکده مهندسی برق و کامپیوتر
+}
+\vspace{3cm}
+
+{\LARGE
+	\textbf{
+طراحی و پیاده‌سازی چارچوب دوقلو‌های دیجیتال چندعاملی برای پایش، پیش‌بینی و تصمیم‌گیری هوشمند سامانه‌های صنعتی
+	 }\\
+}
+\vspace{3cm}
+
+{\large
+	\textbf{پایان‌نامه کارشناسی ارشد مهندسی کامپیوتر - نرم‌افزار}\\
+}
+\vspace{1cm}
+
+{\Large
+	\textbf{نوید نصیری}\\
+}
+\vspace{2.5cm}
+
+{\large
+	استاد راهنما\\
+}
+\vspace{0.5cm}
+
+{\Large
+	\textbf{دکتر مسعودرضا هاشمی}\\
+}
+\vspace{1cm}
+
+{\large
+	استاد مشاور\\
+}
+\vspace{0.5cm}
+
+{\Large
+	\textbf{دکتر عارف کریمی افشار}\\
+}
+\vspace{2.5cm}
+\vspace{3.75cm}
+
+{\Large
+	\textbf{1400}
+}
+
+\end{center}
+\restoregeometry
+\pagebreak
+
+%***************************
+% 4th page: Signatures
+%***************************
+\thispagestyle{empty}
+\newgeometry{left=3cm,right=3cm,top=2cm}
+\begin{center}
+	\includegraphics[height=3cm]{images/iut_logo.png}
+	\vspace{0.4cm}
+	
+	\textbf{دانشگاه صنعتی اصفهان}\\
+	\vspace{0.4cm}
+	
+	{\large
+		دانشکده مهندسی برق و کامپیوتر
+	}
+	\vspace{1.5cm}
+	
+	\vfill
+	
+	{\Large
+		پایان‌نامه کارشناسی ارشد رشته مهندسی کامپیوتر -- نرم‌افزار آقای نوید نصیری\\
+		\vspace{.3cm}
+		تحت عنوان\\
+	}
+	
+	
+\end{center}
+\vfill
+\vspace{2.5cm}
+
+{\large
+	\textbf{ 
+		طراحی و پیاده‌سازی چارچوب دوقلو‌های دیجیتال چندعاملی برای پایش، پیش‌بینی و تصمیم‌گیری هوشمند سامانه‌های صنعتی
+	}
+}
+
+\vspace*{2cm}
+
+%پیش‌بینی‌ و پایش بی‌درنگ داده‌های شبیه‌سازی موتورهای جت CMAPSS ناسا بر اساس چارچوب معماری دوقلوهای دیجیتال چندعاملی
+
+%ارائه چارچوب معماری دوقلوهای دیجیتال چندعاملی برای پایش و پیش‌بینی وضعیت سامانه‌های پیچیده  
+
+
+
+%طراحی چارچوب معماری دوقلوهای دیجیتال چندعاملی برای پایش و نگهداری پیشگویانه سامانه‌های صنعتی  
+
+
+
+%ارائه معماری دوقلوهای دیجیتال چندعاملی برای پایش، پیش‌بینی و کنترل هوشمند سامانه‌های صنعتی  
+
+
+
+%طراحی و پیاده‌سازی چارچوب دوقلوهای دیجیتال چندعاملی برای پایش و نگهداری پیشگویانه تجهیزات
+
+
+
+%طراحی و پیاده‌سازی چارچوب دوقلوهای دیجیتال چندعاملی برای پایش، پیش‌بینی و تصمیم‌گیری هوشمند  
+%در تاریخ 1404/01/01 توسط کمیته تخصصی زیر مورد بررسی و تصویب نهایی قرار گرفت:\\
+\vspace{0.8cm}
+
+%{\normalsize
+%	\begin{tabular}{rr}
+%		1- استاد راهنمای پایان‌نامه & دکتر محمد محمدی محمدآبادی \\[0.8cm]
+%		2- استاد مشاور پایان‌نامه & دکتر محمد محمدی محمدآبادی \\[0.8cm]
+%		3- استاد داور & دکتر محمد محمدی محمدآبادی \\[0.8cm]
+%		4- استاد داور & دکتر محمد محمدی محمدآبادی \\[0.8cm]
+%		سرپرست تحصیلات تکمیلی دانشکده & دکتر محمد محمدی محمدآبادی \\[0.8cm]
+%	\end{tabular}
+%}
+\restoregeometry
+\pagebreak
+
+%***************************
+% 5th page: Acknowledgment
+%***************************
+\thispagestyle{empty}
+\newgeometry{left=3cm,right=4cm,top=4cm}
+\vspace*{1.5cm}
+
+{\large
+	\textbf{تشکر و قدردانی}\\
+	
+	
+	سپاس خدایی را که با وجود ناتوانی آفریدگان در گزاردن حقش، باز الطاف محبت بی‌کرانش بر همه می‌تابد.
+	
+	قدردان راهنمایی‌های ارزنده استاد گرانقدر جناب آقای دکتر مسعودرضا هاشمی و جناب آقای دکتر عارف کریمی افشار هستم که بدون شک پشتیبانی و راهنمایی‌هایشان روشنگر مسیر انجام پژوهش بود.
+	همچنین قدردان پدر، مادر و همسرم هستم که در این مسیر به من دلگرمی و انگیزه دادند.
+	
+}
+\restoregeometry
+\pagebreak
+
+%***************************
+% 6th page: Rights
+%***************************
+%\thispagestyle{empty}
+%\newgeometry{left=6cm,right=6cm}
+%
+%begin{spacing}{3}
+%	\leavevmode
+%	\vfill
+%	\parbox{8 cm}{
+%		
+%		\textbf{\Large کلیه حقوق مادی مترتب بر نتایج مطالعات، ابتکارات و نوآوری‌های ناشی از تحقیق موضوع این پایان‌نامه  متعلق به دانشگاه صنعتی اصفهان است.}
+%		
+%	}
+%	\vfill
+%\end{spacing}
+%\restoregeometry
+%\pagebreak
+
+\thispagestyle{empty}
+\newgeometry{left=2.5cm,right=3cm}
+
+\vspace*{3cm}
+\textbf{\Large کلیه حقوق مالکیت مادی و معنوی مربوط به اين پايان نامه متعلق به دانشگاه صنعتی اصفهان و پدیدآورندگان است. این حقوق توسط دانشگاه صنعتي اصفهان و بر اساس خط مشی مالکیت فکری این دانشگاه، ارزش‌گذاری و سهم بندي خواهد شد.
+\\
+			هر گونه بهره برداري از محتوا، نتايج یا اقدام براي تجاري‌سازي دستاوردهاي اين پايان نامه تنها با مجوز کتبی دانشگاه صنعتی اصفهان امکان‌پذیر است.
+}
+
+\restoregeometry
+\pagebreak
+
+%***************************
+% 7th page: Dedication
+%***************************
+\thispagestyle{empty}
+\vspace*{3cm}
+
+{\nastaliq
+	\Huge
+	\raggedleft
+	\textbf{\vspace{2cm}تقدیم به}	
+	\\
+\hspace{1cm}	
+\textbf{\vspace{0.5cm}پدر و مادر عزیزم}
+\\
+\hspace{4cm}
+	مستحکم‌ترین پشتوانه و حامیانم در این مسیر\vspace{1cm}
+\\ 
+\hspace{1cm}	
+\textbf{\vspace{0.5cm}و همسرم}
+\\
+\hspace{4cm}
+	که وجودش منشأ آرامش و انگیزه من است...
+
+	
+}
+\pagebreak
+
+%***************************
+% 8th page: Table of contents
+%***************************
+
+\titleformat{\chapter}[display]
+	{\normalfont\LARGE\bfseries\centering}{\chaptertitlename ~ \tartibi{chapter}}{20pt}{\LARGE}
+\newgeometry{left=2.5cm,right=3cm,top=3cm,bottom=2.5cm,includehead=false,headsep=1cm,footnotesep=.5cm}
+\baselineskip=.7cm
+
+
+\addtocontents{toc}{\textbf{\underline{عنوان}}}
+\addtocontents{toc}{\hfill\textbf{\underline{صفحه}}\par}
+\addcontentsline{toc}{section}{فهرست مطالب}
+\tableofcontents
+\pagebreak
+
+
+
+%\begin{comment}
+\renewcommand\listfigurename{فهرست شکل‌ها}
+\addcontentsline{toc}{section}{فهرست شکل‌ها}
+\listoffigures
+\pagebreak
+%\end{comment}
+
+%\begin{comment}
+\renewcommand\listfigurename{فهرست جداول}
+\addcontentsline{toc}{section}{فهرست جداول}
+\listoftables
+\pagebreak
+%\end{comment}
+
+
+% change the font and margins of a chapter title
+\titlespacing*{\chapter}{0pt}{3.5cm}{6cm}
+\titleformat{\chapter}[display]
+	{\normalfont\LARGE\bfseries\raggedright}{\chaptertitlename ~ \tartibi{chapter}}{20pt}{\LARGE}
+
+% No page numbers on the first page of a chapter
+\assignpagestyle{\chapter}{empty}
+
+%*****************************************************************
+% فهرست اختصارات
+%*****************************************************************
+
+\printabbreviation
+
+%*****************************************************************
+% abstract.tex
+%*****************************************************************
+
 %*************************************************
 % In this file the abstract is typeset.
 % Make changes accordingly.
@@ -30,6 +954,21 @@
 ناسا،
  پایش بی‌درنگ، هوش مصنوعی توضیح‌پذیر.
 \end{small}
+
+%*****************************************************************
+% تنظیمات صفحه و فونت متن اصلی
+%*****************************************************************
+
+\newgeometry{left=2.5cm,right=3cm,top=3cm,bottom=2.5cm,includehead=false,headsep=1cm,footnotesep=.5cm}
+\settextfont{XB Zar}\fontsize{12}{6}\selectfont
+\setlatintextfont{Times New Roman}\fontsize{11}{6}
+\baselineskip=.9cm
+
+\pagestyle{myheadings}
+
+%*****************************************************************
+% chap1.tex
+%*****************************************************************
 
 % Chapter 1
 \chapter{مقدمه}  
@@ -137,6 +1076,9 @@
 %\section{خلاصه فصل‌ها}
 %توصیف مختصر ساختار پایان‌نامه.
 
+%*****************************************************************
+% chap2.tex
+%*****************************************************************
 
 % !TeX spellcheck = en_US
 % Chapter 2
@@ -465,7 +1407,7 @@
 	  همچنان چالشی مهم است که منجر به تصمیم‌های نادرست در نگهداری پیش‌بینانه می‌شود و اعتماد را به پیش‌بینی‌های انجام‌شده توسط هوش مصنوعی، غیرقابل اعتماد می‌کند.
 	
 	\item
-	در حوزه پیش‌بینی عمر باقی‌مانده برای \gls{Turbofan} در مجموعه‌داده 
+	در حوزه پیش‌بینی عمر باقی‌ مانده برای \gls{Turbofan} در مجموعه‌داده 
 	\lr{CMAPSS}
 		ناسا، بیشتر پژوهش‌ها صرفاً بر بهبود دقت مدل‌های پیش‌بینی (مانند شبکه‌های \lr{LSTM}) متمرکز بوده‌اند و به توضیح‌پذیری نتایج و تحلیل سهم هر حسگر در تصمیم نهایی مدل توجهی نکرده‌اند.
 	
@@ -607,6 +1549,9 @@
 %\end{align}
 
 
+%*****************************************************************
+% chap3.tex
+%*****************************************************************
 
 % فصل ۳
 \chapter{روش‌شناسی و معماری پیشنهادی}\label{chap:methodology}
@@ -874,7 +1819,7 @@ $\{\mathbf{x}_1,\mathbf{x}_2,\ldots,\mathbf{x}_T\}$
 آزمون قطعی اهمیت ویژگی تفسیر شده‌اند.
 
 
-پس از محاسبه برچسب \gls{RUL}، ضریب همبستگی \lr{Pearson} میان ویژگی‌های باقی‌مانده و متغیر هدف محاسبه شد. همان‌گونه که در شکل \ref{fig:corr-heatmap} مشاهده می‌شود، \gls{RUL} با \lr{time\_in\_cycles}، \lr{Ps30}، \lr{T50} و \lr{BPR} رابطه منفی نسبتاً قوی دارد؛ به این معنا که با افزایش چرخه‌های کاری و نزدیک شدن موتور به انتهای عمر، مقدار عمر مفید باقی‌مانده کاهش می‌یابد. در مقابل، ویژگی‌هایی نظیر \lr{phi}، \lr{W31} و \lr{W32} رابطه مثبت قابل‌توجهی با \gls{RUL} نشان می‌دهند. همچنین، دو متغیر \lr{setting\_1} و \lr{setting\_2} رابطه بسیار ضعیفی با متغیر هدف دارند و \lr{P15} نیز ارتباط محدودی نشان می‌دهد. نکته مهم دیگر، همبستگی بسیار بالای میان \lr{Nc} و \lr{NRc} با مقدار تقریبی $0.96$ است که نشان می‌دهد نگه‌داری هم‌زمان این دو متغیر می‌تواند اطلاعات تکراری وارد مدل کند. از این رو، انتخاب ویژگی در پژوهش حاضر صرفاً بر مبنای مقدار همبستگی با \gls{RUL} انجام نشده، بلکه ترکیبی از حذف ویژگی‌های ثابت، حذف ویژگی‌های کم‌اطلاع و کاهش هم‌خطی میان متغیرهای حسگری مورد توجه قرار گرفته است.
+پس از محاسبه برچسب \gls{RUL}، ضریب همبستگی \lr{Pearson} میان ویژگی‌های باقیمانده و متغیر هدف محاسبه شد. همان‌گونه که در شکل \ref{fig:corr-heatmap} مشاهده می‌شود، \gls{RUL} با \lr{time\_in\_cycles}، \lr{Ps30}، \lr{T50} و \lr{BPR} رابطه منفی نسبتاً قوی دارد؛ به این معنا که با افزایش چرخه‌های کاری و نزدیک شدن موتور به انتهای عمر، مقدار عمر مفید باقیمانده کاهش می‌یابد. در مقابل، ویژگی‌هایی نظیر \lr{phi}، \lr{W31} و \lr{W32} رابطه مثبت قابل‌توجهی با \gls{RUL} نشان می‌دهند. همچنین، دو متغیر \lr{setting\_1} و \lr{setting\_2} رابطه بسیار ضعیفی با متغیر هدف دارند و \lr{P15} نیز ارتباط محدودی نشان می‌دهد. نکته مهم دیگر، همبستگی بسیار بالای میان \lr{Nc} و \lr{NRc} با مقدار تقریبی $0.96$ است که نشان می‌دهد نگه‌داری هم‌زمان این دو متغیر می‌تواند اطلاعات تکراری وارد مدل کند. از این رو، انتخاب ویژگی در پژوهش حاضر صرفاً بر مبنای مقدار همبستگی با \gls{RUL} انجام نشده، بلکه ترکیبی از حذف ویژگی‌های ثابت، حذف ویژگی‌های کم‌اطلاع و کاهش هم‌خطی میان متغیرهای حسگری مورد توجه قرار گرفته است.
 
 
 \begin{figure}[H]
@@ -1042,7 +1987,7 @@ $w=50$ برای تبدیل داده‌های جدولی به نمونه‌های
 برچسب هر پنجره برابر با مقدار \gls{RUL} در آخرین چرخه همان پنجره
 در نظر گرفته می‌شود. بنابراین، اگر پنجره مربوط به چرخه‌های
 $t-49$ تا $t$ باشد، هدف آن $y(t)$ خواهد بود. در نتیجه، هر نمونه
-آموزشی اطلاعات تاریخی لازم برای تخمین عمر باقی‌مانده در انتهای
+آموزشی اطلاعات تاریخی لازم برای تخمین عمر باقیمانده در انتهای
 پنجره را در اختیار مدل قرار می‌دهد.
 
 در نهایت، تفکیک آموزش و آزمون در سطح موتور حفظ شد و هیچ تقسیم
@@ -1640,6 +2585,9 @@ $\tau=0.125$ به‌گونه‌ای انتخاب شد که بیش‌برآورد
 بعد، نتایج مدل پیش‌بینی، مقایسه با خطوط مبنا، رفتار تابع زیان
 نامتقارن و عملکرد اجزای چندعاملی گزارش و تحلیل خواهد شد.
 
+%*****************************************************************
+% chap4.tex
+%*****************************************************************
 
 %   ۴ — پیاده‌سازی
 %  =======================================================================
@@ -1795,7 +2743,7 @@ $\tau=0.125$ به‌گونه‌ای انتخاب شد که بیش‌برآورد
 از منظر جریان داده، عامل زبان طبیعی تنها سرویسی است که در فرایندهای کنترلی، علاوه بر دریافت داده، امکان ارسال فرمان تغییر وضعیت به عامل دوقلوی دیجیتال را نیز دارد. بنابراین، این عامل در سطح کاربرد به‌عنوان واسط تصمیم‌گیری برای کاربر عمل می‌کند.
 
 
- -----------------------------------------------------------------------
+
 \section{روش استقرار سامانه}
 \label{sec:deployment}
 
@@ -1992,7 +2940,7 @@ s_k\in\{\mathrm{ON},\mathrm{OFF}\}.
 	\end{tabular}
 \end{table}
 
-در پیاده‌سازی، مقادیر جدول \ref{tab:lstm-hyperparams} مستقیماً در فرایند آموزش شبکه اعمال شده‌اند. بهینه‌ساز \lr{RMSprop} برای به‌روزرسانی تطبیقی وزن‌ها در شبکه بازگشتی به‌کار رفته است. اندازه دسته برابر ۲۰۰ تعیین شده تا در هر گام آموزشی، ۲۰۰ توالی ۵۰ چرخه‌ای به‌صورت یکجا پردازش شود؛ این مقدار میان هزینه حافظه و پایداری تعادل برقرار می‌کند. آموزش در ۶۰ دوره کامل انجام شده و در هر دوره وزن‌ها روی کل مجموعه آموزش بازبینی می‌شوند. نسبت اعتبارسنجی، ۰٫۵ از توالی‌های آموزشی را بدون مشارکت در به‌روزرسانی وزن‌ها کنار می‌گذارد تا روند تعمیم‌پذیری در طول آموزش قابل پایش باشد؛ این بخش جدا از مجموعه آزمون است که پیش‌تر برای ارزیابی نهایی نگه داشته شده است. تابع زیان اصلی \lr{PinballLoss} با $\tau=0.125$ استفاده شده است که به صورت مفصل در بخش
+در پیاده‌سازی، مقادیر جدول \ref{tab:lstm-hyperparams} مستقیماً در فرایند آموزش شبکه اعمال شده‌اند. بهینه‌ساز \lr{RMSprop} برای به‌روزرسانی تطبیقی وزن‌ها در شبکه بازگشتی به‌کار رفته است. اندازه دسته برابر ۲۰۰ تعیین شده تا در هر گام آموزشی، ۲۰۰ توالی ۵۰ چرخه‌ای به‌صورت یکجا پردازش شود؛ این مقدار میان هزینه حافظه و پایداری تعادل برقرار می‌کند. آموزش در ۶۰ دوره کامل انجام شده و در هر دوره وزن‌ها روی کل مجموعه آموزش بازبینی می‌شوند. نسبت اعتبارسنجی، ۰٫۰۵ از توالی‌های آموزشی را بدون مشارکت در به‌روزرسانی وزن‌ها کنار می‌گذارد تا روند تعمیم‌پذیری در طول آموزش قابل پایش باشد؛ این بخش جدا از مجموعه آزمون است که پیش‌تر برای ارزیابی نهایی نگه داشته شده است. تابع زیان اصلی \lr{PinballLoss} با $\tau=0.125$ استفاده شده است که به صورت مفصل در بخش
 \ref{sec:cmapss-prediction-agent}
 توضیح داده می‌شود.
 . معیارهای \lr{MAE} و $R^2$ نیز علاوه بر تابع زیان در هر دوره ثبت شده‌اند تا علاوه بر مقدار هدف بهینه‌سازی، خطای مطلق و میزان توضیح‌پذیری مدل قابل پیگیری باشد.
@@ -2586,6 +3534,9 @@ s_k\in\{\mathrm{ON},\mathrm{OFF}\}.
 
 در نهایت، اجرای فرایند‌های سرتاسری نشان داد که معماری حاضر صرفاً یک زنجیره پیش‌بینی نیست، بلکه می‌تواند پیش‌بینی را در قالب یک جریان چندعاملی به تصمیم و سپس تغییر وضعیت عملیاتی تبدیل کند. ارزیابی کمی مدل و ارزیابی عملی عملکرد این زنجیره در فصل پنجم ارائه می‌شود.
 
+%*****************************************************************
+% chap5.tex
+%*****************************************************************
 
 \chapter{ارزیابی و بحث}
 \label{chap:eval}
@@ -2950,11 +3901,7 @@ s_k\in\{\mathrm{ON},\mathrm{OFF}\}.
 بیش از یک مطالعه مروری معمولی است، زیرا نویسندگان سه مسئله باز را به
 عنوان مسیرهای اصلی پژوهش آینده مطرح می‌کنند که یکی از مسئله‌ها، سازمان‌دهی سلسله‌مراتبی دوقلوهای دیجیتال برای کنترل هوشمند که در آن برآورد عمر مفید باقیمانده و هوش مصنوعی توضیح‌پذیر نیز در نظر گرفته شود.
 
-این مسئله مطرح‌شده توسط 
-\lr{Coulibaly}
-و
-\lr{Hamlich} 
-ارتباط مستقیمی با جایگاه
+این مسئله مطرح‌شده توسط کولیبالی و هملیش ارتباط مستقیمی با جایگاه
 پژوهش حاضر دارد. در آن مقاله بیان می‌شود که هنوز سامانه‌ای که بتواند
 دوقلوهای دیجیتال، هماهنگی عامل‌ها، برآورد عمر مفید باقیمانده و
 توضیح‌پذیری را در یک راهکار یکپارچه و سلسله‌مراتبی برای کاربردهای
@@ -2965,11 +3912,7 @@ s_k\in\{\mathrm{ON},\mathrm{OFF}\}.
 پیش‌بینی نیز مستقیماً در اختیار عامل مدل زبانی قرار می‌گیرد. به این
 ترتیب، نتیجه پیش‌بینی تنها یک مقدار عددی نیست، بلکه می‌تواند از طریق زبان طبیعی برای کاربر توضیح داده شود و بر اساس شرایط موتور، پیشنهاد عملی ارائه کند. بنابراین، پژوهش حاضر می‌تواند یک نمونه عملی از این مسئله باز را ارائه دهد و به عنوان یک گام اجرایی در راستای پرسش باز این مقاله در نظر گرفته شود.
 
-از سوی دیگر، پژوهش 
-\lr{Coulibaly}
-و
-\lr{Hamlich} 
-عمدتاً بر طبقه‌بندی معماری‌ها،
+از سوی دیگر، پژوهش کولیبالی و هملیش عمدتاً بر طبقه‌بندی معماری‌ها،
 فناوری‌ها و چالش‌های موجود تمرکز دارد و هدف آن ارائه یک پیاده‌سازی
 موردی برای یک تجهیز مشخص نیست. در پژوهش حاضر، مفاهیم مطرح‌شده به یک معماری عملیاتی تبدیل شده‌اند. به گونه‌ای که هر قابلیت
 اصلی در قالب یک عامل مستقل قابل توسعه قرار گرفته است. این ویژگی باعث
@@ -3196,6 +4139,11 @@ s_k\in\{\mathrm{ON},\mathrm{OFF}\}.
 
 
 
+
+%*****************************************************************
+% chap6.tex
+%*****************************************************************
+
 \chapter{نتیجه‌گیری و پیشنهادها}
 \label{chap:conclusion}
 
@@ -3282,3 +4230,173 @@ s_k\in\{\mathrm{ON},\mathrm{OFF}\}.
 
 
 
+
+%*****************************************************************
+% واژه‌نامه
+%*****************************************************************
+
+\printglossary
+
+%*****************************************************************
+% references.tex
+%*****************************************************************
+
+% ‎References‎
+‎\renewcommand{\bibname}{مراجع}‎
+‎\addcontentsline{toc}{section}{مراجع}‎
+
+‎%%You may use IEEE transactions style‎
+%\bibliographystyle{ieeetr-fa}‎
+‎\bibliographystyle{ModifiedIEEEtranFa}‎
+%‎\bibliographystyle{plain-fa}‎ %added by ehsan
+‎%You may use IEEE abbreviation along with the name of your bitex database‎.
+‎\bibliography{my_ref}
+
+
+%*****************************************************************
+% abstract_english.tex
+%*****************************************************************
+
+\addcontentsline{toc}{section}{چکیده انگلیسی}
+\thispagestyle{empty}
+
+\begin{latin}
+\begin{center}
+
+{\huge Design and Implementation of a Multi-Agent Digital Twin Framework for Intelligent Monitoring, Prediction, and Decision-Making in Industrial Systems}
+
+\vspace{1cm}
+
+{\LARGE{Navid Nasiri}}
+
+\vspace{0.2cm}
+
+{\small navidnasyry@gmail.com}
+
+\vspace{0.5cm}
+
+2026
+
+\vspace{0.5cm}
+
+Department of Electrical and Computer Engineering
+
+\vspace{0.2cm}
+
+Isfahan University of Technology, Isfahan 84156-83111, Iran
+
+\vspace{0.2cm}
+
+Degree: M.Sc. \hspace*{3cm} Language: Farsi
+
+\vspace{1cm}
+
+{\small\textbf{Supervisor: Prof. Masoudreza Hashemi (hashemim@iut.ac.ir)}}
+
+{\small\textbf{Advisor: Prof. Aref Karimi Afshar (a.karimiafshar@iut.ac.ir)}}
+\end{center}
+~\vfill
+
+
+\noindent\textbf{Abstract}
+
+\begin{small}
+\baselineskip=0.6cm
+
+With the increasing complexity of industrial equipment and the costs associated with unplanned downtime, the development of systems for continuous condition monitoring, failure prediction, and maintenance decision support has become essential. Despite the capability of digital twins to connect physical assets with their virtual representations, integrating Remaining Useful Life prediction, near-real-time monitoring, human--system interaction, and safe decision-making into extensible architectures remains a challenge. This study aims to design, implement, and evaluate a multi-agent digital twin framework for monitoring industrial equipment and predicting failures by leveraging deep learning and large language models. The proposed architecture consists of five layers: physical entity, data acquisition, data integration, digital twin agents, and application agents. To evaluate the framework, a digital twin of turbofan engines was developed using the FD001 subset of the NASA C-MAPSS dataset. This subset contains data from 100 engines for training and 100 engines for testing. To account for the operational risk of unexpected failures, Pinball loss with a quantile coefficient of 0.125 was employed to deliberately favor conservative underestimation of Remaining Useful Life. Compared with a baseline model based on a Long Short-Term Memory network trained using Mean Squared Error, the final model reduced the Mean Absolute Error from 17.56 to 17.21, increased the coefficient of determination from 0.24 to 0.71, and raised the underestimation ratio from 0.47 to 0.87. Independent monitoring, prediction, dashboard, and language-interaction agents were also implemented to enable near-real-time updates of the digital twin state, provision of relevant information, and execution of predefined operational commands. The results indicate that the proposed framework provides a modular, replaceable, and extensible foundation for safe, interactive, and adaptable predictive maintenance across other industrial assets and datasets.
+
+
+\end{small}
+
+\vspace{0.5 cm}
+
+\noindent \textbf{Key Words}: Digital Twin, Multi-Agent System, Multi-Agent Digital Twin, Large Language Model, Predictive Maintenance, Remaining Useful Life, LSTM, NASA CMAPSS, Real-Time Monitoring, Explainable Artificial Intelligence.
+
+\end{latin}
+
+%*****************************************************************
+% lastpages.tex
+%*****************************************************************
+
+%********************************
+% Page before last: English Signatures
+%********************************
+\thispagestyle{empty}
+\newgeometry{left=3cm,right=3cm,top=2cm}
+\begin{latin}
+\begin{center}
+\includegraphics[height=3cm]{images/iut_logo.png}
+\vspace{0.4cm}
+
+{\large\textbf{Isfahan University of Technology}}\\
+
+\vspace{0.4cm}
+Department of Electrical and Computer Engineering
+
+\vspace{2.5cm}
+
+{\huge Design and Implementation of a Multi-Agent Digital Twin Framework for Intelligent Monitoring, Prediction, and Decision-Making in Industrial Systems}
+
+\vspace{1.5cm}
+
+%{\large
+%	A Thesis
+%	
+%	\vspace{.3cm}
+%	
+%	Submitted in partial fulfillment of the requirements
+%	
+%	\vspace{.3cm}
+%	
+%	for the degree of Master of Science
+%}
+
+	\vspace{1.5cm}
+
+{\Large
+	\textbf{by}
+	
+	\vspace{.3cm}
+	
+	\textbf{Navid Nasiri}
+}
+\end{center}
+
+\vfill
+
+Evaluated and Approved by the Thesis Committee, on Jan 01, 2022
+\vspace{0.5cm}
+
+\begin{enumerate}
+\item Masoudreza Hashemi, Prof. (Supervisor)
+\vspace{0.5cm}
+
+\item Aref Karimi Afshar, Assoc. Prof. (Advisor)
+\vspace{0.5cm}
+%
+%\item Mohammad Mohammadi Mohammadabadi, Prof. (Examiner)
+%\vspace{0.5cm}
+%
+%\item Mohammad Mohammadi Mohammadabadi, Assist. Prof (Examiner)
+%\vspace{0.5cm}
+
+\end{enumerate}
+
+%Mohammad Mohammadi Mohammadabadi, Department Graduate Coordinator
+
+\pagebreak
+\end{latin}
+
+%***************************
+% last page: Blank
+%***************************
+\thispagestyle{empty}
+\mbox{}
+
+% It's finally over. Wasn't that hard, was it?
+
+%*****************************************************************
+% پایان سند
+%*****************************************************************
+
+\end{document}
