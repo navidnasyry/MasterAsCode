@@ -697,7 +697,8 @@ $R^2=0.85$ دست یافته است. همچنین، نسبت
 	\caption{مقایسه قابلیت‌های پژوهش حاضر با پژوهش‌های پایه}
 	\label{tab:comparison-capabilities}
 	\resizebox{\textwidth}{!}{
-		\begin{tabular}{p{4.4cm}ccccc}
+		\renewcommand{\arraystretch}{1.6}%   <-- این خط
+		\begin{tabular}{p{4.6cm}ccccc}
 			\toprule
 			\textbf{قابلیت} &
 			\textbf{موهانراج و بالاجی (۲۰۲۶)} &
@@ -707,37 +708,22 @@ $R^2=0.85$ دست یافته است. همچنین، نسبت
 			
 			\textbf{پژوهش حاضر} \\
 			\midrule
-			دوقلوی دیجیتال &
-			\checkmark & \checkmark & \checkmark & \checkmark & \textbf{\checkmark} \\
-			سیستم چندعاملی &
-			-- & \checkmark & محدود & \checkmark & \textbf{\checkmark} \\
 			معماری ماژولار و عامل‌های مستقل &
 			محدود & \checkmark & محدود & \checkmark & \textbf{\checkmark} \\
-			پیش‌بینی RUL &
-			محدود & \checkmark & -- & -- & \textbf{\checkmark} \\
-			استفاده از LSTM &
-			-- & -- & -- & -- & \textbf{\checkmark} \\
-			استفاده از CMAPSS &
-			-- & -- & -- & -- & \textbf{\checkmark} \\
-			کاهش هدفمند بیش‌برآورد RUL &
-			-- & مطرح‌شده & -- & -- & \textbf{\checkmark} \\
-			پایش وضعیت تجهیز &
-			\checkmark & \checkmark & \checkmark & \checkmark & \textbf{\checkmark} \\
+			کاهش هدفمند بیش‌برآورد RUL & -- & مطرح‌شده & -- & -- & \textbf{\checkmark} \\
+			پایش وضعیت تجهیز به صورت برخط & \checkmark & \checkmark & \checkmark & \checkmark & \textbf{\checkmark} \\
 			دوقلوی دیجیتال دوطرفه در نمونه اجرایی &
 			محدود & مطرح‌شده & محدود & محدود & \textbf{\checkmark} \\
-			ادغام LLM با DT &
-			-- & -- & \checkmark & \checkmark & \textbf{\checkmark} \\
-			تعامل با زبان طبیعی &
+			تعامل به زبان طبیعی با سامانه دوقلوی دیجیتال &
 			-- & -- & \checkmark & \checkmark & \textbf{\checkmark} \\
 			توضیح خروجی پیش‌بینی برای کاربر &
 			-- & \textbf{هدف آینده} & محدود & محدود & \textbf{\checkmark} \\
 			ارائه پیشنهاد به کاربر &
 			-- & \textbf{هدف آینده} & محدود & محدود & \textbf{\checkmark} \\
-			نمونه اجرایی CMAPSS + MA-DT + LSTM + LLM &
-			-- & -- & -- & -- & \textbf{\checkmark} \\
 			\bottomrule
 	\end{tabular}}
 \end{table}
+
 
 جدول \ref{tab:comparison-capabilities} نشان می‌دهد که پژوهش حاضر
 در یک ویژگی منفرد لزوماً جایگزین پژوهش‌های پیشین نیست، بلکه قابلیت‌هایی
